@@ -1,0 +1,17 @@
+.background-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.main-graphic {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    width: 70%;
+}
+
+.background-container img {
+    width: 100%;
+}
+

@@ -1,0 +1,12 @@
+.background-container2 {
+    flex-direction: column;
+    align-items: center;
+    width: min(55rem,50vw);
+    gap: 5%;
+    aspect-ratio: 1 / 1;
+}
+.horizontal-bar{
+    background: linear-gradient(90deg, #D42C27 0%, #EEA910 100%);
+    width: 90%;
+    height: 10%;
+}
