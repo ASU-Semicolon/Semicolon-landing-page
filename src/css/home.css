@@ -1,0 +1,100 @@
+:root {
+    font-size: 62.5%;
+    background-color: #020405;
+}
+
+* {
+    margin: 0;
+}
+
+.content-container {
+    display: flex;
+    gap: 9rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2.5rem;
+    max-width: 50rem;
+}
+
+.text-container {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+h1 {
+    font-family: "Open Sans";
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+p {
+    font-family: "Open Sans";
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.orange-text {
+    color: #FFB000;
+}
+
+.button {
+    background: #112C2C;
+    display: inline-block;
+
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #E7E7E7;
+
+    padding: 1.2rem 2.5rem;
+    margin: 1.5rem 0 0;
+}
+
+.logo-container {
+    position: relative;
+    top: 5rem;
+}
+
+
+.boxes-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.boxes-vertical-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.main-graphic {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+}
