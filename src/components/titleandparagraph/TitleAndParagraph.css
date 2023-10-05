@@ -8,21 +8,23 @@
     flex-grow: 1;
 }
 
-h1 {
+.main-title {
     font-family: "Open Sans";
-    font-size: min(4.2vw,4.5rem);
+    line-height: 6vw;
+    font-size: clamp(2rem,calc(2rem + 2.4vw),4.5rem);
     font-weight: 700;
-    line-height: min(6vw,6rem);
+    line-height: clamp(2.8rem,6vw,6rem);
     text-align: left;
 }
 
-p {
+.main-paragraph {
     font-family: "Open Sans";
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.02em;
     text-align: left;
+    white-space: pre-line;
 }
 
 .orange-text {
