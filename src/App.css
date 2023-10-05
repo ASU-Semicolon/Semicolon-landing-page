@@ -1,6 +1,8 @@
 :root {
     font-size: 62.5%;
-    background-color: #020405;
+    background-image: url("src/assets/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 * {
