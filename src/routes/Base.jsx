@@ -22,6 +22,7 @@ export default function Base() {
         </nav>
       </header>
 
+      <Outlet />
 
       <footer>
         <div className="main-footer">
@@ -69,7 +70,6 @@ export default function Base() {
           <p className='copyrights-text'>All Rights Reserved © SemiColon Club 2024</p>
         </div>
       </footer>
-      <Outlet />
     </>
   )
 }

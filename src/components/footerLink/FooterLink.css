@@ -3,6 +3,7 @@
     justify-content: start;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
 }
 
 .footer-link-text {
@@ -11,4 +12,8 @@
     font-weight: 400;
     line-height: 12px;
     color: #FFFFFF;
+}
+
+.footer-link-container:hover .footer-link-text{
+    text-decoration: underline;
 }

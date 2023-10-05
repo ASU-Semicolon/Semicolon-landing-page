@@ -32,6 +32,7 @@
 }
 
 .button {
+    border: 0px;
     background: #112C2C;
     display: inline-block;
 
@@ -45,4 +46,11 @@
 
     padding: 0.6em 1.2em;
     margin: 1.5rem 0 0;
+    transition: background-color 500ms;
+    cursor: pointer;
+}
+
+.button:hover {
+    border: 0px;
+    background-color: #FFB000;
 }

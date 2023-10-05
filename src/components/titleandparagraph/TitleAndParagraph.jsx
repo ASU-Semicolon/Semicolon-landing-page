@@ -6,7 +6,7 @@ export default function TitleAndParagraph(props) {
         <div className='text-container'>
             <h1 className='main-title'>{props.title}</h1>
             <p className='main-paragraph'>{props.paragraph}</p>
-            <div className='button'>{props.button}</div>
+            <button className='button'>{props.button}</button>
         </div>
     </>
   )

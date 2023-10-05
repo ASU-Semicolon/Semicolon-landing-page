@@ -2,7 +2,13 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 2rem 0;
+    position: sticky;
+    top: 0px;
+    background-image: url("src/assets/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 10;
 }
 
 .main-logo {
@@ -52,6 +58,13 @@ header {
     line-height: 22px;
     letter-spacing: 0.04em;
     color: #FFFFFF;
+    transition: color 500ms;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    border: 0px;
+    color: #FFB000;
 }
 
 .main-footer {
