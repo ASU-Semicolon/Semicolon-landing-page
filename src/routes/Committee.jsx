@@ -6,7 +6,7 @@ export default function Committee(props) {
     const [committee, setCommittee] = useState();
 
     async function fetchCommittee() {
-        let response = await fetch('https://api.quotable.io/quotes/random' + props.path);
+        let response = await fetch('https://api.quotable.io/quotes/random');
         let user = await response.json();
         setCommittee(user);
         console.log(committee);
