@@ -1,8 +1,6 @@
 import TitleAndParagraph from '../components/titleandparagraph/TitleAndParagraph'
 import Illustration from '../components/Illustration/Illustration'
-import MainIllustrationDevs from '../components/Illustration/BackgroundDevs/MainIllustrationDevs'
-import AboutIllustrationDevs from '../components/Illustration/BackgroundDevs/AboutIllustrationDevs'
-import '../css/home.css'
+import './home.css'
 
 export default function Home() {
   return (
@@ -11,7 +9,7 @@ export default function Home() {
             <div className="content-container">
                 <div className="left-content">
                     <TitleAndParagraph
-                        title={['Hands-On Software Workshops',<span className="orange-text">.</span>]}
+                        title={['Make Your College Years Count',<span className="orange-text">.</span>]}
                         paragraph={'Our hands-on software workshops teach new coding skills you can apply right away. No prior experience required - just bring your laptop. Small class sizes ensures individualized attention'}
                         button={'CHECK NOW'}
                     />
@@ -21,9 +19,7 @@ export default function Home() {
                 </div>
                 <div className="right-content">
                     <Illustration
-                        class='background-container1'
-                        background={<MainIllustrationDevs />}
-                        foreground={'src/assets/home-graphics/graphic-main.svg'}
+                        url={'src/assets/home-graphics/home.svg'}
                     />
                 </div>
             </div>
@@ -37,9 +33,7 @@ export default function Home() {
                 </div>
                 <div className="right-content">
                     <Illustration
-                        class='background-container2'
-                        background={<AboutIllustrationDevs/>}
-                        foreground={'src/assets/home-graphics/graphic-about.svg'}
+                        url={'src/assets/home-graphics/about.svg'}
                     />
                 </div>
             </div>
