@@ -1,101 +1,109 @@
-form{
-    width: 540px;
-    height: 634px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    max-width: 31.25em;
+    height: 40em;
     border-radius: 15px;
-    background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(public/image 3.png);
-    background-size:cover;
-}
-#form-background{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(public/image 3.png);
+    background-size: cover;
+    gap: 2em;
+  }
+  #form-background{
     border-radius: 15px;
     background: #0b2323;
     box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.25);
-    width: 540px;
-    height: 634px;
-    position: absolute;
-    top: 197px;
-    left: 839px;
-}
-#name{
-   position: absolute;
-   top:203px;
-   left:22px;
-   width: 180px;
-   height: 75px;
-}
-#email{
-   
-    position: absolute;
-    top: 203px;
-    left: 276px;
-    width: 180px;
-    height: 75px;
-}
-label{
+    width: 80%;
+    max-width: 31.25em;
+    max-height: 37.5em;
+    z-index: 1;
+
+  }
+
+  #getinfo {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #name {
+    max-height: 4.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  #email {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  
+  .your-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  label {
     color: #fff;
     font-weight: 700;
     font-family: "Montserrat";
-font-size: 14px;
-
-}
-input{
-    padding-left: 20px;
-border-radius: 3px;
-border: 1px solid #FFF;
-background: #3B6262;
-margin-top: 5px;
-width: 212px;
-height: 38px;
-color: #FFF;
-cursor: pointer;
-}
-::placeholder{
-    color: #FFB000;
+    font-size: 1rem;
+  }
+  
+  input {
+    padding-left: 1.25em;
+    border-radius: 0.1875em;
+    border: 0.0625em solid #fff;
+    background: #3b6262;
+    min-height: 2.4em;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  ::placeholder {
+    color: #ffb000;
     font-family: 'Montserrat';
     font-weight: 400;
-}
-#message{
-    position: absolute;
-    top: 305px;
-    left: 22px;
-}
-
-textarea{
-    position: absolute;
-    top: 330px;
-    left: 22px;
-   margin-bottom: 20px;
-    width: 466px;
-    height: 101px;
-    border-radius: 9px;
+  }
+  
+  #message {
+    align-self: start;
+    margin-left: 3.1em;
+  }
+  
+  textarea {
+    width: 79%;
+    min-height: 6.4em;
+    border-radius: 0.5em;
     cursor: pointer;
-border: 1px solid #FFF;
-background: #3B6262;
-resize: none;
-padding-left: 20px;
-padding-top: 10px;
-}
-button{
-    position: absolute;
-    color: #FFF;
-    font-size: 18px;
-    top: 464px;
-    left: 22px;
-    width: 117px;
-    height: 38px;
+    border: 1px solid #fff;
+    background: #3b6262;
+    resize: none;
+    padding-left: 1.25em;
+    padding-top: 0.625em;
+  }
+  
+  button {
+    margin-left: 2.3em;
+    color: #fff;
+    font-size: 1rem;
+    width: fit-content;
+    height: 2.375em;
     cursor: pointer;
-    border-radius: 6px;
-    background: #284B4B;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: #FFF;
-font-family: 'Montserrat';
-font-size: 18px;
-font-weight: 300;
-letter-spacing: 0.9px;
-text-transform: uppercase;
-}
-input:hover,textarea:hover,button:hover{
-    border: 1px solid grey;
-}
+    border-radius: 0.375em;
+    background: #284b4b;
+    box-shadow: 0px 0.25em 0.25em 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0em 1em;
+  }
+  
+  input:hover,textarea:hover,button:hover{
+    border: 1px solid grey;  }
