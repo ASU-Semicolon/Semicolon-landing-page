@@ -1,0 +1,79 @@
+body {
+    background-image: url("public/Squares Pattern.jpg");
+  }
+  
+  .information {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    gap: 2em;
+  }
+  
+  h1 {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 2rem; 
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  p {
+    box-sizing: border-box;
+    padding-top: 0.625em; 
+    color: #fff;
+    width: 25.4em; 
+    height: 5.6em; 
+    font-family: "Open Sans";
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4em; 
+  }
+  
+  .info {
+    display: flex;
+    gap: 1.25em; 
+    width: 22.875em; 
+    height: 3.25em; 
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-info div {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  h4 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  
+  .logo {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    width: 3em; 
+    height: 3em; 
+    background-color: #ffb000;
+    border-radius: 0.25em; 
+    display: flex;
+  }
