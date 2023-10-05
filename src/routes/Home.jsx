@@ -1,7 +1,10 @@
 import TitleAndParagraph from '../components/titleandparagraph/TitleAndParagraph'
-import Illustration from '../components/Illustration/Illustration'
+import Illustration from '../components/illustration/Illustration'
 import Statistic from '../components/statistic/Statistic'
-import Brief from '../components/Brief/Brief'
+import Brief from '../components/brief/Brief'
+
+import Info from '../components/contactInfo/Contactinfo'
+import Contactform from '../components/contactInput/Contactinput'
 import './home.css'
 
 export default function Home() {
@@ -62,6 +65,12 @@ export default function Home() {
                         url={'src/assets/about-graphics/about.png'}
                     />
                 </div>
+            </div>
+
+
+            <div className='contact-container'>
+                <Info />
+                <Contactform />
             </div>
 
         </main>
