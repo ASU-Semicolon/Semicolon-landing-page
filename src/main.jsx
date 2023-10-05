@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App/App.jsx'
+import Info from './Contactinfo.jsx'
+import Contactform from './Contactinput.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Info />
+    <Contactform />+
   </React.StrictMode>,
 )
