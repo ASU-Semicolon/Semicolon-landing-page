@@ -28,18 +28,28 @@ header {
 
 .main-logo-title {
     font-family: "Montserrat";
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 700;
-    line-height: 39px;
+    line-height: 3.9rem;
     color: #FFFFFF;
 }
 
 .main-logo-slogan {
     font-family: "Montserrat";
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 700;
-    line-height: 15px;
+    line-height: 1.5rem;
     color: #FFFFFF;
+}
+
+.orange-circle {
+    width: 7px;
+    height: 7px;
+    background-color: #FFB000;
+    border-radius: 100%;
+    position: absolute;
+    left: 42%;
+    top: 12px;
 }
 
 .nav-bar {
@@ -53,9 +63,9 @@ header {
     background-color: transparent;
     border: 0px;
     font-family: "Montserrat";
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 300;
-    line-height: 22px;
+    line-height: 2.2rem;
     letter-spacing: 0.04em;
     color: #FFFFFF;
     transition: color 500ms;
@@ -65,6 +75,10 @@ header {
 .nav-button:hover {
     border: 0px;
     color: #FFB000;
+}
+
+.selected, .selected:hover {
+    border-bottom: #FFB000 solid 2px;
 }
 
 .main-footer {
@@ -93,9 +107,9 @@ header {
 
 .footer-list-title {
     font-family: "Montserrat";
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
-    line-height: 20px;
+    line-height: 2rem;
     letter-spacing: 0.05em;
     color: #FFFFFF;
 }
@@ -104,11 +118,11 @@ header {
     background: #000000;
     color: #FFFFFF;
     font-family: "Montserrat";
-    font-size: 7px;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: 9px;
     letter-spacing: 0.04em;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }

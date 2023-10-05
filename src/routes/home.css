@@ -25,7 +25,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    gap: 20em;
+    gap: 9%;
     font-size: 1.6rem;
 }
 
@@ -75,8 +75,13 @@ main {
     letter-spacing: 0.04em;
     color: #FFFFFF;
     rotate: 90deg;
+    cursor: pointer;
+    transition: color 500ms;
 }
 
+.left-bar-text:hover {
+    color: #FFB000;
+}
 
 .stats-container {
     display: flex;

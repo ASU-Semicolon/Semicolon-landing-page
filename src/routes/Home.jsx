@@ -22,7 +22,7 @@ export default function Home() {
                     <TitleAndParagraph
                         title={['Make Your College Years Count',<span className="orange-text">.</span>]}
                         paragraph={'Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with Semi Colon!'}
-                        button={'CHECK NOW'}
+                        button={'APPLY NOW'}
                     />
                     <div className='logo-container'>
                         <img src="src/assets/home-graphics/logo.svg" width="183px" alt="" />
@@ -69,8 +69,12 @@ export default function Home() {
 
 
             <div className='contact-container'>
-                <Info />
-                <Contactform />
+                <div className="left-content">
+                    <Info />
+                </div>
+                <div className="right-content">
+                    <Contactform />
+                </div>
             </div>
 
         </main>

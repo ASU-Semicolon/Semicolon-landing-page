@@ -15,7 +15,7 @@
   border-radius: 15px;
   background: #0b2323;
   box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.25);
-  width: 80%;
+  width: 100%;
   max-width: 31.25em;
   max-height: 37.5em;
   z-index: 1;
@@ -25,9 +25,11 @@
 #getinfo {
   display: flex;
   justify-content: space-evenly;
+  gap: 5px;
 }
 
 #name {
+  min-width: 10rem;
   max-height: 4.7em;
   display: flex;
   flex-direction: column;
@@ -35,6 +37,7 @@
 }
 
 #email {
+  min-width: 10rem;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
