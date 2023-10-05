@@ -1,15 +1,28 @@
-import './contactinfo.css'
+import ContactCard from './contactCard/ContactCard'
+import './contactInfo.css'
 
 export default function Info() {
   return (
     <>
-    <div className='information'>  
-      <h1>Contact Us</h1>
-      <p>We will be more than happy to hear from you whether it’s a question or a feedback or just some random thoughts that you want share just hit us and we will contact you as soon as we can.</p>
-      <div className='container'>
-        <div className='info'><div className='logo'><img src='Phone.png'></img></div><div className='contact-info'><h4>Phone</h4><div>+20112345680</div></div></div> 
-        <div className='info'><div className='logo'><img src='Email.png'></img></div><div className='contact-info'><h4>Email</h4><div>semicolon@gmail.com</div></div></div> 
-        <div className='info'><div className='logo'><img src='WhatsApp.png'></img></div><div className='contact-info'><h4>WhatsApp</h4><div>+20112345680</div></div></div> 
+    <div className='contact-information'>  
+      <h1 className='contact-title'>Contact Us</h1>
+      <p className='contact-description'>We will be more than happy to hear from you whether it’s a question or a feedback or just some random thoughts that you want share just hit us and we will contact you as soon as we can.</p>
+      <div className='contact-cards-container'>
+        <ContactCard 
+          title="Phone"
+          number="+20112345680"
+          url="src/assets/contact-graphics/phone.png"
+        />
+        <ContactCard 
+          title="Email"
+          number="semicolon@gmail.com"
+          url="src/assets/contact-graphics/Email.png"
+        />
+        <ContactCard 
+          title="WhatsApp"
+          number="+20112345680"
+          url="src/assets/contact-graphics/WhatsApp.png"
+        />
       </div>
       </div>
     </>

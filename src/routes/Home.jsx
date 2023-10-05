@@ -3,8 +3,8 @@ import Illustration from '../components/illustration/Illustration'
 import Statistic from '../components/statistic/Statistic'
 import Brief from '../components/brief/Brief'
 
-import Info from '../components/contactInfo/Contactinfo'
-import Contactform from '../components/contactInput/Contactinput'
+import Info from '../components/contactInfo/ContactInfo'
+import Contactform from '../components/contactInput/ContactInput'
 import './home.css'
 
 export default function Home() {
