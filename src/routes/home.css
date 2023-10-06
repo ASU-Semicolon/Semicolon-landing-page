@@ -93,3 +93,32 @@ main {
     grid-column: 2 / 4;
     align-self: start;
 }
+
+.committee-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.committee-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5rem;
+    max-width: 80vw;
+}
+
+.committee-brief {
+    max-width: 50rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12rem;
+    row-gap: 5rem;
+    justify-content: start;
+    align-items: stretch;
+    align-self: center;
+}

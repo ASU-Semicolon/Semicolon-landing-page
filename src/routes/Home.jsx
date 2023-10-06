@@ -2,12 +2,95 @@ import TitleAndParagraph from '../components/titleandparagraph/TitleAndParagraph
 import Illustration from '../components/illustration/Illustration'
 import Statistic from '../components/statistic/Statistic'
 import Brief from '../components/brief/Brief'
-
+import Card from '../components/card/card'
 import Info from '../components/contactInfo/ContactInfo'
 import Contactform from '../components/contactInput/ContactInput'
 import './home.css'
 
 export default function Home() {
+
+    const committees = [{
+        href: 'web',
+        title: 'AI',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/AI.png'
+    },{
+        href: 'web',
+        title: 'DIGITAL',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/digital.png'
+    },{
+        href: 'web',
+        title: 'ANALOG',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/analog.png'
+    },{
+        href: 'web',
+        title: 'MOBLIE',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/mobile.png'
+    },{
+        href: 'web',
+        title: 'OOP & QT',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/qt.png'
+    },{
+        href: 'web',
+        title: 'C++ & DSA',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/c++.png'
+    },{
+        href: 'web',
+        title: 'BASIC DEV',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/basic dev.png'
+    },{
+        href: 'web',
+        title: 'ADVANCED DEV',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/advanced dev.png'
+    },{
+        href: 'web',
+        title: 'ARM',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/embedded.png'
+    },{
+        href: 'web',
+        title: 'AVT & RTOS',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/embedded.png'
+    },{
+        href: 'web',
+        title: 'EMBEDDED C',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/c.png'
+    },{
+        href: 'web',
+        title: 'FR',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/fr.png'
+    },{
+        href: 'web',
+        title: 'HR',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/hr.png'
+    },{
+        href: 'web',
+        title: 'PM & LOGISTICS',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/pm.png'
+    },{
+        href: 'web',
+        title: 'PR',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/pr.png'
+    },{
+        href: 'web',
+        title: 'MEDIA',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        icon: 'src/assets/cards/media.png'
+    },];
+
   return (
     <>
         <main>
@@ -69,6 +152,27 @@ export default function Home() {
                 </div>
             </div>
 
+            <div className="committee-container">
+                <div className="committee-wrapper">
+                    <TitleAndParagraph
+                        titleId='committee'
+                        className='committee-brief'
+                        title='Our Committees'
+                        paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.'
+                        button=''
+                    />
+                    <div className="cards-container">
+                        {committees.map((committee) => {
+                            return <Card 
+                                href={committee.href}
+                                title = {committee.title}
+                                description= {committee.description}
+                                icon= {committee.icon}
+                            />
+                        })}
+                    </div>
+                </div>
+            </div>
 
             <div className='contact-container'>
                 <div className="left-content">
