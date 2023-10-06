@@ -2,12 +2,79 @@ import TitleAndParagraph from '../components/titleandparagraph/TitleAndParagraph
 import Illustration from '../components/illustration/Illustration'
 import Statistic from '../components/statistic/Statistic'
 import Brief from '../components/brief/Brief'
-
+import Card from '../components/card/card'
 import Info from '../components/contactInfo/ContactInfo'
 import Contactform from '../components/contactInput/ContactInput'
 import './home.css'
 
 export default function Home() {
+
+    const committees = [{
+        title: 'AI',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/AI.png'
+    },{
+        title: 'DIGITAL',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/digital.png'
+    },{
+        title: 'ANALOG',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/analog.png'
+    },{
+        title: 'MOBLIE',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/mobile.png'
+    },{
+        title: 'OOP & QT',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/qt.png'
+    },{
+        title: 'C++ & DSA',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/c++.png'
+    },{
+        title: 'BASIC DEV',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/basic dev.png'
+    },{
+        title: 'ADVANCED DEV',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/advanced dev.png'
+    },{
+        title: 'ARM',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/embedded.png'
+    },{
+        title: 'AVT & RTOS',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/embedded.png'
+    },{
+        title: 'EMBEDDED C',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/c.png'
+    },{
+        title: 'FR',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/fr.png'
+    },{
+        title: 'HR',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/hr.png'
+    },{
+        title: 'PM & LOGISTICS',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/pm.png'
+    },{
+        title: 'PR',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/pr.png'
+    },{
+        title: 'MEDIA',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        url: 'src/assets/cards/media.png'
+    },];
+
   return (
     <>
         <main>
@@ -69,6 +136,26 @@ export default function Home() {
                 </div>
             </div>
 
+            <div className="committee-container">
+                <div className="committee-wrapper">
+                    <TitleAndParagraph
+                        titleId='committee'
+                        className='committee-brief'
+                        title='Our Committees'
+                        paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.'
+                        button=''
+                    />
+                    <div className="cards-container">
+                        {committees.map((committee) => {
+                            return <Card 
+                                title = {committee.title}
+                                description= {committee.description}
+                                url= {committee.url}
+                            />
+                        })}
+                    </div>
+                </div>
+            </div>
 
             <div className='contact-container'>
                 <div className="left-content">
