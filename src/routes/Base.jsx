@@ -5,7 +5,8 @@ import './base.css'
 export default function Base() {
   return (
     <>
-      <header>
+
+      <header className="desktop-header">
         <div className="main-logo">
           <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
           <div className="main-logo-text">
@@ -22,6 +23,39 @@ export default function Base() {
           <button className='nav-button'>Committees</button>
           <button className='nav-button'>Contact Us</button>
         </nav>
+      </header>
+      <header className="mobile-header">
+        <div className="all-mobile-nav">
+        <div className="main-logo">
+          <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
+          <div className="main-logo-text">
+            <h2 className='main-logo-title'>Sem,Colon
+              <div className="orange-circle"></div>
+            </h2>
+            <p className='main-logo-slogan'>Debug Your <span className='orange-text'>Soul.</span></p>
+          </div>
+        </div>
+        <div className="divnav">
+      <div class="collapse" id="navbarToggleExternalContent">
+  <div class=" p-4">
+  <nav className='nav-bar-mobile'>
+          <button className='nav-button selected'>Home</button>
+          <button className='nav-button'>About Us</button>
+          <button className='nav-button'>Committees</button>
+          <button className='nav-button'>Contact Us</button>
+        </nav>
+  </div>
+</div>
+<nav class="navbar navbar-dark ">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="nav-icon"></div>
+      <div class="nav-icon"></div>
+    </button>
+  </div>
+</nav>
+</div>
+</div>
       </header>
 
       <Outlet />

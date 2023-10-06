@@ -1,14 +1,59 @@
-header {
+body{
+    position: sticky;
+    top: 0px;
+    background-image: url("src/assets/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.desktop-header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 2rem 2rem 0;
     position: sticky;
     top: 0px;
-    background-image: url("src/assets/background.svg");
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: 10;
+
+}
+.mobile-header{
+    display: none;
+    position: sticky;
+    top: 0px;
+}
+.all-mobile-nav{
+    display: flex;
+    justify-content: end;
+    gap: 60px;
+
+
+}
+.divnav{
+    display: flex;
+    justify-content: end;
+    gap: 0px;
+
+}
+.nav-bar-mobile{
+    background: #0B1616;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius:20px;
+    padding: 1em;
+
+}
+.nav-icon{
+    width: 26px;
+    height: 4px;
+    border-radius: 15px;
+    background: #FFB000;
+    margin: 4px auto;
+}
+
+button.navbar-toggler{
+    display: flex;
+    flex-direction: column;
+    border: 0px;
 }
 
 .main-logo {
@@ -16,6 +61,10 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+
+
+
 
 .main-logo-text {
     display: flex;
@@ -84,14 +133,14 @@ header {
 .main-footer {
     background: #0B1616;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 1% calc(6% - 1rem);
 }
 
 .footer-links-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 10vw;
     padding: 0 2%;
@@ -125,4 +174,51 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px;
+}
+
+@media (max-width:480px){
+    .desktop-header{
+        display: none;
+    }
+    .mobile-header{
+        display: block;
+    }
+    .main-logo{
+        width: 60px;
+
+    }
+    .main-logo-title{
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.9rem;
+    }
+    .orange-circle { 
+        width: 3.5px;
+        height: 3.5px;
+        position: absolute;
+        top: 7px;
+        left: 35px;
+    }
+    .main-logo-slogan {
+        font-size: 0.6rem;
+        font-weight: 400;
+        line-height: 0.7rem;
+    }
+    .footer-list-title {
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1rem;
+        letter-spacing: 0.05em;
+    }
+    .main-footer {
+     justify-content: end;
+     gap: 55px;
+    }
+    
+.copyrights {
+    font-size: 0.5rem;
+    letter-spacing: 0.02em;
+    padding: 5px;
+}
+
 }
