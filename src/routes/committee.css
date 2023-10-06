@@ -1,8 +1,62 @@
-.committee {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 10rem;
+.main{
+    display: inline-flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 24px;
+   margin: 182px 405px 351px 245px;
+}
+.name{
+    display:flex;
+    justify-content: start;
+
+}
+
+.title{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+}
+.line{
+    border-bottom: 4px solid #FFB000;
+}
+
+.btn{
+    width: 152px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.23);
+    background: #284B4B;
+    box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.50);
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.76px;
+    text-transform: uppercase;
+}
+
+.description{
+    width: 628px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.icon{
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    float: right;
 }
