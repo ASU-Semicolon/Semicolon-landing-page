@@ -48,3 +48,7 @@ button.card-button {
     right: 1rem;
     bottom: 1rem;
 }
+
+.card-link {
+    all: unset;
+}

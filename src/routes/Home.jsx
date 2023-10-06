@@ -10,69 +10,85 @@ import './home.css'
 export default function Home() {
 
     const committees = [{
+        href: 'web',
         title: 'AI',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/AI.png'
+        icon: 'src/assets/cards/AI.png'
     },{
+        href: 'web',
         title: 'DIGITAL',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/digital.png'
+        icon: 'src/assets/cards/digital.png'
     },{
+        href: 'web',
         title: 'ANALOG',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/analog.png'
+        icon: 'src/assets/cards/analog.png'
     },{
+        href: 'web',
         title: 'MOBLIE',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/mobile.png'
+        icon: 'src/assets/cards/mobile.png'
     },{
+        href: 'web',
         title: 'OOP & QT',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/qt.png'
+        icon: 'src/assets/cards/qt.png'
     },{
+        href: 'web',
         title: 'C++ & DSA',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/c++.png'
+        icon: 'src/assets/cards/c++.png'
     },{
+        href: 'web',
         title: 'BASIC DEV',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/basic dev.png'
+        icon: 'src/assets/cards/basic dev.png'
     },{
+        href: 'web',
         title: 'ADVANCED DEV',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/advanced dev.png'
+        icon: 'src/assets/cards/advanced dev.png'
     },{
+        href: 'web',
         title: 'ARM',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/embedded.png'
+        icon: 'src/assets/cards/embedded.png'
     },{
+        href: 'web',
         title: 'AVT & RTOS',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/embedded.png'
+        icon: 'src/assets/cards/embedded.png'
     },{
+        href: 'web',
         title: 'EMBEDDED C',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/c.png'
+        icon: 'src/assets/cards/c.png'
     },{
+        href: 'web',
         title: 'FR',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/fr.png'
+        icon: 'src/assets/cards/fr.png'
     },{
+        href: 'web',
         title: 'HR',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/hr.png'
+        icon: 'src/assets/cards/hr.png'
     },{
+        href: 'web',
         title: 'PM & LOGISTICS',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/pm.png'
+        icon: 'src/assets/cards/pm.png'
     },{
+        href: 'web',
         title: 'PR',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/pr.png'
+        icon: 'src/assets/cards/pr.png'
     },{
+        href: 'web',
         title: 'MEDIA',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
-        url: 'src/assets/cards/media.png'
+        icon: 'src/assets/cards/media.png'
     },];
 
   return (
@@ -148,9 +164,10 @@ export default function Home() {
                     <div className="cards-container">
                         {committees.map((committee) => {
                             return <Card 
+                                href={committee.href}
                                 title = {committee.title}
                                 description= {committee.description}
-                                url= {committee.url}
+                                icon= {committee.icon}
                             />
                         })}
                     </div>
