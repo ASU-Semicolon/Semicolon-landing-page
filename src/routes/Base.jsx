@@ -27,7 +27,7 @@ export default function Base() {
       <Outlet />
 
       <footer>
-        <div className="-mainfooter">
+        <div className="main-footer">
           <div className="main-logo">
             <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
             <div className="main-logo-text">

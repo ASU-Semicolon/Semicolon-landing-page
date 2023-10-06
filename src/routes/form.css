@@ -1,0 +1,51 @@
+.form-main-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-photo{
+    width: 29%;
+    height: 80%;
+    background-color: rgba(0, 13, 16, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-photo img{
+    width: 80%;
+    height: 80%;
+}
+.form-inputs{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+width: 29%;
+height: 80%;
+background-color: rgba(0, 23, 28, 1);
+flex-wrap: nowrap;
+}
+#submit-btn{
+    width:25%;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5em;
+    cursor: pointer;
+    border: 2px solid #FFF;
+    background: #FFB000;
+    color: #000;
+font-family: "Montserrat";
+font-size: 2rem;
+font-weight: 400;
+text-transform: uppercase;
+margin-bottom: 0.5em;
+}
+.form-inputs input{
+padding-left: 0.5em;
+}
+.form-inputs input:hover,.form-inputs select:hover,#submit-btn:hover{
+    border: 2px solid grey;
+}

@@ -1,0 +1,35 @@
+.input-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+input{
+    width:37%;
+    height: 100%;
+    background-color: #000D10;
+    border: 1px solid #FFF;
+    color: #FFF;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+label{
+color: white;
+font-family: "Montserrat";
+font-size: 1.8rem;
+font-weight: 400;
+letter-spacing: 1.08px;
+text-transform: uppercase;
+width: 60%;
+}
+.input-field::placeholder{
+    color: color: #BEBEBE;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

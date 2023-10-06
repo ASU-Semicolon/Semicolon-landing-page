@@ -1,0 +1,14 @@
+.default{
+    color: gray;
+}
+select{
+    color: gray;
+    width: 39.3%;
+    height: 100%;
+    background-color: #000D10;
+    border: 1px solid #FFF;
+}
+option{
+    background-color: #FFF;
+    color: #000D10;
+}
