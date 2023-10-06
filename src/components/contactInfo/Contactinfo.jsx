@@ -2,14 +2,15 @@ import TitleAndParagraph from '../titleandparagraph/TitleAndParagraph'
 import ContactCard from './contactCard/ContactCard'
 import './contactInfo.css'
 
-export default function Info() {
+export default function Info(props) {
   return (
     <>
     <div className='contact-information'>
-      <TitleAndParagraph 
+      <TitleAndParagraph
+        titleId={props.titleId}
         title='Contact Us'
         paragraph='We will be more than happy to hear from you whether it’s a question or a feedback or just some random thoughts that you want share just hit us and we will contact you as soon as we can.'
-        url=''
+        button=''
       />
       <div className='contact-cards-container'>
         <ContactCard 

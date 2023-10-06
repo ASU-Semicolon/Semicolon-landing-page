@@ -77,6 +77,10 @@ header {
     color: #FFB000;
 }
 
+.nav-button a {
+    all: unset;
+}
+
 .selected, .selected:hover {
     border-bottom: #FFB000 solid 2px;
 }

@@ -17,10 +17,10 @@ export default function Base() {
         </div>
         
         <nav className='nav-bar'>
-          <button className='nav-button selected'>Home</button>
-          <button className='nav-button'>About Us</button>
-          <button className='nav-button'>Committees</button>
-          <button className='nav-button'>Contact Us</button>
+          <button className='nav-button selected'><a href="#home">Home</a></button>
+          <button className='nav-button'><a href="#about">About Us</a></button>
+          <button className='nav-button'><a href="#committee">Committees</a></button>
+          <button className='nav-button'><a href="#contact">Contact Us</a></button>
         </nav>
       </header>
 
@@ -41,29 +41,41 @@ export default function Base() {
             <div className="footer-links-list">
               <p className='footer-list-title'>FOLLOW US</p>
               <FooterLink 
+                href="https://www.facebook.com/SemiColon.team.asu"
+                target='_blank'
                 url="src/assets/footer/Facebook.svg"
                 text="Facebook"
               />
               <FooterLink 
+                href="https://www.linkedin.com/company/semicolon.org"
+                target='_blank'
                 url="src/assets/footer/LinkedIn.svg"
                 text="LinkedIn"
               />
               <FooterLink 
+                href=""
+                target='_blank'
                 url="src/assets/footer/Instagram.svg"
                 text="Instagram"
               />
             </div>
             <div className="footer-links-list">
               <p className='footer-list-title'>Navigate</p>
-              <FooterLink 
+              <FooterLink
+                href="#home"
+                target=''
                 url="src/assets/footer/Home.svg"
                 text="Home"
               />
               <FooterLink 
+                href="#about"
+                target=''
                 url="src/assets/footer/About.svg"
                 text="About"
               />
               <FooterLink 
+                href="#committee"
+                target=''
                 url="src/assets/footer/People.svg"
                 text="Committees"
               />

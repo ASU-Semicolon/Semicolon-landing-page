@@ -3,6 +3,8 @@
     background-image: url("src/assets/background.svg");
     background-size: cover;
     background-attachment: fixed;
+    scroll-behavior: smooth;
+    scroll-padding-top: 15rem;
 }
 
 * {

@@ -20,6 +20,7 @@ export default function Home() {
                 </div>
                 <div className="left-content">
                     <TitleAndParagraph
+                        titleId="home"
                         title={['Make Your College Years Count',<span className="orange-text">.</span>]}
                         paragraph={'Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with Semi Colon!'}
                         button={'APPLY NOW'}
@@ -45,6 +46,7 @@ export default function Home() {
             <div className="about-container">
                 <div className="left-content">
                     <TitleAndParagraph
+                        titleId='about'
                         title={'Who We Are'}
                         paragraph={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur. Sed sed tristique purus. Nunc convallis, dolor ut porta ullamcorper, nibh ex dignissim turpis, vitae mattis tellus mauris eu nulla. Etiam dictum efficitur eros, a mollis nulla varius a. Curabitur pulvinar congue ultrices.'}
                         button={'Learn More'}
@@ -70,7 +72,7 @@ export default function Home() {
 
             <div className='contact-container'>
                 <div className="left-content">
-                    <Info />
+                    <Info titleId="contact"/>
                 </div>
                 <div className="right-content">
                     <Contactform />
