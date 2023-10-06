@@ -1,0 +1,40 @@
+.contact-card {
+    display: flex;
+    gap: 1.25em; 
+    width: 22.875em; 
+    height: 3.25em; 
+}
+
+.contact-card-logo {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    width: 3em; 
+    height: 3em;
+    background-color: #ffb000;
+    border-radius: 0.25em; 
+    display: flex;
+}
+
+.contact-card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card-title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+.contact-card-description {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+

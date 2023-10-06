@@ -1,0 +1,9 @@
+.background-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.background-container img {
+    width: 120%;
+}

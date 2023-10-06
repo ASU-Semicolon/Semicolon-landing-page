@@ -1,3 +1,12 @@
-h1 {
-    color: red;
+:root {
+    font-size: 62.5%;
+    background-image: url("src/assets/background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    scroll-padding-top: 15rem;
+}
+
+* {
+    margin: 0;
 }

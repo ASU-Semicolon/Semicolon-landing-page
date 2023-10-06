@@ -1,0 +1,20 @@
+.stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: #AAAAAA;
+}
+
+.stat-number {
+    font-family: "Montserrat";
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.stat-text {
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
