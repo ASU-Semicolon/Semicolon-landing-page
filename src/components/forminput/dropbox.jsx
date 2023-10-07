@@ -7,7 +7,7 @@ export default function Dropdownmenu(props) {
      <div className='input-field'>
     <label htmlFor={props.id}>{props.label}</label>
     <select name={props.name} id={props.id} required>
-        <option className='default' value=''>{props.placeholder}</option>
+        <option className='default' value=''hidden>{props.placeholder}</option>
         <option value="Web">Web</option>
         <option value="Embedded">Embedded</option>
         <option value="Python">Python</option>

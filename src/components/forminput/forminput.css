@@ -4,12 +4,13 @@
     align-items: center;
     margin: 2em;
 }
-input{
-    width:37%;
+.input-field input{
+    width:36%;
     height: 100%;
     background-color: #000D10;
     border: 1px solid #FFF;
     color: #FFF;
+    padding: 0.4em;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -26,10 +27,43 @@ text-transform: uppercase;
 width: 60%;
 }
 .input-field::placeholder{
-    color: color: #BEBEBE;
+    color: #BEBEBE;
     font-family: "Open Sans";
-    font-size: 20px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+.form-inputs input{
+    padding-left: 0.5em;
+    }
+.form-inputs input:hover,.form-inputs select:hover,#submit-btn:hover{
+        border: 2px solid grey;
+    }
+    @media ( max-width: 767px) {
+        .input-field {
+            flex-direction: column;
+            justify-content: start;
+            margin: 1em; 
+            width: 100%;
+          }
+        
+          .input-field input {
+            padding: 1em;
+            width: 80%; 
+            justify-self: center;
+          }
+        
+          label {
+            width: 80%; 
+            align-self: start;
+            margin-left: 0.8em;
+            padding-bottom: 0.5em;
+          }
+          .form-inputs{
+            align-items: start;
+            padding: 2em;
+
+          }
+    }
+    

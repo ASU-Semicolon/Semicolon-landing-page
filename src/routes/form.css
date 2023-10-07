@@ -12,6 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 .form-photo img{
     width: 80%;
@@ -25,6 +27,8 @@ width: 29%;
 height: 80%;
 background-color: rgba(0, 23, 28, 1);
 flex-wrap: nowrap;
+padding-top: 2em;
+padding-bottom: 2em;
 }
 #submit-btn{
     width:25%;
@@ -32,7 +36,7 @@ flex-wrap: nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1.5em;
+    margin-left: 1em;
     cursor: pointer;
     border: 2px solid #FFF;
     background: #FFB000;
@@ -43,9 +47,26 @@ font-weight: 400;
 text-transform: uppercase;
 margin-bottom: 0.5em;
 }
-.form-inputs input{
-padding-left: 0.5em;
-}
-.form-inputs input:hover,.form-inputs select:hover,#submit-btn:hover{
-    border: 2px solid grey;
-}
+@media (max-width: 768px) {
+  .form-main-page{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+    .form-photo {
+      display: none;
+    }
+  
+    .form-inputs {
+      padding-top: 4em;
+      padding-bottom: 4em;
+      width: 80%;
+      margin: 3em;
+      gap: 0.5em;
+    }
+    #submit-btn {
+      width: 40%; 
+      margin-left: 1.2em; 
+      padding: 0.5em 2em;
+    }
+  }

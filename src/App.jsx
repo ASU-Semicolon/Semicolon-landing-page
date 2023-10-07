@@ -7,15 +7,15 @@ import './App.css'
 
 export default function App() {
   return (
-    <Form/>
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<Base />}>
-    //       <Route index element={<Home />} />
-    //       <Route path="web" element={<Committee path="web" />}></Route>
-    //       <Route path="embedded" element={<Committee path="embedded" />}></Route>
-    //     </Route>
-    //   </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Base />}>
+          <Route index element={<Home />} />
+          <Route path="web" element={<Committee path="web" />}></Route>
+          <Route path="/form" element={<Form />}></Route>
+          <Route path="embedded" element={<Committee path="embedded" />}></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
