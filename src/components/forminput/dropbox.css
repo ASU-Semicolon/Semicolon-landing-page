@@ -2,8 +2,9 @@
     color: gray;
 }
 .input-field select{
+    font-size: 2rem;
     color: gray;
-    width: 39.3%;
+    width: clamp(8rem, 20rem, 25rem);
     height: 100%;
     background-color: #000D10;
     border: 1px solid #FFF;
@@ -15,7 +16,8 @@
 }
 @media (max-width: 768px) {
     .input-field select{
-        width: 90%;
-        padding: 1em;
+        width: 86%;
+        padding: 0.4em;
+        font-size: 1.6rem;
     }
 }

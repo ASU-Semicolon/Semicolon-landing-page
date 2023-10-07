@@ -6,7 +6,7 @@
     align-items: center;
 }
 .form-photo{
-    width: 29%;
+  width: clamp(35rem,35%,60rem);
     height: 80%;
     background-color: rgba(0, 13, 16, 1);
     display: flex;
@@ -17,13 +17,12 @@
 }
 .form-photo img{
     width: 80%;
-    height: 80%;
 }
 .form-inputs{
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-width: 29%;
+width: clamp(35rem,35%,60rem);
 height: 80%;
 background-color: rgba(0, 23, 28, 1);
 flex-wrap: nowrap;
@@ -32,7 +31,7 @@ padding-bottom: 2em;
 }
 #submit-btn{
     width:25%;
-    height: 6%;
+    height: 7%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +65,7 @@ margin-bottom: 0.5em;
     }
     #submit-btn {
       width: 40%; 
-      margin-left: 1.2em; 
+      margin-left: 1.3em; 
       padding: 0.5em 2em;
     }
   }

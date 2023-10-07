@@ -5,19 +5,20 @@
     margin: 2em;
 }
 .input-field input{
-    width:36%;
+   width: clamp(6rem, 18rem, 25rem);
     height: 100%;
     background-color: #000D10;
     border: 1px solid #FFF;
     color: #FFF;
-    padding: 0.4em;
+    padding: 0.3em;
+    font-size: 2rem;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
   -webkit-appearance: none;
   margin: 0;
 }
-label{
+.input-field label{
 color: white;
 font-family: "Montserrat";
 font-size: 1.8rem;
@@ -49,12 +50,13 @@ width: 60%;
           }
         
           .input-field input {
-            padding: 1em;
+            padding: 0.4em;
             width: 80%; 
             justify-self: center;
+            font-size: 1.6rem;
           }
         
-          label {
+          .input-field label {
             width: 80%; 
             align-self: start;
             margin-left: 0.8em;
