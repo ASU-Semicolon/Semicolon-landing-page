@@ -31,7 +31,7 @@ export default function Committee(props) {
             <p className='committee-description'>{committee[0].content}</p>
             <h1 className='committee-title'> <span className='committee-title-underline'>want to</span> join them</h1>
             <p className='committee-description'>{committee[0].content}</p>
-            <button className='committee-btn'> <a href="/" className='join-committee'>join us</a></button> 
+            <button className='committee-btn'> <a href="/form" className='join-committee'>join us</a></button> 
         </section>
 }
     </>
