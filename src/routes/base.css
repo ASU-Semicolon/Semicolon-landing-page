@@ -15,6 +15,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .main-logo-text {
@@ -81,7 +82,7 @@ header {
     all: unset;
 }
 
-.selected, .selected:hover {
+.nav-button.selected, .nav-button.selected:hover {
     border-bottom: #FFB000 solid 2px;
 }
 

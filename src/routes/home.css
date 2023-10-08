@@ -1,5 +1,5 @@
 main {
-    padding: 0 5vw;
+    padding: 0 0vw;
 }
 
 .home-container {
@@ -17,7 +17,8 @@ main {
     gap: 9%;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
+    padding-top: 3rem;
 }
 
 .contact-container {
@@ -98,6 +99,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 3rem;
 }
 
 .committee-wrapper {
@@ -106,7 +108,7 @@ main {
     justify-content: center;
     align-items: start;
     gap: 5rem;
-    max-width: 80vw;
+    width: clamp(50rem,90vw,120rem);
 }
 
 .committee-brief {
@@ -116,9 +118,13 @@ main {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 12rem;
+    column-gap: 8vw;
     row-gap: 5rem;
-    justify-content: start;
+    justify-content: center;
     align-items: stretch;
     align-self: center;
 }
+.cards-container::after {
+    content: "";
+    flex: auto;
+  }

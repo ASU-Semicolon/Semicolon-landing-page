@@ -12,7 +12,7 @@ export default function Home() {
     const committees = [{
         href: 'web',
         title: 'AI',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         icon: 'src/assets/cards/AI.png'
     },{
         href: 'web',
@@ -90,7 +90,6 @@ export default function Home() {
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.',
         icon: 'src/assets/cards/media.png'
     },];
-    console.log("link")
 
   return (
     <>
@@ -163,7 +162,8 @@ export default function Home() {
                     />
                     <div className="cards-container">
                         {committees.map((committee) => {
-                            return <Card 
+                            return <Card
+                                key={Math.random()}
                                 href={committee.href}
                                 title = {committee.title}
                                 description= {committee.description}

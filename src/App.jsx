@@ -11,9 +11,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Base />}>
           <Route index element={<Home />} />
-          <Route path="web" element={<Committee path="web" />}></Route>
+          <Route path=":committeeName" element={<Committee />}></Route>
           <Route path="/form" element={<Form />}></Route>
-          <Route path="embedded" element={<Committee path="embedded" />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
