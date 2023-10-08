@@ -36,8 +36,16 @@ export default function Base() {
           </div>
         </div>
         <div className="divnav">
-      <div class="collapse" id="navbarToggleExternalContent">
-  <div class=" p-4">
+<nav class="navbar navbar-dark ">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="True" aria-label="Toggle navigation">
+      <div class="nav-icon"></div>
+      <div class="nav-icon"></div>
+    </button>
+  </div>
+</nav>
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="p-4">
   <nav className='nav-bar-mobile'>
           <button className='nav-button selected'>Home</button>
           <button className='nav-button'>About Us</button>
@@ -46,14 +54,6 @@ export default function Base() {
         </nav>
   </div>
 </div>
-<nav class="navbar navbar-dark ">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="nav-icon"></div>
-      <div class="nav-icon"></div>
-    </button>
-  </div>
-</nav>
 </div>
 </div>
       </header>
