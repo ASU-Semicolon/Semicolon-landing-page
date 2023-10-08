@@ -35,27 +35,21 @@ export default function Base() {
             <p className='main-logo-slogan'>Debug Your <span className='orange-text'>Soul.</span></p>
           </div>
         </div>
-        <div className="divnav">
-<nav class="navbar navbar-dark ">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="True" aria-label="Toggle navigation">
+    <nav class="navbar navbar-dark ">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <div class="nav-icon"></div>
       <div class="nav-icon"></div>
-    </button>
-  </div>
-</nav>
-<div class="collapse" id="navbarToggleExternalContent">
-  <div class="p-4">
-  <nav className='nav-bar-mobile'>
+      </button>
+    </nav>
+    </div>
+   <div class="collapse" id="navbarToggleExternalContent">
+      <nav className='nav-bar-mobile'>
           <button className='nav-button selected'>Home</button>
           <button className='nav-button'>About Us</button>
           <button className='nav-button'>Committees</button>
           <button className='nav-button'>Contact Us</button>
         </nav>
-  </div>
-</div>
-</div>
-</div>
+        </div>
       </header>
 
       <Outlet />
@@ -108,6 +102,7 @@ export default function Base() {
           <p className='copyrights-text'>All Rights Reserved © SemiColon Club 2024</p>
         </div>
       </footer>
-    </>
+  
+  </>
   )
-  }
+}

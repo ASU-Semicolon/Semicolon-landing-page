@@ -22,28 +22,20 @@ body{
 }
 .all-mobile-nav{
     display: flex;
-    justify-content: space-between;
-
+    justify-content: space-around;
 }
-.divnav{
-    display: flex;
-    justify-content: end;
-    gap: 0px;
 
-}
 .nav-bar-mobile{
     background: #0B1616;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius:10px;
-    padding: 10px;
-    height: 80vw;
     position: absolute;
-    align-items: start;
-    top:90px;
-    right: 0%;
-    font-size: 8em;
+    align-items: center;
+    top:68px;
+    right: 2px;
+    gap: 1rem;
 
 }
 .nav-icon{
@@ -191,6 +183,9 @@ button.navbar-toggler{
         width: 90px;
 
     }
+    .main-logo{
+        float: left;
+    }
     .main-logo-title{
         font-size: 1.5rem;
         font-weight: 400;
@@ -214,15 +209,16 @@ button.navbar-toggler{
         line-height: 1rem;
         letter-spacing: 0.05em;
     }
-    .main-footer {
-     justify-content: end;
-     gap: 55px;
+    .footer-link-text {
+        font-size: 7px;
     }
-    
-.copyrights {
-    font-size: 0.5rem;
-    letter-spacing: 0.02em;
-    padding: 5px;
+    div.main-footer {
+        width:100%;
+    }
+   .copyrights {
+        font-size: 0.5rem;
+        letter-spacing: 0.02em;
+        padding: 5px;
 }
 
 }
