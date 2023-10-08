@@ -1,11 +1,28 @@
+
 import { Outlet, Link } from "react-router-dom";
 import FooterLink from '../components/footerLink/FooterLink'
+import { useEffect, useRef } from "react";
 import './base.css'
 
 export default function Base() {
+
+  const myDiv = useRef();
+
+  const handleResize = () => {
+    if (window.innerWidth > 480) {
+      myDiv.current.classList.remove("collapse");
+    } else {
+      myDiv.current.classList.add("collapse");      
+    }
+  }
+  
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, [])
+
   return (
     <>
-
+      
       <header className="desktop-header">
         <div className="main-logo">
           <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
@@ -17,38 +34,22 @@ export default function Base() {
           </div>
         </div>
         
-        <nav className='nav-bar'>
-          <button className='nav-button selected'>Home</button>
-          <button className='nav-button'>About Us</button>
-          <button className='nav-button'>Committees</button>
-          <button className='nav-button'>Contact Us</button>
-        </nav>
-      </header>
-      <header className="mobile-header">
-        <div className="all-mobile-nav">
-        <div className="main-logo">
-          <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
-          <div className="main-logo-text">
-            <h2 className='main-logo-title'>Sem,Colon
-              <div className="orange-circle"></div>
-            </h2>
-            <p className='main-logo-slogan'>Debug Your <span className='orange-text'>Soul.</span></p>
+        <div className="nav-wrapper">
+          <nav class="navbar navbar-dark mobile">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="nav-icon"></div>
+                <div class="nav-icon"></div>
+              </button>
+          </nav>
+
+          <div  id="navbarToggleExternalContent" ref={myDiv}>
+            <nav className='nav-bar'>
+              <button className='nav-button selected'>Home</button>
+              <button className='nav-button'>About Us</button>
+              <button className='nav-button'>Committees</button>
+              <button className='nav-button'>Contact Us</button>
+            </nav>
           </div>
-        </div>
-    <nav class="navbar navbar-dark ">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="nav-icon"></div>
-      <div class="nav-icon"></div>
-      </button>
-    </nav>
-    </div>
-   <div class="collapse" id="navbarToggleExternalContent">
-      <nav className='nav-bar-mobile'>
-          <button className='nav-button selected'>Home</button>
-          <button className='nav-button'>About Us</button>
-          <button className='nav-button'>Committees</button>
-          <button className='nav-button'>Contact Us</button>
-        </nav>
         </div>
       </header>
 
