@@ -76,3 +76,7 @@
     flex-shrink: 0;
     float: right;
 }
+
+.bold {
+    font-weight: bold;
+}
