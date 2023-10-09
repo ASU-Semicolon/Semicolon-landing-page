@@ -4,7 +4,7 @@
 .input-field select {
     font-size: 2rem;
     color: gray;
-    width: clamp(6rem, 50%, 25rem);
+    width: clamp(6rem, 50%, 50rem);
     box-sizing: border-box;
     height: 100%;
     background-color: #000d10;
