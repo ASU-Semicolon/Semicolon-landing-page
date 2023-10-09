@@ -2,44 +2,74 @@
     width: 100%;
     min-height: 70vh;
     display: flex;
-    justify-content: center;
+    /* gap:10px; */
+    /* flex-direction: column; */
     align-items: stretch;
+    justify-content: center;
+    /* align-items: center; */
     padding: 3rem 0;
 }
-.form-photo {
-    width: clamp(20rem, 40%, 45rem);
-    background-color: rgba(0, 13, 16, 1);
+.form-title {
+    color: #ffb000;
+    opacity: 0.7;
+    font-size: calc(3rem + 1.5vw);
+    letter-spacing: -3px;
+
+}
+
+.form-wrapper {
     display: flex;
     justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    /* filter: drop-shadow(0px 3px 6px rgba(255, 176, 0, 0.3))
+        drop-shadow(0px 3px 6px rgba(255, 176, 0, 0.1)); */
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+}
+.form-photo {
+    width: clamp(20rem, 40%, 50rem);
+    background-color: rgba(0, 13, 16, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    /* padding-top: 2em; */
+    /* padding-bottom: 2em; */
+    /* border-left: 1px solid #ffb000; */
+    border-top: 2px solid rgb(255, 176, 0,0.5);
+    border-bottom: 2px solid rgb(255, 176, 0,0.5);
 }
 .form-photo img {
-    width: 80%;
+    width: 90%;
+    filter: brightness(80%);
 }
 
 .form-inputs-wrapper {
     box-sizing: border-box;
-    width: clamp(35rem, 55%, 50rem);
+    width: clamp(35rem, 45%, 100rem);
     background-color: rgba(0, 23, 28, 1);
     padding: 3em;
+    border-top: 2px solid rgb(255, 176, 0,0.5);
+    border-bottom: 2px solid rgb(255, 176, 0,0.5);
 }
 
 .form-inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* padding: 0 10%; */
     width: 100%;
     flex-wrap: nowrap;
     gap: 2.5em;
+    /* filter: drop-shadow(0px 4px 4px rgba(185, 204, 60, 0.25)); */
 }
 #submit-btn {
-    max-width: 25%;
+    max-width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1em;
+    align-self: flex-end;
+    /* margin-left: 1em; */
     cursor: pointer;
     border: 2px solid #fff;
     background-color: green;
@@ -48,11 +78,9 @@
     font-size: 2rem;
     font-weight: 400;
     text-transform: uppercase;
-    padding: 0.4em;
+    padding: 10px 70px;
     border: 1px white solid;
-    transition:
-        background-color 500ms,
-        color 500ms;
+    transition: background-color 500ms, color 500ms;
 }
 #submit-btn:hover {
     background: rgb(19, 200, 19);
@@ -64,6 +92,13 @@
 .input-field:has(input:invalid, select:invalid) ~ #submit-btn:hover {
     background-color: gray;
 }
+
+.mobile { 
+    display: none;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 42px;
+}
 @media (max-width: 768px) {
     .form-main-page {
         justify-content: center;
@@ -72,6 +107,10 @@
     }
     .form-photo {
         display: none;
+    }
+
+    .mobile{
+        display: block;
     }
 
     .form-inputs-wrapper {
