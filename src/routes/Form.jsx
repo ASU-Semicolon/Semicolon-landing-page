@@ -8,11 +8,11 @@ import "./form.css";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
-    showErrorToast(message, theme = "dark") {
-      toast.error(message, {theme});
+    function showErrorToast(message, theme = "dark") {
+        toast.error(message, { theme });
     }
-    showSuccessToast(message, theme = "dark") {
-      toast.success(message, {theme});
+    function showSuccessToast(message, theme = "dark") {
+        toast.success(message, { theme });
     }
 
     const [committees, setCommittees] = useState([]);

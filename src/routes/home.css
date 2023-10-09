@@ -4,7 +4,7 @@ main {
 
 .home-container {
     display: grid;
-    grid-template-columns: 1rem repeat(auto-fill,1fr);
+    grid-template-columns: 1rem repeat(auto-fill, 1fr);
     column-gap: 9rem;
     justify-content: center;
     align-items: center;
@@ -78,14 +78,14 @@ a {
     font-weight: 300;
     line-height: 22px;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
     rotate: 90deg;
     cursor: pointer;
     transition: color 500ms;
 }
 
 .left-bar-text:hover {
-    color: #FFB000;
+    color: #ffb000;
 }
 
 .stats-container {
@@ -112,7 +112,7 @@ a {
     justify-content: center;
     align-items: start;
     gap: 5rem;
-    width: clamp(50rem,90vw,120rem);
+    width: clamp(50rem, 90vw, 120rem);
 }
 
 .committee-brief {

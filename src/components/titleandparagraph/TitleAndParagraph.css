@@ -1,5 +1,5 @@
 .text-container {
-    color: #FFFFFF;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,9 +11,9 @@
 .main-title {
     font-family: "Open Sans";
     line-height: 6vw;
-    font-size: clamp(2rem,calc(2rem + 2.4vw),4.5rem);
+    font-size: clamp(2rem, calc(2rem + 2.4vw), 4.5rem);
     font-weight: 700;
-    line-height: clamp(2.8rem,6vw,6rem);
+    line-height: clamp(2.8rem, 6vw, 6rem);
     text-align: left;
 }
 
@@ -28,12 +28,12 @@
 }
 
 .orange-text {
-    color: #FFB000;
+    color: #ffb000;
 }
 
 .button {
     border: 0px;
-    background: #112C2C;
+    background: #112c2c;
     display: inline-block;
 
     font-family: "Montserrat";
@@ -42,7 +42,7 @@
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
-    color: #E7E7E7;
+    color: #e7e7e7;
 
     padding: 0.6em 1.2em;
     margin: 1.5rem 0 0;
@@ -52,5 +52,5 @@
 
 .button:hover {
     border: 0px;
-    background-color: #FFB000;
+    background-color: #ffb000;
 }

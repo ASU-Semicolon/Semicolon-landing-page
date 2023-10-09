@@ -1,113 +1,116 @@
 .contact-container form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-  width: 100%;
-  max-width: 31.25em;
-  height: 40em;
-  border-radius: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("src/assets/contact-graphics/image 3.png");
-  background-size: cover;
-  gap: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    max-width: 31.25em;
+    height: 40em;
+    border-radius: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("src/assets/contact-graphics/image 3.png");
+    background-size: cover;
+    gap: 2em;
 }
-#form-background{
-  border-radius: 15px;
-  background: #0b2323;
-  box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  max-width: 31.25em;
-  max-height: 37.5em;
-  z-index: 1;
-
+#form-background {
+    border-radius: 15px;
+    background: #0b2323;
+    box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 31.25em;
+    max-height: 37.5em;
+    z-index: 1;
 }
 
 #getinfo {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
 }
 
 #name {
-  min-width: 10rem;
-  max-height: 4.7em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+    min-width: 10rem;
+    max-height: 4.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }
 
 #email {
-  min-width: 10rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+    min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }
 
 .contact-container .your-message {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .contact-container label {
-  color: #fff;
-  font-weight: 700;
-  font-family: "Montserrat";
-  font-size: 1.6rem;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    font-size: 1.6rem;
 }
 
 .contact-container input {
-  padding-left: 1.25em;
-  border-radius: 0.1875em;
-  border: 0.0625em solid #fff;
-  background: #3b6262;
-  min-height: 2.4em;
-  color: #fff;
-  cursor: pointer;
+    padding-left: 1.25em;
+    border-radius: 0.1875em;
+    border: 0.0625em solid #fff;
+    background: #3b6262;
+    min-height: 2.4em;
+    color: #fff;
+    cursor: pointer;
 }
 
 .contact-container ::placeholder {
-  color: #ffb000;
-  font-family: 'Montserrat';
-  font-weight: 400;
+    color: #ffb000;
+    font-family: "Montserrat";
+    font-weight: 400;
 }
 
 #message {
-  align-self: start;
-  margin-left: 3.1em;
+    align-self: start;
+    margin-left: 3.1em;
 }
 
 .contact-container textarea {
-  color: #fff;
-  width: 79%;
-  min-height: 6.4em;
-  border-radius: 0.5em;
-  cursor: pointer;
-  border: 1px solid #fff;
-  background: #3b6262;
-  resize: none;
-  padding-left: 1.25em;
-  padding-top: 0.625em;
+    color: #fff;
+    width: 79%;
+    min-height: 6.4em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    border: 1px solid #fff;
+    background: #3b6262;
+    resize: none;
+    padding-left: 1.25em;
+    padding-top: 0.625em;
 }
 
 .contact-container button {
-  margin-left: 2.3em;
-  color: #fff;
-  font-size: 1.6rem;
-  width: fit-content;
-  height: 2.375em;
-  cursor: pointer;
-  border-radius: 0.375em;
-  background: #284b4b;
-  box-shadow: 0px 0.25em 0.25em 0px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  font-family: 'Montserrat';
-  font-weight: 300;
-  text-transform: uppercase;
-  padding: 0em 1em;
+    margin-left: 2.3em;
+    color: #fff;
+    font-size: 1.6rem;
+    width: fit-content;
+    height: 2.375em;
+    cursor: pointer;
+    border-radius: 0.375em;
+    background: #284b4b;
+    box-shadow: 0px 0.25em 0.25em 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: "Montserrat";
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0em 1em;
 }
 
-.contact-container input:hover,textarea:hover,button:hover{
-  border: 1px solid grey;  }
+.contact-container input:hover,
+textarea:hover,
+button:hover {
+    border: 1px solid grey;
+}

@@ -31,7 +31,7 @@ header {
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 3.9rem;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .main-logo-slogan {
@@ -39,13 +39,13 @@ header {
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.5rem;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .orange-circle {
     width: 7px;
     height: 7px;
-    background-color: #FFB000;
+    background-color: #ffb000;
     border-radius: 100%;
     position: absolute;
     left: 42%;
@@ -67,26 +67,27 @@ header {
     font-weight: 300;
     line-height: 2.2rem;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
     transition: color 500ms;
     cursor: pointer;
 }
 
 .nav-button:hover {
     border: 0px;
-    color: #FFB000;
+    color: #ffb000;
 }
 
 .nav-button a {
     all: unset;
 }
 
-.selected, .selected:hover {
-    border-bottom: #FFB000 solid 2px;
+.selected,
+.selected:hover {
+    border-bottom: #ffb000 solid 2px;
 }
 
 .main-footer {
-    background: #0B1616;
+    background: #0b1616;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,12 +116,12 @@ header {
     font-weight: 300;
     line-height: 2rem;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .copyrights {
     background: #000000;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: "Montserrat";
     font-size: 1rem;
     font-weight: 300;

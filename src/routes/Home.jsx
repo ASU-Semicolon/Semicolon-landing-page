@@ -11,116 +11,127 @@ import "./home.css";
 import { HashLoader } from "react-spinners";
 
 export default function Home() {
-	const [committees, setCommittees] = useState();
-	useEffect(() => {
-		fetch(`${API_URL}/committee`)
-			.then((res) => res.json())
-			.then(({ data }) => setCommittees(data));
-	}, []);
+    const [committees, setCommittees] = useState();
+    useEffect(() => {
+        fetch(`${API_URL}/committee`)
+            .then((res) => res.json())
+            .then(({ data }) => setCommittees(data));
+    }, []);
 
-	return (
-		<>
-			<main>
-				<div className="home-container">
-					<div className="left-bar">
-						<a href="https://www.facebook.com/SemiColon.team.asu">
-							<p className="left-bar-text">FACEBOOK</p>
-						</a>
-						<a href="https://www.linkedin.com/company/semicolon.org">
-							<p className="left-bar-text">LINKEDIN</p>
-						</a>
-						<a href="">
-							<p className="left-bar-text"></p>
-						</a>
-					</div>
-					<div className="left-content">
-						<TitleAndParagraph
-							title={[
-								"Make Your College Years Count",
-								<span className="orange-text">.</span>,
-							]}
-							paragraph={
-								"Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with Semi Colon!"
-							}
-							button={"APPLY NOW"}
-							href="/form"
-						/>
-						<div className="logo-container">
-							<img src="src/assets/home-graphics/logo.svg" width="183px" alt="" />
-						</div>
-					</div>
-					<div className="right-content">
-						<Illustration url={"src/assets/home-graphics/home.png"} />
-					</div>
-					<div className="stats-container">
-						<Statistic number="2,000" text="Students Taught" />
-						<Statistic number="30" text="Instructors" />
-						<Statistic number="10" text="Workshops" />
-					</div>
-				</div>
+    return (
+        <>
+            <main>
+                <div className="home-container">
+                    <div className="left-bar">
+                        <a href="https://www.facebook.com/SemiColon.team.asu">
+                            <p className="left-bar-text">FACEBOOK</p>
+                        </a>
+                        <a href="https://www.linkedin.com/company/semicolon.org">
+                            <p className="left-bar-text">LINKEDIN</p>
+                        </a>
+                        <a href="">
+                            <p className="left-bar-text"></p>
+                        </a>
+                    </div>
+                    <div className="left-content">
+                        <TitleAndParagraph
+                            title={[
+                                "Make Your College Years Count",
+                                <span className="orange-text">.</span>,
+                            ]}
+                            paragraph={
+                                "Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with Semi Colon!"
+                            }
+                            button={"APPLY NOW"}
+                            href="/form"
+                        />
+                        <div className="logo-container">
+                            <img
+                                src="src/assets/home-graphics/logo.svg"
+                                width="183px"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div className="right-content">
+                        <Illustration
+                            url={"src/assets/home-graphics/home.png"}
+                        />
+                    </div>
+                    <div className="stats-container">
+                        <Statistic number="2,000" text="Students Taught" />
+                        <Statistic number="30" text="Instructors" />
+                        <Statistic number="10" text="Workshops" />
+                    </div>
+                </div>
 
-				<div className="about-container">
-					<div className="left-content">
-						<TitleAndParagraph
-							title={"Who We Are"}
-							paragraph={
-								"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur. Sed sed tristique purus. Nunc convallis, dolor ut porta ullamcorper, nibh ex dignissim turpis, vitae mattis tellus mauris eu nulla. Etiam dictum efficitur eros, a mollis nulla varius a. Curabitur pulvinar congue ultrices."
-							}
-							button={"Learn More"}
-							href="/"
-						/>
-						<Brief
-							title="Our history"
-							description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
-							url="src/assets/about-graphics/history.svg"
-						/>
-						<Brief
-							title="Our Vision"
-							description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
-							url="src/assets/about-graphics/vision.svg"
-						/>
-					</div>
-					<div className="right-content">
-						<Illustration url={"src/assets/about-graphics/about.png"} />
-					</div>
-				</div>
+                <div className="about-container">
+                    <div className="left-content">
+                        <TitleAndParagraph
+                            title={"Who We Are"}
+                            paragraph={
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur. Sed sed tristique purus. Nunc convallis, dolor ut porta ullamcorper, nibh ex dignissim turpis, vitae mattis tellus mauris eu nulla. Etiam dictum efficitur eros, a mollis nulla varius a. Curabitur pulvinar congue ultrices."
+                            }
+                            button={"Learn More"}
+                            href="/"
+                        />
+                        <Brief
+                            title="Our history"
+                            description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
+                            url="src/assets/about-graphics/history.svg"
+                        />
+                        <Brief
+                            title="Our Vision"
+                            description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
+                            url="src/assets/about-graphics/vision.svg"
+                        />
+                    </div>
+                    <div className="right-content">
+                        <Illustration
+                            url={"src/assets/about-graphics/about.png"}
+                        />
+                    </div>
+                </div>
 
-				<div className="committee-container">
-					<div className="committee-wrapper">
-						<TitleAndParagraph
-							className="committee-brief"
-							title="Our Committees"
-							paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris."
-							button=""
-						/>
+                <div className="committee-container">
+                    <div className="committee-wrapper">
+                        <TitleAndParagraph
+                            className="committee-brief"
+                            title="Our Committees"
+                            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris."
+                            button=""
+                        />
 
-						<div className="cards-container">
-							<HashLoader color={"#FFB000"} loading={!committees} />
-							{committees &&
-								committees.map((committee) => {
-									return (
-										<Card
-											key={Math.random()}
-											href={committee.title}
-											title={committee.title}
-											description={committee.brief}
-											icon={null}
-										/>
-									);
-								})}
-						</div>
-					</div>
-				</div>
+                        <div className="cards-container">
+                            <HashLoader
+                                color={"#FFB000"}
+                                loading={!committees}
+                            />
+                            {committees &&
+                                committees.map((committee) => {
+                                    return (
+                                        <Card
+                                            key={Math.random()}
+                                            href={committee.title}
+                                            title={committee.title}
+                                            description={committee.brief}
+                                            icon={null}
+                                        />
+                                    );
+                                })}
+                        </div>
+                    </div>
+                </div>
 
-				<div className="contact-container">
-					<div className="left-content">
-						<Info />
-					</div>
-					<div className="right-content">
-						<Contactform />
-					</div>
-				</div>
-			</main>
-		</>
-	);
+                <div className="contact-container">
+                    <div className="left-content">
+                        <Info />
+                    </div>
+                    <div className="right-content">
+                        <Contactform />
+                    </div>
+                </div>
+            </main>
+        </>
+    );
 }

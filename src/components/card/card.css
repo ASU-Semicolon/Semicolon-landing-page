@@ -5,11 +5,11 @@
     min-height: 25rem;
     border-radius: 22px;
     box-shadow: 20px 20px 50px 0px #00000080;
-    color: #FFFFFF;
+    color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
     border-width: 1px 0px 0px 1px;
     border-style: solid;
-    border-color: #FFFFFF80;
+    border-color: #ffffff80;
     padding: 3rem 3rem;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
     font-weight: 300;
     line-height: 34px;
     letter-spacing: 0.04em;
-    border-bottom: 2px #FFFFFF solid;
+    border-bottom: 2px #ffffff solid;
 }
 
 .card-description {
