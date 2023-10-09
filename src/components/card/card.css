@@ -1,6 +1,6 @@
 .card-container {
     position: relative;
-    max-width: 25rem;
+    max-width: 28rem;
     max-height: 35rem;
     min-height: 25rem;
     border-radius: 22px;
@@ -10,7 +10,7 @@
     border-width: 1px 0px 0px 1px;
     border-style: solid;
     border-color: #FFFFFF80;
-    padding: 4rem 3rem;
+    padding: 3rem 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

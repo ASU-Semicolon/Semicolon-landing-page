@@ -97,9 +97,15 @@ export default function Home() {
             
             <div className="home-container">
                 <div className="left-bar">
-                    <p className='left-bar-text'>FACEBOOK</p>
-                    <p className='left-bar-text'>LINKEDIN</p>
-                    <p className='left-bar-text'>INSTAGRAM</p>
+                    <a href="https://www.facebook.com/SemiColon.team.asu">
+                        <p className='left-bar-text'>FACEBOOK</p>
+                    </a>
+                    <a href="https://www.linkedin.com/company/semicolon.org">
+                        <p className='left-bar-text'>LINKEDIN</p>
+                    </a>
+                    <a href="">
+                        <p className='left-bar-text'></p>
+                    </a>
                 </div>
                 <div className="left-content">
                     <TitleAndParagraph

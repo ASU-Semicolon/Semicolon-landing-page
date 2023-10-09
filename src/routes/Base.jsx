@@ -2,7 +2,9 @@ import { Outlet, Link } from "react-router-dom";
 import FooterLink from '../components/footerLink/FooterLink'
 import { useEffect, useRef } from "react";
 import { scrollContext } from "../Context";
-import './base.css'
+import './base-css/nav.css'
+import './base-css/footer.css'
+import './base-css/logo.css'
 
 export default function Base() {
 
@@ -20,10 +22,14 @@ export default function Base() {
   }
   
   const handleResize = () => {
-    if (window.innerWidth > 480) {
+    if (window.innerWidth > 760) {
       myDiv.current.classList.remove("collapse");
+      myDiv.current.setAttribute("data-bs-toggle", "");
+      myDiv.current.setAttribute("data-bs-target", "");
     } else {
       myDiv.current.classList.add("collapse");      
+      myDiv.current.setAttribute("data-bs-toggle", "collapse");
+      myDiv.current.setAttribute("data-bs-target", "#navbarToggleExternalContent");
     }
   }
   
@@ -34,16 +40,18 @@ export default function Base() {
   return (
     <>
       
-      <header className="desktop-header">
-        <div className="main-logo">
-          <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
-          <div className="main-logo-text">
-            <h2 className='main-logo-title'>Sem,Colon
-              <div className="orange-circle"></div>
-            </h2>
-            <p className='main-logo-slogan'>Debug Your <span className='orange-text'>Soul.</span></p>
+      <header>
+        <Link to="/">
+          <div className="main-logo">
+            <img src="src/assets/home-graphics/logo.svg" width="90px" alt="" />
+            <div className="main-logo-text">
+              <h2 className='main-logo-title'>Sem,Colon
+                <div className="orange-circle"></div>
+              </h2>
+              <p className='main-logo-slogan'>Debug Your <span className='orange-text'>Soul.</span></p>
+            </div>
           </div>
-        </div>
+        </Link>
         
         <div className="nav-wrapper">
           <nav class="navbar navbar-dark mobile">
@@ -79,15 +87,18 @@ export default function Base() {
 
       <footer>
         <div className="main-footer">
-          <div className="main-logo">
-            <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
-            <div className="main-logo-text">
-              <h2 className='main-logo-title'>Sem,Colon
-                <div className="orange-circle"></div>
-              </h2>
-              <p className='main-logo-slogan'>Debug Your <span className='orange-text'>Soul.</span></p>
+          <Link to="/">
+            <div className="main-logo">
+              <img src="src/assets/home-graphics/logo.svg" width="90px" alt="" />
+              <div className="main-logo-text">
+                <h2 className='main-logo-title'>Sem,Colon
+                  <div className="orange-circle"></div>
+                </h2>
+                <p className='main-logo-slogan'>Debug Your <span className='orange-text'>Soul.</span></p>
+              </div>
             </div>
-          </div>
+          </Link>
+
           <div className="footer-links-container">
             <div className="footer-links-list">
               <p className='footer-list-title'>FOLLOW US</p>

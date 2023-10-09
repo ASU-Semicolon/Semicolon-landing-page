@@ -13,6 +13,7 @@
     font-weight: 400;
     line-height: 12px;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .footer-link-container:hover .footer-link-text{
