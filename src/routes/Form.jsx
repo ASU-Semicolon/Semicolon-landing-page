@@ -44,7 +44,9 @@ export default function Home() {
                     showSuccessToast("Your application has been submitted");
                     event.target.reset();
                 } else {
-                    showErrorToast(res.message);
+                    showErrorToast(
+                        "Phone or email has been used before, try again with new data"
+                    );
                 }
             })
             .catch((err) => {
@@ -92,6 +94,19 @@ export default function Home() {
                             id="email"
                             placeholder="Your email"
                         />
+                         <Dropdownmenu
+                            label="Academic Year"
+                            name="academic_year"
+                            id="academicyear"
+                            placeholder="Your academic year"
+                            options={[
+                                "Freshman",
+                                "Sophomore",
+                                "Junior",
+                                "Senior 1",
+                                "Senior 2",
+                            ]}
+                        />
                         <Dropdownmenu
                             label="First Preferance"
                             name="first_preference"
@@ -120,13 +135,7 @@ export default function Home() {
                             placeholder="Your previous experience"
                             multiline={true}
                         />
-                        <Input
-                            type="text"
-                            label="Academic Year"
-                            name="academic_year"
-                            id="academicyear"
-                            placeholder="Your academic year"
-                        />
+                       
                         <button type="submit" id="submit-btn">
                             Submit
                         </button>
