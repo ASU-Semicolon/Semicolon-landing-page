@@ -1,12 +1,14 @@
 import { Outlet, Link } from "react-router-dom";
 import FooterLink from '../components/footerLink/FooterLink'
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { scrollContext } from "../Context";
 import './base.css'
 
 export default function Base() {
 
+
   const scrollRef = useRef(new Array());
+  const myDiv = useRef();
 
   const handleScroll = (event, num) => {
     const buttons = event.target.parentElement.parentElement.children
@@ -16,10 +18,23 @@ export default function Base() {
     event.target.classList.add("selected");
     scrollRef.current[num].scrollIntoView({behavior: 'smooth'});
   }
-
+  
+  const handleResize = () => {
+    if (window.innerWidth > 480) {
+      myDiv.current.classList.remove("collapse");
+    } else {
+      myDiv.current.classList.add("collapse");      
+    }
+  }
+  
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  }, [])
+  
   return (
     <>
-      <header>
+      
+      <header className="desktop-header">
         <div className="main-logo">
           <img src="src/assets/home-graphics/logo.svg" width="130px" alt="" />
           <div className="main-logo-text">
@@ -30,20 +45,32 @@ export default function Base() {
           </div>
         </div>
         
-        <nav className='nav-bar'>
-          <Link to="/">
-            <button className='nav-button selected' onClick={(event) => {handleScroll(event, 0)}}>Home</button>
-          </Link>
-          <Link to="/">
-            <button className='nav-button' onClick={(event) => {handleScroll(event, 1)}}>About Us</button>
-          </Link>
-          <Link to="/">
-            <button className='nav-button' onClick={(event) => {handleScroll(event, 2)}}>Committees</button>
-          </Link>
-          <Link to="/">
-            <button className='nav-button' onClick={(event) => {handleScroll(event, 3)}}>Contact Us</button>
-          </Link>
-        </nav>
+        <div className="nav-wrapper">
+          <nav class="navbar navbar-dark mobile">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="nav-icon"></div>
+                <div class="nav-icon"></div>
+              </button>
+          </nav>
+
+          <div  id="navbarToggleExternalContent" ref={myDiv}>
+            <nav className='nav-bar'>
+              <Link to="/">
+                <button className='nav-button selected' onClick={(event) => {handleScroll(event, 0)}}>Home</button>
+              </Link>
+              <Link to="/">
+                <button className='nav-button' onClick={(event) => {handleScroll(event, 1)}}>About Us</button>
+              </Link>
+              <Link to="/">
+                <button className='nav-button' onClick={(event) => {handleScroll(event, 2)}}>Committees</button>
+              </Link>
+              <Link to="/">
+                <button className='nav-button' onClick={(event) => {handleScroll(event, 3)}}>Contact Us</button>
+              </Link>
+            </nav>
+          </div>
+        </div>
+
       </header>
       
       <scrollContext.Provider value={{scrollRef}} >
@@ -116,6 +143,7 @@ export default function Base() {
           <p className='copyrights-text'>All Rights Reserved © SemiColon Club 2024</p>
         </div>
       </footer>
-    </>
+  
+  </>
   )
 }

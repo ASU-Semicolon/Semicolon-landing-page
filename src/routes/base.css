@@ -1,14 +1,55 @@
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem 2rem 0;
+body{
     position: sticky;
     top: 0px;
     background-image: url("src/assets/background.svg");
     background-size: cover;
     background-attachment: fixed;
-    z-index: 10;
+
+}
+.desktop-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0;
+    position: sticky;
+    top: 0px;
+
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.mobile-header{
+    display: none;
+    position: sticky;
+    top: 0px;
+}
+.all-mobile-nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.mobile{
+    display: none;
+}
+
+.nav-icon{
+    width: 26px;
+    height: 4px;
+    border-radius: 15px;
+    background: #FFB000;
+    margin: 4px auto;
+}
+
+button.navbar-toggler{
+    display: flex;
+    flex-direction: column;
+    border: 0px;
 }
 
 .main-logo {
@@ -17,6 +58,10 @@ header {
     align-items: center;
     user-select: none;
 }
+
+
+
+
 
 .main-logo-text {
     display: flex;
@@ -89,14 +134,14 @@ header {
 .main-footer {
     background: #0B1616;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 1% calc(6% - 1rem);
 }
 
 .footer-links-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 10vw;
     padding: 0 2%;
@@ -130,4 +175,66 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px;
+}
+
+@media (max-width:480px){
+    
+    .main-logo img{
+        width: 90px;
+
+    }
+    .nav-bar {
+        background: #0B1616;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius:10px;
+        position: absolute;
+        align-items: center;
+        top:68px;
+        right: 2px;
+        gap: 1.2rem;
+        padding: 1rem;
+    }
+    .mobile{
+        display: flex;
+    }
+    .main-logo{
+        float: left;
+    }
+    .main-logo-title{
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.9rem;
+    }
+    .orange-circle { 
+        width: 3.5px;
+        height: 3.5px;
+        position: absolute;
+        top: 7px;
+        left: 35px;
+    }
+    .main-logo-slogan {
+        font-size: 0.6rem;
+        font-weight: 400;
+        line-height: 0.7rem;
+    }
+    .footer-list-title {
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1rem;
+        letter-spacing: 0.05em;
+    }
+    .footer-link-text {
+        font-size: 7px;
+    }
+    div.main-footer {
+        width:100%;
+    }
+   .copyrights {
+        font-size: 0.5rem;
+        letter-spacing: 0.02em;
+        padding: 5px;
+}
+
 }
