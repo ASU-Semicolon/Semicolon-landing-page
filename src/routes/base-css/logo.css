@@ -1,0 +1,71 @@
+.main-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.main-logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+}
+
+.main-logo-title {
+    font-family: "Montserrat";
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 3.9rem;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.main-logo-slogan {
+    font-family: "Montserrat";
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.orange-circle {
+    width: 7px;
+    height: 7px;
+    background-color: #FFB000;
+    border-radius: 100%;
+    position: absolute;
+    left: 42%;
+    top: 12px;
+}
+
+@media (max-width:760px) {
+    .main-logo{
+        float: left;
+    }
+    .main-logo img{
+        width: 60px;
+    }
+    .main-logo-text {
+        gap: 0.6rem;
+    }
+    .main-logo-title{
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.9rem;
+    }
+    .main-logo-slogan {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 0.7rem;
+    }
+    .orange-circle { 
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        top: 6px;
+        left: 46px;
+    }
+}
