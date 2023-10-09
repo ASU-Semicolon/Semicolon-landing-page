@@ -1,22 +1,28 @@
 import './contactInput.css'
 
 export default function Contactform() {
+
+   const handleContactUsSumbit = (event) => {
+      event.preventDefault();
+      event.target.reset();
+   }
+
   return (
     <>
          <div id='form-background'>
-         <form>
+         <form onSubmit={handleContactUsSumbit}>
              <div id='getinfo'>
                  <div id='name'>
-                     <label for='username'>Your Name</label>
+                     <label htmlFor='username'>Your Name</label>
                      <input id='username' type='text' placeholder='Your Name' required></input>
                   </div>
                   <div id='email'>
-                     <label for='useremail' >Your Email</label>
+                     <label htmlFor='useremail' >Your Email</label>
                      <input id='useremail' type='email' placeholder='Your Email' required></input>
                   </div>
              </div>
              <div className='your-message'>
-             <label for='thought' id='message'>Your Message or Thought</label>
+             <label htmlFor='thought' id='message'>Your Message or Thought</label>
              <textarea id='thought' placeholder='Your Message or Thought or whatever...' required></textarea>
              </div>
              <button type='submit'>Submit</button>

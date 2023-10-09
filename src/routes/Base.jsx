@@ -1,13 +1,24 @@
-
 import { Outlet, Link } from "react-router-dom";
 import FooterLink from '../components/footerLink/FooterLink'
 import { useEffect, useRef } from "react";
+import { scrollContext } from "../Context";
 import './base.css'
 
 export default function Base() {
 
+
+  const scrollRef = useRef(new Array());
   const myDiv = useRef();
 
+  const handleScroll = (event, num) => {
+    const buttons = event.target.parentElement.parentElement.children
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].children[0].classList.remove("selected");
+    }
+    event.target.classList.add("selected");
+    scrollRef.current[num].scrollIntoView({behavior: 'smooth'});
+  }
+  
   const handleResize = () => {
     if (window.innerWidth > 480) {
       myDiv.current.classList.remove("collapse");
@@ -19,7 +30,7 @@ export default function Base() {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   }, [])
-
+  
   return (
     <>
       
@@ -44,16 +55,27 @@ export default function Base() {
 
           <div  id="navbarToggleExternalContent" ref={myDiv}>
             <nav className='nav-bar'>
-              <button className='nav-button selected'>Home</button>
-              <button className='nav-button'>About Us</button>
-              <button className='nav-button'>Committees</button>
-              <button className='nav-button'>Contact Us</button>
+              <Link to="/">
+                <button className='nav-button selected' onClick={(event) => {handleScroll(event, 0)}}>Home</button>
+              </Link>
+              <Link to="/">
+                <button className='nav-button' onClick={(event) => {handleScroll(event, 1)}}>About Us</button>
+              </Link>
+              <Link to="/">
+                <button className='nav-button' onClick={(event) => {handleScroll(event, 2)}}>Committees</button>
+              </Link>
+              <Link to="/">
+                <button className='nav-button' onClick={(event) => {handleScroll(event, 3)}}>Contact Us</button>
+              </Link>
             </nav>
           </div>
         </div>
-      </header>
 
-      <Outlet />
+      </header>
+      
+      <scrollContext.Provider value={{scrollRef}} >
+        <Outlet />
+      </scrollContext.Provider>
 
       <footer>
         <div className="main-footer">
@@ -70,32 +92,50 @@ export default function Base() {
             <div className="footer-links-list">
               <p className='footer-list-title'>FOLLOW US</p>
               <FooterLink 
+                href="https://www.facebook.com/SemiColon.team.asu"
+                target='_blank'
                 url="src/assets/footer/Facebook.svg"
                 text="Facebook"
               />
               <FooterLink 
+                href="https://www.linkedin.com/company/semicolon.org"
+                target='_blank'
                 url="src/assets/footer/LinkedIn.svg"
                 text="LinkedIn"
               />
               <FooterLink 
+                href=""
+                target='_blank'
                 url="src/assets/footer/Instagram.svg"
                 text="Instagram"
               />
             </div>
             <div className="footer-links-list">
               <p className='footer-list-title'>Navigate</p>
-              <FooterLink 
-                url="src/assets/footer/Home.svg"
-                text="Home"
-              />
-              <FooterLink 
-                url="src/assets/footer/About.svg"
-                text="About"
-              />
-              <FooterLink 
-                url="src/assets/footer/People.svg"
-                text="Committees"
-              />
+              <Link to="/">
+                <FooterLink
+                  handleScroll = {(event) => {handleScroll(event, 0)}}
+                  target=''
+                  url="src/assets/footer/Home.svg"
+                  text="Home"
+                />
+              </Link>
+              <Link to="/">
+                <FooterLink 
+                  handleScroll = {(event) => {handleScroll(event, 1)}}
+                  target=''
+                  url="src/assets/footer/About.svg"
+                  text="About"
+                />
+              </Link>
+              <Link to="/">
+                <FooterLink 
+                  handleScroll = {(event) => {handleScroll(event, 2)}}
+                  target=''
+                  url="src/assets/footer/People.svg"
+                  text="Committees"
+                />
+              </Link>
             </div>
           </div>
         </div>

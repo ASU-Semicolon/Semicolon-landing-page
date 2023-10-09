@@ -80,6 +80,7 @@
 }
 
 .contact-container textarea {
+  color: #fff;
   width: 79%;
   min-height: 6.4em;
   border-radius: 0.5em;
