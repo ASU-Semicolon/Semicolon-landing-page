@@ -6,8 +6,18 @@
 }
 .input-field input {
     box-sizing: border-box;
-    width: clamp(6rem, 50%, 25rem);
+    width: clamp(6rem, 50%, 50rem);
     height: 100%;
+    background-color: #000d10;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.6em;
+    font-size: 2rem;
+}
+.input-field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100px;
     background-color: #000d10;
     border: 1px solid #fff;
     color: #fff;
