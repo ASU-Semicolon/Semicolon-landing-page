@@ -1,4 +1,4 @@
-.form-main-page{
+.form-main-page {
     width: 100%;
     min-height: 70vh;
     display: flex;
@@ -6,8 +6,8 @@
     align-items: stretch;
     padding: 3rem 0;
 }
-.form-photo{
-  width: clamp(20rem,40%,45rem);
+.form-photo {
+    width: clamp(20rem, 40%, 45rem);
     background-color: rgba(0, 13, 16, 1);
     display: flex;
     justify-content: center;
@@ -15,33 +15,33 @@
     padding-top: 2em;
     padding-bottom: 2em;
 }
-.form-photo img{
+.form-photo img {
     width: 80%;
 }
 
 .form-inputs-wrapper {
-  box-sizing: border-box;
-  width: clamp(35rem,55%,50rem);
-  background-color: rgba(0, 23, 28, 1);
-  padding: 3em;
+    box-sizing: border-box;
+    width: clamp(35rem, 55%, 50rem);
+    background-color: rgba(0, 23, 28, 1);
+    padding: 3em;
 }
 
-.form-inputs{
-display: flex;
-flex-direction: column;
-justify-content: center;
-width: 100%;
-flex-wrap: nowrap;
-gap: 2.5em;
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 2.5em;
 }
-#submit-btn{
-    max-width:25%;
+#submit-btn {
+    max-width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 1em;
     cursor: pointer;
-    border: 2px solid #FFF;
+    border: 2px solid #fff;
     background-color: green;
     color: white;
     font-family: "Montserrat";
@@ -50,44 +50,46 @@ gap: 2.5em;
     text-transform: uppercase;
     padding: 0.4em;
     border: 1px white solid;
-    transition: background-color 500ms, color 500ms;
+    transition:
+        background-color 500ms,
+        color 500ms;
 }
 #submit-btn:hover {
-  background: rgb(19, 200, 19);
+    background: rgb(19, 200, 19);
 }
-.input-field:has(input:invalid, select:invalid) ~ #submit-btn{
-  background: #FFB000;
-  color: black;
+.input-field:has(input:invalid, select:invalid) ~ #submit-btn {
+    background: #ffb000;
+    color: black;
 }
 .input-field:has(input:invalid, select:invalid) ~ #submit-btn:hover {
-  background-color: gray;
+    background-color: gray;
 }
 @media (max-width: 760px) {
-  .form-main-page{
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+    .form-main-page {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
     .form-photo {
-      display: none;
+        display: none;
     }
-  
+
     .form-inputs-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 4em;
-      padding-bottom: 4em;
-      width: 90%;
-      gap: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        width: 90%;
+        gap: 0.5em;
     }
-    .form-inputs{
-      align-items: start;
-      width: clamp(25rem, 85%, 45rem);
+    .form-inputs {
+        align-items: start;
+        width: clamp(25rem, 85%, 45rem);
     }
     #submit-btn {
-      max-width: 40%; 
-      margin-left: 1.3em; 
-      padding: 0.5em 2em;
+        max-width: 40%;
+        margin-left: 1.3em;
+        padding: 0.5em 2em;
     }
-  }
+}

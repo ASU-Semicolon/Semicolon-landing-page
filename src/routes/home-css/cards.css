@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: start;
     gap: 5rem;
-    width: clamp(30rem,90vw,120rem);
+    width: clamp(30rem, 90vw, 120rem);
 }
 
 .committee-brief {

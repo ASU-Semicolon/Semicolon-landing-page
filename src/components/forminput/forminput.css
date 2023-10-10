@@ -1,64 +1,65 @@
-.input-field{
+.input-field {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
-.input-field input{
+.input-field input {
     box-sizing: border-box;
     width: clamp(6rem, 50%, 25rem);
     height: 100%;
-    background-color: #000D10;
-    border: 1px solid #FFF;
-    color: #FFF;
+    background-color: #000d10;
+    border: 1px solid #fff;
+    color: #fff;
     padding: 0.6em;
     font-size: 2rem;
 }
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-  margin: 0;
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-.input-field label{
-color: white;
-font-family: "Montserrat";
-font-size: 1.8rem;
-font-weight: 400;
-letter-spacing: 1.08px;
-text-transform: uppercase;
-width: 60%;
+.input-field label {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+    width: 60%;
 }
-.input-field::placeholder{
-    color: #BEBEBE;
+.input-field::placeholder {
+    color: #bebebe;
     font-family: "Open Sans";
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.form-inputs input:hover,.form-inputs select:hover,#submit-btn:hover{
+.form-inputs input:hover,
+.form-inputs select:hover,
+#submit-btn:hover {
     border: 1px solid grey;
 }
 
-@media ( max-width: 760px) {
+@media (max-width: 760px) {
     .input-field {
         flex-direction: column;
         justify-content: start;
         align-items: start;
         width: 100%;
-      }
-    
-      .input-field input {
+    }
+
+    .input-field input {
         padding: 0.7em;
         width: 100%;
         justify-self: center;
         font-size: 1.6rem;
-      }
-    
-      .input-field label {
-        width: 80%; 
+    }
+
+    .input-field label {
+        width: 80%;
         align-self: start;
         padding-bottom: 0.5em;
-      }
+    }
 }
-    

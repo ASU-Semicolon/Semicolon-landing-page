@@ -1,22 +1,22 @@
-.default{
+.default {
     color: gray;
 }
-.input-field select{
+.input-field select {
     font-size: 2rem;
     color: gray;
     width: clamp(6rem, 50%, 25rem);
     box-sizing: border-box;
     height: 100%;
-    background-color: #000D10;
-    border: 1px solid #FFF;
+    background-color: #000d10;
+    border: 1px solid #fff;
     padding: 0.6em 0.3em;
 }
-.input-field option{
-    background-color: #000D10;
+.input-field option {
+    background-color: #000d10;
     color: gray;
 }
 @media (max-width: 760px) {
-    .input-field select{
+    .input-field select {
         width: 100%;
         padding: 0.6em;
         font-size: 1.6rem;

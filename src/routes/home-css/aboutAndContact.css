@@ -18,7 +18,8 @@
 }
 
 @media (max-width: 760px) {
-    .about-container, .contact-container {
+    .about-container,
+    .contact-container {
         max-width: 55rem;
     }
 
