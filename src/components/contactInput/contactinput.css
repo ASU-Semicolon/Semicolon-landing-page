@@ -83,11 +83,6 @@
     font-weight: 400;
 }
 
-#message {
-    align-self: start;
-    margin-left: 3.1em;
-}
-
 .contact-container textarea {
     color: #fff;
     width: 100%;
@@ -102,7 +97,7 @@
 }
 
 .contact-container button {
-    /* margin-left: 2.3em; */
+    margin-left: 2rem;
     color: #fff;
     font-size: 1.6rem;
     width: fit-content;
@@ -149,6 +144,7 @@ textarea:hover,
         font-size: 14px;
         line-height: 17px;
         color: #ffb000;
+        padding-left: 1rem;
     }
     .contact-container input,
     .contact-container textarea {

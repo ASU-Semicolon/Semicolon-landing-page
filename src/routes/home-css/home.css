@@ -5,25 +5,6 @@
     justify-content: center;
     align-items: center;
     min-height: 70vh;
-    padding-top: 1px;
-}
-
-.about-container {
-    display: flex;
-    gap: 9%;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    padding-top: 3rem;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    gap: 9%;
-    font-size: 1.6rem;
     padding: 1rem 5vw 0;
 }
 
@@ -96,46 +77,22 @@ a {
     align-self: start;
 }
 
-.committee-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3rem;
-}
-
-.committee-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 5rem;
-    width: clamp(50rem, 90vw, 120rem);
-}
-
-.committee-brief {
-    max-width: 50rem;
-}
-
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 8vw;
-    row-gap: 5rem;
-    justify-content: center;
-    align-items: stretch;
-    align-self: center;
-}
-/* .cards-container::after {
-    content: "";
-    flex: 0 0 1;
-} */
 @media (max-width: 760px) {
+
+    div.home-container,
+    div.about-container,
+    div.contact-container,
+    div.committee-brief {
+        max-width: 65rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
     .home-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        max-width: 55rem;
         min-height: 80vh;
         gap: 3rem;
     }

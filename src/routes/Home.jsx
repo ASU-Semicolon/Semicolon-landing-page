@@ -8,6 +8,8 @@ import Contactform from "../components/contactInput/ContactInput";
 import { useEffect, useState } from "react";
 import { API_URL } from "../keys.config";
 import "./home-css/home.css";
+import "./home-css/aboutAndContact.css";
+import "./home-css/cards.css";
 import { HashLoader } from "react-spinners";
 
 export default function Home() {
@@ -21,6 +23,7 @@ export default function Home() {
     return (
         <>
             <main>
+            <div className='mobile-wrapper'>
                 <div className="home-container">
                     <div className="left-bar">
                         <a href="https://www.facebook.com/SemiColon.team.asu">
@@ -36,8 +39,8 @@ export default function Home() {
                     <div className="left-content">
                         <TitleAndParagraph
                             title={[
-                                "Make Your College Years Count",
-                                <span className="orange-text">.</span>,
+                                <span key={1}>Make Your College Years Count</span>,
+                                <span className="orange-text" key={2}>.</span>,
                             ]}
                             paragraph={
                                 "Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with Semi Colon!"
@@ -59,9 +62,9 @@ export default function Home() {
                         />
                     </div>
                     <div className="stats-container">
-                        <Statistic number="2,000" text="Students Taught" />
-                        <Statistic number="30" text="Instructors" />
-                        <Statistic number="10" text="Workshops" />
+                        <Statistic number="500" text="Workshop Students" />
+                        <Statistic number="28" text="Instructors" />
+                        <Statistic number="13" text="Workshops" />
                     </div>
                 </div>
 
@@ -73,7 +76,7 @@ export default function Home() {
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur. Sed sed tristique purus. Nunc convallis, dolor ut porta ullamcorper, nibh ex dignissim turpis, vitae mattis tellus mauris eu nulla. Etiam dictum efficitur eros, a mollis nulla varius a. Curabitur pulvinar congue ultrices."
                             }
                             button={"Learn More"}
-                            href="/"
+                            href="https://www.facebook.com/SemiColon.team.asu/posts/pfbid0eqbNgvA2E1yjKh5V6cjZYxr4z7h3x4pfcLkwJ1HQZMxhrzFapyRvFj2qymhh73udl"
                         />
                         <Brief
                             title="Our history"
@@ -130,6 +133,7 @@ export default function Home() {
                     <div className="right-content">
                         <Contactform />
                     </div>
+                </div>
                 </div>
             </main>
         </>

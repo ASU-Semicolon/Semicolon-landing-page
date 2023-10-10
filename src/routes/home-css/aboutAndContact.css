@@ -18,15 +18,12 @@
 }
 
 @media (max-width: 760px) {
-    .about-container,
-    .contact-container {
-        max-width: 55rem;
-    }
 
     .contact-container {
         flex-direction: column;
         height: fit-content;
-        padding: 5rem 0 2rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
         gap: 2rem;
     }
 
