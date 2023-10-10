@@ -9,7 +9,7 @@
 .footer-links-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     gap: 10vw;
     padding: 1rem 2% 0;
 }
@@ -32,6 +32,10 @@
     margin: 0;
 }
 
+.footer-links-list:first-child .footer-list-title {
+    margin-bottom: 1rem;
+}
+
 .copyrights {
     background: #0B1616;
     color: #FFFFFF;
@@ -42,7 +46,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0 0;
+    padding: 0 0 10px;
+}
+
+.copyrights p {
+    margin: 0;
 }
 
 @media (max-width:760px){
@@ -61,6 +69,6 @@
    .copyrights {
         font-size: 0.8rem;
         letter-spacing: 0.02em;
-        padding: 5px;
+        padding-bottom: 5px;
     }
 }
