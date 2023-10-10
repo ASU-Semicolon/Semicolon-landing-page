@@ -9,34 +9,34 @@ import './base-css/logo.css'
 
 export default function Base() {
 
-  
+  const navRef = useRef(new Array());
   const scrollRef = useRef(new Array());
-  const myDiv = useRef();
+  const navToggleButtton = useRef();
 
-  const handleScroll = (event, num) => {
-    const buttons = event.target.parentElement.parentElement.children
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].children[0].classList.remove("selected");
+  const handleScroll = (num) => {
+    for (let i = 0; i < navRef.current.length; i++) {
+      navRef.current[i].classList.remove("selected");
     }
-    event.target.classList.add("selected");
+    navRef.current[num].classList.add("selected");
     scrollRef.current[num].scrollIntoView({behavior: 'smooth'});
   }
   
   const handleResize = () => {
     if (window.innerWidth > 760) {
-      myDiv.current.classList.remove("collapse");
-      myDiv.current.setAttribute("data-bs-toggle", "");
-      myDiv.current.setAttribute("data-bs-target", "");
+      navToggleButtton.current.classList.remove("collapse");
+      navToggleButtton.current.setAttribute("data-bs-toggle", "");
+      navToggleButtton.current.setAttribute("data-bs-target", "");
     } else {
-      myDiv.current.classList.add("collapse");      
-      myDiv.current.setAttribute("data-bs-toggle", "collapse");
-      myDiv.current.setAttribute("data-bs-target", "#navbarToggleExternalContent");
+      navToggleButtton.current.classList.add("collapse");      
+      navToggleButtton.current.setAttribute("data-bs-toggle", "collapse");
+      navToggleButtton.current.setAttribute("data-bs-target", "#navbarToggleExternalContent");
     }
   }
   
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-      }, [])
+    handleResize();
+  }, [])
   
   return (
     <>
@@ -55,26 +55,34 @@ export default function Base() {
         </Link>
         
         <div className="nav-wrapper">
-          <nav class="navbar navbar-dark mobile">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="nav-icon"></div>
-                <div class="nav-icon"></div>
+          <nav className="navbar navbar-dark nav-mobile">
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div className="nav-icon"></div>
+                <div className="nav-icon"></div>
               </button>
           </nav>
 
-          <div  id="navbarToggleExternalContent" ref={myDiv}>
+          <div  id="navbarToggleExternalContent" ref={navToggleButtton}>
             <nav className='nav-bar'>
               <Link to="/">
-              <button className='nav-button selected' onClick={(event) => {handleScroll(event, 0)}}>Home</button>
+              <button className='nav-button selected'
+                ref={(element) => navRef.current.push(element)}
+                onClick={() => {handleScroll(0)}}> Home </button>
               </Link>
               <Link to="/">
-              <button className='nav-button' onClick={(event) => {handleScroll(event, 1)}}>About Us</button>
+              <button className='nav-button'
+                ref={(element) => navRef.current.push(element)}
+                onClick={() => {handleScroll(1)}}> About Us </button>
               </Link>
               <Link to="/">
-              <button className='nav-button' onClick={(event) => {handleScroll(event, 2)}}>Committees</button>
+              <button className='nav-button'
+                ref={(element) => navRef.current.push(element)}
+                onClick={() => {handleScroll(2)}}> Committees </button>
               </Link>
               <Link to="/">
-              <button className='nav-button' onClick={(event) => {handleScroll(event, 3)}}>Contact Us</button>
+              <button className='nav-button'
+                ref={(element) => navRef.current.push(element)}
+                onClick={() => {handleScroll(3)}}> Contact Us </button>
               </Link>
             </nav>
           </div>

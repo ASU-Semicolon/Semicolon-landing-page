@@ -22,17 +22,12 @@ header{
 
 }
 
-.mobile-header{
-    display: none;
-    position: sticky;
-    top: 0px;
-}
 .all-mobile-nav{
     display: flex;
     justify-content: space-around;
 }
 
-.mobile{
+.nav-mobile{
     display: none;
 }
 
@@ -81,7 +76,6 @@ button.navbar-toggler{
 }
 
 
-
 @media (max-width:760px) {
     header {
         padding: 1rem calc(2vw + 1rem);
@@ -99,7 +93,7 @@ button.navbar-toggler{
         gap: 1.2rem;
         padding: 1rem;
     }
-    .mobile{
+    .nav-mobile{
         display: flex;
     }
 }
