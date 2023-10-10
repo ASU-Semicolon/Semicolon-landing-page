@@ -15,6 +15,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    pointer-events: none;
+}
+.card-container:hover {
+    color: #FFFFFF;
 }
 
 .card-text-container {
@@ -49,6 +53,7 @@ button.card-button {
     letter-spacing: 0.06em;
     border-radius: 5px;
     padding: 1.1rem 1rem;
+    pointer-events: all;
 }
 
 .card-image {
@@ -59,4 +64,39 @@ button.card-button {
 
 .card-link {
     all: unset;
+}
+
+@media (max-width: 760px) {
+    .card-container {
+        flex-direction: row;
+        max-width: none;
+        min-height: fit-content;
+        width: 90%;
+        border-left: 5px #FFB000 solid;
+        border-radius: 0 22px 22px 0;
+        pointer-events: all;
+        padding: 2rem;
+    }
+
+    button.card-button {
+        display: none;
+    }
+
+    .card-title {
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+        letter-spacing: 0.06em;
+    }
+
+    .card-description {
+        padding-right: 2rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1.6rem;
+    }
+    
+    .card-image {
+        position: static;
+        align-self: end;
+    }
 }
