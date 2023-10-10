@@ -1,0 +1,40 @@
+.about-container {
+    display: flex;
+    gap: 9%;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 5rem 5vw 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    gap: 9%;
+    font-size: 1.6rem;
+    padding: 0 5vw;
+}
+
+@media (max-width: 760px) {
+    .about-container, .contact-container {
+        max-width: 55rem;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        height: fit-content;
+        padding: 5rem 0 2rem;
+        gap: 2rem;
+    }
+
+    .contact-cards-container {
+        display: none;
+    }
+
+    .contact-container .right-content {
+        display: flex;
+        width: 100%;
+    }
+}

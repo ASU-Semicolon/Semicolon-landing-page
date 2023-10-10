@@ -1,7 +1,3 @@
-main {
-    padding: 0 5vw;
-}
-
 .home-container {
     display: grid;
     grid-template-columns: 1rem repeat(auto-fill,1fr);
@@ -9,25 +5,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 70vh;
-    padding-top: 1px;
-}
-
-.about-container {
-    display: flex;
-    gap: 9%;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    padding-top: 3rem;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    gap: 9%;
-    font-size: 1.6rem;
+    padding: 1rem 5vw 0;
 }
 
 .left-content {
@@ -47,7 +25,7 @@ main {
     align-items: center;
     max-width: 50rem;
     min-width: 20rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .logo-container img {
@@ -99,36 +77,46 @@ a {
     align-self: start;
 }
 
-.committee-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3rem;
-}
+@media (max-width: 760px) {
 
-.committee-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 5rem;
-    width: clamp(50rem,90vw,120rem);
-}
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 55rem;
+        min-height: 80vh;
+        gap: 3rem;
+    }
 
-.committee-brief {
-    max-width: 50rem;
-}
+    .about-container .text-container,
+    .committee-wrapper .text-container,
+    .contact-container .text-container {
+        align-items: center;
+    }
 
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 8vw;
-    row-gap: 5rem;
-    justify-content: center;
-    align-items: stretch;
-    align-self: center;
+    .home-container .left-content {
+        justify-content: space-between;
+        padding-top: 8vw;
+    }
+
+    .left-content {
+        max-width: none;
+    }
+
+    .left-bar, .right-content {
+        display: none;
+    }
+
+    .mobile-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-container img{
+        width: 90px;
+    }
+
 }
-/* .cards-container::after {
-    content: "";
-    flex: 0 0 1;
-} */
