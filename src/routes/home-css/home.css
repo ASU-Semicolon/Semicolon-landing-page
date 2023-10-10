@@ -138,6 +138,7 @@ a {
         max-width: 55rem;
         min-height: 80vh;
         gap: 3rem;
+        padding: 20px;
     }
 
     .about-container .text-container,
@@ -153,6 +154,7 @@ a {
 
     .left-content {
         max-width: none;
+        padding: 20px;
     }
 
     .left-bar,
