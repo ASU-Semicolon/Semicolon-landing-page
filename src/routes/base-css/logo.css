@@ -18,7 +18,7 @@
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 3.9rem;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -27,31 +27,31 @@
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.5rem;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
 }
 
 .orange-circle {
     width: 7px;
     height: 7px;
-    background-color: #FFB000;
+    background-color: #ffb000;
     border-radius: 100%;
     position: absolute;
     left: 42%;
     top: 12px;
 }
 
-@media (max-width:760px) {
-    .main-logo{
+@media (max-width: 760px) {
+    .main-logo {
         float: left;
     }
-    .main-logo img{
+    .main-logo img {
         width: 60px;
     }
     .main-logo-text {
         gap: 0.6rem;
     }
-    .main-logo-title{
+    .main-logo-title {
         font-size: 2rem;
         font-weight: 400;
         line-height: 1.9rem;
@@ -61,7 +61,7 @@
         font-weight: 400;
         line-height: 0.7rem;
     }
-    .orange-circle { 
+    .orange-circle {
         width: 4px;
         height: 4px;
         position: absolute;

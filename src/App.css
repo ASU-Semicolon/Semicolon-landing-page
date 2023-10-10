@@ -7,6 +7,22 @@
     scroll-padding-top: 15rem;
 }
 
+/* @media screen and (min-width: 600px) {
+    .Toastify__toast-container {
+        transform: scale(1.5);
+        margin-right: 60px;
+    }
+} */
+
+.Toastify__toast-body {
+    font-size: 1.6rem;
+    display: flex;
+    gap:10px
+}
+.Toastify__toast-icon {
+    transform: scale(1.5);
+}
+
 * {
     margin: 0;
 }

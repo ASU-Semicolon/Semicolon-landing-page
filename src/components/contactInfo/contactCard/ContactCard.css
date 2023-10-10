@@ -1,7 +1,8 @@
 .contact-card {
     display: flex;
-    gap: 1.25em; 
-    height: 3.25em; 
+    gap: 1.25em;
+    width: 22.875em;
+    height: 3.25em;
 }
 
 .contact-card-logo {
@@ -10,10 +11,10 @@
     align-items: center;
     padding: 0px;
     margin: 0px;
-    width: 3em; 
+    width: 3em;
     height: 3em;
     background-color: #ffb000;
-    border-radius: 0.25em; 
+    border-radius: 0.25em;
     display: flex;
 }
 
@@ -27,7 +28,7 @@
     padding: 0;
     color: #fff;
     font-size: 1.6rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
 }
 .contact-card-description {
@@ -36,4 +37,3 @@
     font-size: 1.6rem;
     font-weight: 700;
 }
-

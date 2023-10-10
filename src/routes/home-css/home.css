@@ -1,6 +1,6 @@
 .home-container {
     display: grid;
-    grid-template-columns: 1rem repeat(auto-fill,1fr);
+    grid-template-columns: 1rem repeat(auto-fill, 1fr);
     column-gap: 9rem;
     justify-content: center;
     align-items: center;
@@ -56,14 +56,14 @@ a {
     font-weight: 300;
     line-height: 22px;
     letter-spacing: 0.04em;
-    color: #FFFFFF;
+    color: #ffffff;
     rotate: 90deg;
     cursor: pointer;
     transition: color 500ms;
 }
 
 .left-bar-text:hover {
-    color: #FFB000;
+    color: #ffb000;
 }
 
 .stats-container {
@@ -79,14 +79,23 @@ a {
 
 @media (max-width: 760px) {
 
+    div.home-container,
+    div.about-container,
+    div.contact-container,
+    div.committee-brief {
+        max-width: 65rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
     .home-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        max-width: 55rem;
         min-height: 80vh;
         gap: 3rem;
+        padding: 20px;
     }
 
     .about-container .text-container,
@@ -102,9 +111,11 @@ a {
 
     .left-content {
         max-width: none;
+        padding: 20px;
     }
 
-    .left-bar, .right-content {
+    .left-bar,
+    .right-content {
         display: none;
     }
 
@@ -115,8 +126,7 @@ a {
         align-items: center;
     }
 
-    .logo-container img{
+    .logo-container img {
         width: 90px;
     }
-
 }

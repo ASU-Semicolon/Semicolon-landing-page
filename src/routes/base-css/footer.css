@@ -1,7 +1,7 @@
 .main-footer {
-    background: #0B1616;
+    background: #0b1616;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 1% calc(6% - 1rem);
 }
@@ -28,7 +28,7 @@
     font-weight: 300;
     line-height: 2rem;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .copyrights {
-    background: #0B1616;
-    color: #FFFFFF;
+    background: #0b1616;
+    color: #ffffff;
     font-family: "Montserrat";
     font-size: 1rem;
     font-weight: 300;
@@ -53,7 +53,7 @@
     margin: 0;
 }
 
-@media (max-width:760px){
+@media (max-width: 760px) {
     .footer-list-title {
         font-size: 1.2rem;
         font-weight: 300;
@@ -64,9 +64,9 @@
         font-size: 0.9rem;
     }
     div.main-footer {
-        width:100%;
+        width: 100%;
     }
-   .copyrights {
+    .copyrights {
         font-size: 0.8rem;
         letter-spacing: 0.02em;
         padding-bottom: 5px;

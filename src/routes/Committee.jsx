@@ -1,45 +1,81 @@
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
-import './committee.css'
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { API_URL } from "../keys.config";
+import { HashLoader } from "react-spinners";
+import "./committee.css";
+import LoadingData from "../components/loadingData/loadingData.component";
 
 export default function Committee() {
-
     const { committeeName } = useParams();
-
+    const [isFetching, setIsFetching] = useState(true);
     const [committee, setCommittee] = useState();
 
     useEffect(() => {
-      async function fetchData () {
-        let response = await fetch('https://api.quotable.io/quotes/random');
-        let user = await response.json();
-        setCommittee(user);
-      }
-      fetchData();
-    }, [])
-      
+        fetch(`${API_URL}/committee/${committeeName}`)
+            .then((res) => res.json())
+            .then(({ data }) => {
+                setCommittee(data);
+                setIsFetching(false);
+            });
+    }, [committeeName]);
 
-  return (
-    <>
-      {committee == null? "" :
-        <section className='committee-page-container'> 
-          <div className='committee-main'>
-            <div className="committee-name">
-              <h1 className='committee-title committee-title-underline'>{committee[0].content}</h1>
-              <img src= {committee[0].content} alt=""  className='committee-icon'/>
-            </div>
-            <p className='committee-description'>{committee[0].content}</p>
-            <h1 className='committee-title'> <span className='committee-title-underline'>Who are</span> they</h1>
-            <p className='committee-description'>{committee[0].content}</p>
-            <h1 className='committee-title'> <span className='committee-title-underline'>what th</span>ey do</h1>
-            <p className='committee-description'>{committee[0].content}</p>
-            <h1 className='committee-title'> <span className='committee-title-underline'>want to</span> join them</h1>
-            <p className='committee-description'>{committee[0].content}</p>
-            <a href="/form" className='join-committee'>
-              <button className='committee-btn'>join us</button>
-            </a> 
-          </div>
-        </section>
-      }
-    </>
-  )
+    if (isFetching) return <LoadingData isLoading={isFetching} />;
+
+    return (
+        <>
+            <section className="committee-page-container">
+                <HashLoader color={"#FFB000"} loading={!committee} />
+                {committee && (
+                    <div className="committee-main">
+                        <div className="committee-name">
+                            <h1 className="committee-title committee-title-underline">
+                                {committee.title}
+                            </h1>
+                            {/* <img src= {committee.content} alt=""  className='committee-icon'/> */}
+                        </div>
+                        <p className="committee-description">
+                            {committee.description}
+                        </p>
+                        <h1 className="committee-title committee-title-underline">
+                            Board Members
+                        </h1>
+                        <div className="board-members">
+                            <p className="committee-description">
+                                <span className="bold">
+                                    {committee.director}:
+                                </span>{" "}
+                                Director of {committee.sector}
+                            </p>
+                            {committee.vice_director && (
+                                <p className="committee-description">
+                                    <span className="bold">
+                                        {committee.vice_director}:
+                                    </span>{" "}
+                                    Vice Director of {committee.sector}
+                                </p>
+                            )}
+                            {committee.heads.map((head) => (
+                                <p
+                                    className="committee-description"
+                                    key={Math.random()}
+                                >
+                                    <span className="bold">{head}:</span> Head
+                                    of {committee.title}
+                                </p>
+                            ))}
+                        </div>
+                        <h1 className="committee-title committee-title-underline">
+                            What We Do
+                        </h1>
+                        <p className="committee-description">
+                            {committee.brief}
+                        </p>
+                        <a href="/form" className="join-committee">
+                            <button className="committee-btn">join us</button>
+                        </a>
+                    </div>
+                )}
+            </section>
+        </>
+    );
 }

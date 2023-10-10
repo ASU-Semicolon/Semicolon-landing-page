@@ -1,15 +1,15 @@
 .card-container {
     position: relative;
-    max-width: 28rem;
+    max-width: 30rem;
     max-height: 35rem;
     min-height: 25rem;
     border-radius: 22px;
     box-shadow: 20px 20px 50px 0px #00000080;
-    color: #FFFFFF;
+    color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
     border-width: 1px 0px 0px 1px;
     border-style: solid;
-    border-color: #FFFFFF80;
+    border-color: #ffffff80;
     padding: 3rem 3rem;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     pointer-events: none;
 }
 .card-container:hover {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .card-text-container {
@@ -35,7 +35,7 @@
     font-weight: 300;
     line-height: 34px;
     letter-spacing: 0.04em;
-    border-bottom: 2px #FFFFFF solid;
+    border-bottom: 2px #ffffff solid;
 }
 
 .card-description {
@@ -72,7 +72,7 @@ button.card-button {
         max-width: none;
         min-height: fit-content;
         width: 90%;
-        border-left: 5px #FFB000 solid;
+        border-left: 5px #ffb000 solid;
         border-radius: 0 22px 22px 0;
         pointer-events: all;
         padding: 2rem;
@@ -94,7 +94,7 @@ button.card-button {
         font-weight: 300;
         line-height: 1.6rem;
     }
-    
+
     .card-image {
         position: static;
         align-self: end;
