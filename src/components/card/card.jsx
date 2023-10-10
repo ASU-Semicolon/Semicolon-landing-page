@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import "./card.css";
 
 export default function Card(props) {
     return (
         <>
-            <div className="card-container">
+            <Link className="card-container" to={"/" + props.href}>
                 <div className="card-text-container">
                     <h3 className="card-title">{props.title}</h3>
                     <p className="card-description">{props.description}</p>
                 </div>
                 <button className="button card-button">
-                    <a className="card-link" href={"/" + props.href}>
+                    <Link className="card-link" to={"/" + props.href}>
                         LEARN MORE
-                    </a>
+                    </Link>
                 </button>
                 <img
                     className="card-image"
@@ -19,7 +20,7 @@ export default function Card(props) {
                     src={props.icon}
                     alt=""
                 />
-            </div>
+            </Link>
         </>
     );
 }

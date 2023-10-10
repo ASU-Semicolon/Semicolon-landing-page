@@ -80,3 +80,15 @@
 .bold {
     font-weight: bold;
 }
+
+@media (max-width: 760px) {
+    .committee-title {
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+    }
+
+    .committee-description {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+}

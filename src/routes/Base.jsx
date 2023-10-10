@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
-import FooterLink from "../components/footerLink/FooterLink";
+import ExternalFooterLink from "../components/footerLink/ExternalFooterLink";
+import InternalFooterLink from "../components/footerLink/InternalFooterLink";
 import { useEffect, useRef } from "react";
 import { scrollContext } from "../Context";
 import "./base-css/nav.css";
@@ -7,35 +8,36 @@ import "./base-css/footer.css";
 import "./base-css/logo.css";
 
 export default function Base() {
+    const navRef = useRef(new Array());
     const scrollRef = useRef(new Array());
-    const myDiv = useRef();
+    const navToggleButtton = useRef();
 
-    const handleScroll = (event, num) => {
-        const buttons = event.target.parentElement.parentElement.children;
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].children[0].classList.remove("selected");
+    const handleScroll = (num) => {
+        for (let i = 0; i < navRef.current.length; i++) {
+            navRef.current[i].classList.remove("selected");
         }
-        event.target.classList.add("selected");
+        navRef.current[num].classList.add("selected");
         scrollRef.current[num].scrollIntoView({ behavior: "smooth" });
     };
 
     const handleResize = () => {
         if (window.innerWidth > 760) {
-            myDiv.current.classList.remove("collapse");
-            myDiv.current.setAttribute("data-bs-toggle", "");
-            myDiv.current.setAttribute("data-bs-target", "");
+            navToggleButtton.current.classList.remove("collapse");
+            navToggleButtton.current.setAttribute("data-bs-toggle", "");
+            navToggleButtton.current.setAttribute("data-bs-target", "");
         } else {
-            myDiv.current.classList.add("collapse");
-            myDiv.current.setAttribute("data-bs-toggle", "collapse");
-            myDiv.current.setAttribute(
+            navToggleButtton.current.classList.add("collapse");
+            navToggleButtton.current.setAttribute("data-bs-toggle", "collapse");
+            navToggleButtton.current.setAttribute(
                 "data-bs-target",
-                "#navbarToggleExternalContent",
+                "#navbarToggleExternalContent"
             );
         }
     };
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
+        handleResize();
     }, []);
 
     return (
@@ -54,7 +56,7 @@ export default function Base() {
                                 <div className="orange-circle"></div>
                             </h2>
                             <p className="main-logo-slogan">
-                                Debug Your{" "}
+                                Debug Your
                                 <span className="orange-text">Soul.</span>
                             </p>
                         </div>
@@ -62,9 +64,9 @@ export default function Base() {
                 </Link>
 
                 <div className="nav-wrapper">
-                    <nav class="navbar navbar-dark mobile">
+                    <nav className="navbar navbar-dark nav-mobile">
                         <button
-                            class="navbar-toggler"
+                            className="navbar-toggler"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbarToggleExternalContent"
@@ -72,18 +74,24 @@ export default function Base() {
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                         >
-                            <div class="nav-icon"></div>
-                            <div class="nav-icon"></div>
+                            <div className="nav-icon"></div>
+                            <div className="nav-icon"></div>
                         </button>
                     </nav>
 
-                    <div id="navbarToggleExternalContent" ref={myDiv}>
+                    <div
+                        id="navbarToggleExternalContent"
+                        ref={navToggleButtton}
+                    >
                         <nav className="nav-bar">
                             <Link to="/">
                                 <button
                                     className="nav-button selected"
-                                    onClick={(event) => {
-                                        handleScroll(event, 0);
+                                    ref={(element) =>
+                                        navRef.current.push(element)
+                                    }
+                                    onClick={() => {
+                                        handleScroll(0);
                                     }}
                                 >
                                     Home
@@ -92,8 +100,11 @@ export default function Base() {
                             <Link to="/">
                                 <button
                                     className="nav-button"
-                                    onClick={(event) => {
-                                        handleScroll(event, 1);
+                                    ref={(element) =>
+                                        navRef.current.push(element)
+                                    }
+                                    onClick={() => {
+                                        handleScroll(1);
                                     }}
                                 >
                                     About Us
@@ -102,8 +113,11 @@ export default function Base() {
                             <Link to="/">
                                 <button
                                     className="nav-button"
-                                    onClick={(event) => {
-                                        handleScroll(event, 2);
+                                    ref={(element) =>
+                                        navRef.current.push(element)
+                                    }
+                                    onClick={() => {
+                                        handleScroll(2);
                                     }}
                                 >
                                     Committees
@@ -112,8 +126,11 @@ export default function Base() {
                             <Link to="/">
                                 <button
                                     className="nav-button"
-                                    onClick={(event) => {
-                                        handleScroll(event, 3);
+                                    ref={(element) =>
+                                        navRef.current.push(element)
+                                    }
+                                    onClick={() => {
+                                        handleScroll(3);
                                     }}
                                 >
                                     Contact Us
@@ -143,7 +160,7 @@ export default function Base() {
                                     <div className="orange-circle"></div>
                                 </h2>
                                 <p className="main-logo-slogan">
-                                    Debug Your{" "}
+                                    Debug Your
                                     <span className="orange-text">Soul.</span>
                                 </p>
                             </div>
@@ -153,53 +170,39 @@ export default function Base() {
                     <div className="footer-links-container">
                         <div className="footer-links-list">
                             <p className="footer-list-title">FOLLOW US</p>
-                            <FooterLink
+                            <ExternalFooterLink
                                 href="https://www.facebook.com/SemiColon.team.asu"
-                                target="_blank"
                                 url="src/assets/footer/Facebook.svg"
                                 text="Facebook"
                             />
-                            <FooterLink
+                            <ExternalFooterLink
                                 href="https://www.linkedin.com/company/semicolon.org"
-                                target="_blank"
                                 url="src/assets/footer/LinkedIn.svg"
                                 text="LinkedIn"
-                            />
-                            <FooterLink
-                                href=""
-                                target="_blank"
-                                url="src/assets/footer/Instagram.svg"
-                                text="Instagram"
                             />
                         </div>
                         <div className="footer-links-list">
                             <p className="footer-list-title">Navigate</p>
                             <Link to="/">
-                                <FooterLink
-                                    handleScroll={(event) => {
-                                        handleScroll(event, 0);
-                                    }}
-                                    target=""
+                                <InternalFooterLink
+                                    handleScroll={handleScroll}
+                                    target="0"
                                     url="src/assets/footer/Home.svg"
                                     text="Home"
                                 />
                             </Link>
                             <Link to="/">
-                                <FooterLink
-                                    handleScroll={(event) => {
-                                        handleScroll(event, 1);
-                                    }}
-                                    target=""
+                                <InternalFooterLink
+                                    handleScroll={handleScroll}
+                                    target="1"
                                     url="src/assets/footer/About.svg"
                                     text="About"
                                 />
                             </Link>
                             <Link to="/">
-                                <FooterLink
-                                    handleScroll={(event) => {
-                                        handleScroll(event, 2);
-                                    }}
-                                    target=""
+                                <InternalFooterLink
+                                    handleScroll={handleScroll}
+                                    target="2"
                                     url="src/assets/footer/People.svg"
                                     text="Committees"
                                 />

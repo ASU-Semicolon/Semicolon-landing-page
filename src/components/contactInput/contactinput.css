@@ -5,12 +5,15 @@
     align-self: center;
     width: 100%;
     max-width: 31.25em;
-    height: 40em;
+    min-height: 35em;
     border-radius: 15px;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("src/assets/contact-graphics/image 3.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     gap: 2em;
+    padding: 2rem;
 }
 #form-background {
     border-radius: 15px;
@@ -18,8 +21,11 @@
     box-shadow: 0px 20px 32px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
     max-width: 31.25em;
-    max-height: 37.5em;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
 }
 
 #getinfo {
@@ -34,8 +40,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    gap: 1rem;
 }
 
+#name,
 #email {
     min-width: 10rem;
     display: flex;
@@ -47,7 +55,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 0.5em;
 }
 
@@ -66,6 +74,7 @@
     min-height: 2.4em;
     color: #fff;
     cursor: pointer;
+    min-width: none;
 }
 
 .contact-container ::placeholder {
@@ -81,7 +90,7 @@
 
 .contact-container textarea {
     color: #fff;
-    width: 79%;
+    width: 100%;
     min-height: 6.4em;
     border-radius: 0.5em;
     cursor: pointer;
@@ -93,7 +102,7 @@
 }
 
 .contact-container button {
-    margin-left: 2.3em;
+    /* margin-left: 2.3em; */
     color: #fff;
     font-size: 1.6rem;
     width: fit-content;
@@ -107,10 +116,46 @@
     font-weight: 300;
     text-transform: uppercase;
     padding: 0em 1em;
+    transition: background-color 500ms;
 }
 
 .contact-container input:hover,
 textarea:hover,
-button:hover {
+.contact-container button:hover {
     border: 1px solid grey;
+}
+
+.contact-container button:hover {
+    background-color: #ffb000;
+}
+
+@media (max-width: 760px) {
+    .contact-container form {
+        background: #0b2323;
+        min-height: fit-content;
+        padding: 4rem 2rem;
+    }
+    #getinfo {
+        flex-direction: column;
+    }
+    #form-background {
+        box-shadow: none;
+        margin-top: 0;
+    }
+    .contact-container .right-content {
+        margin: 0;
+    }
+    .contact-container label {
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffb000;
+    }
+    .contact-container input,
+    .contact-container textarea {
+        border: 0px;
+    }
+
+    .contact-container ::placeholder {
+        color: #3b6262;
+    }
 }

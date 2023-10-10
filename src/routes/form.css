@@ -78,9 +78,11 @@
     font-size: 2rem;
     font-weight: 400;
     text-transform: uppercase;
-    padding: 10px 70px;
+    padding: 0.4em;
     border: 1px white solid;
-    transition: background-color 500ms, color 500ms;
+    transition:
+        background-color 500ms,
+        color 500ms;
 }
 #submit-btn:hover {
     background: rgb(19, 200, 19);

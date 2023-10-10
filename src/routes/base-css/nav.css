@@ -34,7 +34,7 @@ header {
     justify-content: space-around;
 }
 
-.mobile {
+.nav-mobile {
     display: none;
 }
 
@@ -100,7 +100,7 @@ button.navbar-toggler {
         gap: 1.2rem;
         padding: 1rem;
     }
-    .mobile {
+    .nav-mobile {
         display: flex;
     }
 }

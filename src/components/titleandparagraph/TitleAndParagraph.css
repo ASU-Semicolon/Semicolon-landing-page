@@ -54,3 +54,32 @@
     border: 0px;
     background-color: #ffb000;
 }
+
+@media (max-width: 760px) {
+    .about-container .main-title,
+    .committee-container .main-title,
+    .contact-container .main-title {
+        font-family: "Montserrat";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 44px;
+        text-decoration: underline 2px;
+        text-underline-offset: 0.8rem;
+    }
+
+    .home-container .main-title {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+    }
+
+    .main-paragraph {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.02em;
+    }
+
+    .button {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+}

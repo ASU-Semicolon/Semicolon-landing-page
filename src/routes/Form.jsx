@@ -62,51 +62,51 @@ export default function Home() {
                 {/* <div className="form-wrapper"> */}
 
                 <div className="form-photo">
-                <h1 className="form-title">Join Us Now</h1>
+                    <h1 className="form-title">Join Us Now</h1>
                     <img src="src/assets/form-graphics/form-photo.png"></img>
                 </div>
                 <div className="form-inputs-wrapper">
                     <form
                         className="form-inputs"
                         onSubmit={handleApplyFormSubmit}
-                        >
+                    >
                         <Input
                             type="text"
                             label="Full Name"
                             name="name"
                             id="name"
                             placeholder="Your name"
-                            />
+                        />
                         <Dropdownmenu
                             type="text"
                             label="Department"
                             name="department"
                             id="department"
                             placeholder="Your department"
-                            options = {[ 
-                                'Freshman',
-                                'Electrical',
-                                'Mechanical',
-                               'Civil',
-                                'Architecture',
-                                'Other'
+                            options={[
+                                "Freshman",
+                                "Electrical",
+                                "Mechanical",
+                                "Civil",
+                                "Architecture",
+                                "Other",
                             ]}
-                            />
+                        />
                         <Input
                             type="number"
                             label="Phone Number"
                             name="phone"
                             id="phone-number"
                             placeholder="Your number"
-                            />
+                        />
                         <Input
                             type="email"
                             label="Email"
                             name="email"
                             id="email"
                             placeholder="Your email"
-                            />
-                         <Dropdownmenu
+                        />
+                        <Dropdownmenu
                             label="Academic Year"
                             name="academic_year"
                             id="academicyear"
@@ -125,7 +125,7 @@ export default function Home() {
                             id="firstchoice"
                             placeholder="First Preferance"
                             options={committees}
-                            />
+                        />
                         <Input
                             label="First Preferance Previous Experience"
                             name="first_preference_experience"
@@ -139,22 +139,22 @@ export default function Home() {
                             id="secondchoice"
                             placeholder="Second Preferance"
                             options={committees}
-                            />
+                        />
                         <Input
                             label="Second Preferance Previous Experience"
                             name="second_preference_experience"
                             id="secondchoiceexperience"
                             placeholder="Your previous experience"
                             multiline={true}
-                            />
-                       
+                        />
+
                         <button type="submit" id="submit-btn">
                             Submit
                         </button>
                     </form>
                 </div>
             </div>
-                            {/* </div> */}
+            {/* </div> */}
         </>
     );
 }

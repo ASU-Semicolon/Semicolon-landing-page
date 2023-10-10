@@ -52,7 +52,7 @@ input::-webkit-inner-spin-button {
     border: 1px solid grey;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .input-field {
         flex-direction: column;
         justify-content: start;

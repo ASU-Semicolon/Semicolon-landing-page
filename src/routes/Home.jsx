@@ -7,7 +7,7 @@ import Info from "../components/contactInfo/ContactInfo";
 import Contactform from "../components/contactInput/ContactInput";
 import { useEffect, useState } from "react";
 import { API_URL } from "../keys.config";
-import "./home.css";
+import "./home-css/home.css";
 import { HashLoader } from "react-spinners";
 
 export default function Home() {

@@ -43,14 +43,14 @@ export default function Committee() {
                             <p className="committee-description">
                                 <span className="bold">
                                     {committee.director}:
-                                </span>{" "}
+                                </span>
                                 Director of {committee.sector}
                             </p>
                             {committee.vice_director && (
                                 <p className="committee-description">
                                     <span className="bold">
                                         {committee.vice_director}:
-                                    </span>{" "}
+                                    </span>
                                     Vice Director of {committee.sector}
                                 </p>
                             )}

@@ -15,7 +15,7 @@
     background-color: #000d10;
     color: gray;
 }
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .input-field select {
         width: 100%;
         padding: 0.6em;
