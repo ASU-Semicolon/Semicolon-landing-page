@@ -3,13 +3,11 @@ body {
 }
 
 header {
-    background-color: rgba(11, 22, 22, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
-    padding-left: 50px;
+    padding: 1.2rem calc(5vw - 2rem);
     position: sticky;
     top: 0px;
     z-index: 10;
@@ -21,16 +19,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: end;
-}
-
-.mobile-header {
-    display: none;
-    position: sticky;
-    top: 0px;
-}
-.all-mobile-nav {
-    display: flex;
-    justify-content: space-around;
 }
 
 .nav-mobile {
