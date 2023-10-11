@@ -3,6 +3,12 @@ import ExternalFooterLink from "../components/footerLink/ExternalFooterLink";
 import InternalFooterLink from "../components/footerLink/InternalFooterLink";
 import { useEffect, useRef } from "react";
 import { scrollContext } from "../Context";
+import Logo from "../assets/home-graphics/logo.svg";
+import FacebookIcon from "../assets/footer/Facebook.svg";
+import LinkedInIcon from "../assets/footer/LinkedIn.svg";
+import HomeIcon from "../assets/footer/Home.svg";
+import AboutIcon from "../assets/footer/About.svg";
+import PeopleIcon from "../assets/footer/People.svg";
 import "./base-css/nav.css";
 import "./base-css/footer.css";
 import "./base-css/logo.css";
@@ -10,7 +16,7 @@ import "./base-css/logo.css";
 export default function Base() {
     const navRef = useRef(new Array());
     const scrollRef = useRef(new Array());
-    const navToggleButtton = useRef();
+    const navToggleButton = useRef();
 
     const handleScroll = (num) => {
         for (let i = 0; i < navRef.current.length; i++) {
@@ -22,13 +28,13 @@ export default function Base() {
 
     const handleResize = () => {
         if (window.innerWidth > 760) {
-            navToggleButtton.current.classList.remove("collapse");
-            navToggleButtton.current.setAttribute("data-bs-toggle", "");
-            navToggleButtton.current.setAttribute("data-bs-target", "");
+            navToggleButton.current.classList.remove("collapse");
+            navToggleButton.current.setAttribute("data-bs-toggle", "");
+            navToggleButton.current.setAttribute("data-bs-target", "");
         } else {
-            navToggleButtton.current.classList.add("collapse");
-            navToggleButtton.current.setAttribute("data-bs-toggle", "collapse");
-            navToggleButtton.current.setAttribute(
+            navToggleButton.current.classList.add("collapse");
+            navToggleButton.current.setAttribute("data-bs-toggle", "collapse");
+            navToggleButton.current.setAttribute(
                 "data-bs-target",
                 "#navbarToggleExternalContent"
             );
@@ -45,11 +51,7 @@ export default function Base() {
             <header>
                 <Link to="/">
                     <div className="main-logo">
-                        <img
-                            src="src/assets/home-graphics/logo.svg"
-                            width="90px"
-                            alt=""
-                        />
+                        <img src={Logo} width="90px" alt="" />
                         <div className="main-logo-text">
                             <h2 className="main-logo-title">
                                 Sem,Colon
@@ -79,10 +81,7 @@ export default function Base() {
                         </button>
                     </nav>
 
-                    <div
-                        id="navbarToggleExternalContent"
-                        ref={navToggleButtton}
-                    >
+                    <div id="navbarToggleExternalContent" ref={navToggleButton}>
                         <nav className="nav-bar">
                             <Link to="/">
                                 <button
@@ -149,11 +148,7 @@ export default function Base() {
                 <div className="main-footer">
                     <Link to="/">
                         <div className="main-logo">
-                            <img
-                                src="src/assets/home-graphics/logo.svg"
-                                width="90px"
-                                alt=""
-                            />
+                            <img src={Logo} width="90px" alt="" />
                             <div className="main-logo-text">
                                 <h2 className="main-logo-title">
                                     Sem,Colon
@@ -172,12 +167,12 @@ export default function Base() {
                             <p className="footer-list-title">FOLLOW US</p>
                             <ExternalFooterLink
                                 href="https://www.facebook.com/SemiColon.team.asu"
-                                url="src/assets/footer/Facebook.svg"
+                                url={FacebookIcon}
                                 text="Facebook"
                             />
                             <ExternalFooterLink
                                 href="https://www.linkedin.com/company/semicolon.org"
-                                url="src/assets/footer/LinkedIn.svg"
+                                url={LinkedInIcon}
                                 text="LinkedIn"
                             />
                         </div>
@@ -187,7 +182,7 @@ export default function Base() {
                                 <InternalFooterLink
                                     handleScroll={handleScroll}
                                     target="0"
-                                    url="src/assets/footer/Home.svg"
+                                    url={HomeIcon}
                                     text="Home"
                                 />
                             </Link>
@@ -195,7 +190,7 @@ export default function Base() {
                                 <InternalFooterLink
                                     handleScroll={handleScroll}
                                     target="1"
-                                    url="src/assets/footer/About.svg"
+                                    url={AboutIcon}
                                     text="About"
                                 />
                             </Link>
@@ -203,7 +198,7 @@ export default function Base() {
                                 <InternalFooterLink
                                     handleScroll={handleScroll}
                                     target="2"
-                                    url="src/assets/footer/People.svg"
+                                    url={PeopleIcon}
                                     text="Committees"
                                 />
                             </Link>

@@ -8,7 +8,7 @@
     min-height: 35em;
     border-radius: 15px;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("src/assets/contact-graphics/image 3.png");
+        url("../../assets/contact-graphics/image 3.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

@@ -7,10 +7,16 @@ import Info from "../components/contactInfo/ContactInfo";
 import Contactform from "../components/contactInput/ContactInput";
 import { useEffect, useState } from "react";
 import { API_URL } from "../keys.config";
+import { HashLoader } from "react-spinners";
+import Logo from "../assets/home-graphics/logo.svg"
+import HomeIcon from "../assets/home-graphics/home.png"
+import HistoryIcon from "../assets/about-graphics/History.svg"
+import AboutIcon from "../assets/about-graphics/about.png"
+import VisionIcon from "../assets/about-graphics/Vision.svg"
+
 import "./home-css/home.css";
 import "./home-css/aboutAndContact.css";
 import "./home-css/cards.css";
-import { HashLoader } from "react-spinners";
 
 export default function Home() {
     const [committees, setCommittees] = useState();
@@ -50,7 +56,7 @@ export default function Home() {
                         />
                         <div className="logo-container">
                             <img
-                                src="src/assets/home-graphics/logo.svg"
+                                src={Logo}
                                 width="183px"
                                 alt=""
                             />
@@ -58,7 +64,7 @@ export default function Home() {
                     </div>
                     <div className="right-content">
                         <Illustration
-                            url={"src/assets/home-graphics/home.png"}
+                            url={HomeIcon}
                         />
                     </div>
                     <div className="stats-container">
@@ -81,17 +87,17 @@ export default function Home() {
                         <Brief
                             title="Our history"
                             description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
-                            url="src/assets/about-graphics/history.svg"
+                            url={HistoryIcon}
                         />
                         <Brief
                             title="Our Vision"
                             description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
-                            url="src/assets/about-graphics/vision.svg"
+                            url={VisionIcon}
                         />
                     </div>
                     <div className="right-content">
                         <Illustration
-                            url={"src/assets/about-graphics/about.png"}
+                            url={AboutIcon}
                         />
                     </div>
                 </div>
