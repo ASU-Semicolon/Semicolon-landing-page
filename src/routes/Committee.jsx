@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { API_URL } from "../keys.config";
 import { HashLoader } from "react-spinners";
 import "./committee.css";
@@ -70,9 +70,9 @@ export default function Committee() {
                         <p className="committee-description">
                             {committee.brief}
                         </p>
-                        <a href="/form" className="join-committee">
+                        <Link to="/form" className="join-committee">
                             <button className="committee-btn">join us</button>
-                        </a>
+                        </Link>
                     </div>
                 )}
             </section>

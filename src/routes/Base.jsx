@@ -18,6 +18,7 @@ export default function Base() {
         }
         navRef.current[num].classList.add("selected");
         scrollRef.current[num].scrollIntoView({ behavior: "smooth" });
+        console.log(scrollRef.current[num]);
     };
 
     const handleResize = () => {

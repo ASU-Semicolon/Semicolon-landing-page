@@ -1,5 +1,6 @@
 import "./TitleAndParagraph.css";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { scrollContext } from "../../Context";
 
 export default function TitleAndParagraph(props) {
@@ -19,9 +20,9 @@ export default function TitleAndParagraph(props) {
                 {props.button == "" ? (
                     ""
                 ) : (
-                    <a href={props.href}>
+                    <Link to={props.href}>
                         <button className="button">{props.button}</button>
-                    </a>
+                    </Link>
                 )}
             </div>
         </>
