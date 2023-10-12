@@ -54,13 +54,22 @@ export default function Committee() {
                                     Vice Director of {committee.sector}
                                 </p>
                             )}
-                            {committee.heads.map((head) => (
+                            {committee.heads && committee.heads.map((head) => (
                                 <p
                                     className="committee-description"
                                     key={Math.random()}
                                 >
                                     <span className="bold">{head}:</span> Head
                                     of {committee.title}
+                                </p>
+                            ))}
+                            {committee.vice_heads && committee.vice_heads.map((vice_head) => (
+                                <p
+                                    className="committee-description"
+                                    key={Math.random()}
+                                >
+                                    <span className="bold">{vice_head}: </span>
+                                    Vice Head of {committee.title}
                                 </p>
                             ))}
                         </div>
