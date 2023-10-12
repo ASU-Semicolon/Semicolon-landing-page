@@ -26,14 +26,14 @@ export default function Home() {
             <div className='mobile-wrapper'>
                 <div className="home-container">
                     <div className="left-bar">
-                        <a href="https://www.facebook.com/SemiColon.team.asu">
+                        <a href="https://www.facebook.com/SemiColon.team.asu" target="_blank">
                             <p className="left-bar-text">FACEBOOK</p>
                         </a>
-                        <a href="https://www.linkedin.com/company/semicolon.org">
+                        <a href="https://www.linkedin.com/company/semicolon.org" target="_blank">
                             <p className="left-bar-text">LINKEDIN</p>
                         </a>
-                        <a href="">
-                            <p className="left-bar-text"></p>
+                        <a href="https://www.instagram.com/semicolon_asu" target="_blank">
+                            <p className="left-bar-text">INSTAGRAM</p>
                         </a>
                     </div>
                     <div className="left-content">
@@ -42,6 +42,7 @@ export default function Home() {
                                 <span key={1}>Make Your College Years Count</span>,
                                 <span className="orange-text" key={2}>.</span>,
                             ]}
+                            titleId="home"
                             paragraph={
                                 "Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with Semi Colon!"
                             }
@@ -72,6 +73,7 @@ export default function Home() {
                     <div className="left-content">
                         <TitleAndParagraph
                             title={"Who We Are"}
+                            titleId="about"
                             paragraph={
                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur. Sed sed tristique purus. Nunc convallis, dolor ut porta ullamcorper, nibh ex dignissim turpis, vitae mattis tellus mauris eu nulla. Etiam dictum efficitur eros, a mollis nulla varius a. Curabitur pulvinar congue ultrices."
                             }
@@ -100,6 +102,7 @@ export default function Home() {
                     <div className="committee-wrapper">
                         <TitleAndParagraph
                             className="committee-brief"
+                            titleId="committees"
                             title="Our Committees"
                             paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris."
                             button=""
