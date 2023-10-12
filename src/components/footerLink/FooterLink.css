@@ -8,6 +8,7 @@
 }
 
 .footer-link-text {
+    all: unset;
     font-family: "Montserrat";
     font-size: 10px;
     font-weight: 400;
