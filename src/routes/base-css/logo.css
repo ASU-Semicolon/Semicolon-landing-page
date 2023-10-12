@@ -5,6 +5,10 @@
     user-select: none;
 }
 
+footer .main-logo{
+    transform: scale(0.75);
+}
+
 .main-logo-text {
     display: flex;
     flex-direction: column;

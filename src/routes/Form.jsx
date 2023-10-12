@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { API_URL } from "../keys.config";
 import { ToastContainer, toast } from "react-toastify";
+import FormBackgroundImage from "../assets/form-graphics/form-photo.png"
 import "./form.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -63,7 +64,7 @@ export default function Home() {
 
                 <div className="form-photo">
                     <h1 className="form-title">Join Us Now</h1>
-                    <img src="src/assets/form-graphics/form-photo.png"></img>
+                    <img src={FormBackgroundImage}></img>
                 </div>
                 <div className="form-inputs-wrapper">
                     <form

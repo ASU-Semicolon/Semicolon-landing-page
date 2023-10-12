@@ -1,5 +1,4 @@
 import "./TitleAndParagraph.css";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 
 export default function TitleAndParagraph(props) {

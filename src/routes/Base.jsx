@@ -1,25 +1,31 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import FooterLink from "../components/footerLink/FooterLink";
 import { useEffect, useRef, useState } from "react";
+import Logo from "../assets/home-graphics/logo.svg";
+import FacebookIcon from "../assets/footer/Facebook.svg";
+import LinkedInIcon from "../assets/footer/LinkedIn.svg";
+import HomeIcon from "../assets/footer/Home.svg";
+import AboutIcon from "../assets/footer/About.svg";
+import PeopleIcon from "../assets/footer/People.svg";
+import InstagramIcon from "../assets/footer/Instagram.svg"
 import "./base-css/nav.css";
 import "./base-css/footer.css";
 import "./base-css/logo.css";
 
 export default function Base() {
-
     const [selectedNav, setSelectedNav] = useState("home");
-    const navToggleButtton = useRef();
+    const navToggleButton = useRef();
     const path = useLocation();
 
     const handleResize = () => {
         if (window.innerWidth > 760) {
-            navToggleButtton.current.classList.remove("collapse");
-            navToggleButtton.current.setAttribute("data-bs-toggle", "");
-            navToggleButtton.current.setAttribute("data-bs-target", "");
+            navToggleButton.current.classList.remove("collapse");
+            navToggleButton.current.setAttribute("data-bs-toggle", "");
+            navToggleButton.current.setAttribute("data-bs-target", "");
         } else {
-            navToggleButtton.current.classList.add("collapse");
-            navToggleButtton.current.setAttribute("data-bs-toggle", "collapse");
-            navToggleButtton.current.setAttribute(
+            navToggleButton.current.classList.add("collapse");
+            navToggleButton.current.setAttribute("data-bs-toggle", "collapse");
+            navToggleButton.current.setAttribute(
                 "data-bs-target",
                 "#navbarToggleExternalContent"
             );
@@ -36,11 +42,7 @@ export default function Base() {
             <header>
                 <Link to="/">
                     <div className="main-logo">
-                        <img
-                            src="src/assets/home-graphics/logo.svg"
-                            width="90px"
-                            alt=""
-                        />
+                        <img src={Logo} width="90px" alt="" />
                         <div className="main-logo-text">
                             <h2 className="main-logo-title">
                                 Sem,Colon
@@ -72,7 +74,7 @@ export default function Base() {
 
                     <div
                         id="navbarToggleExternalContent"
-                        ref={navToggleButtton}
+                        ref={navToggleButton}
                     >
                         <nav className="nav-bar">
                             <a href="#home">
@@ -118,11 +120,7 @@ export default function Base() {
                 <div className="main-footer">
                     <Link to="/">
                         <div className="main-logo">
-                            <img
-                                src="src/assets/home-graphics/logo.svg"
-                                width="90px"
-                                alt=""
-                            />
+                            <img src={Logo} width="90px" alt="" />
                             <div className="main-logo-text">
                                 <h2 className="main-logo-title">
                                     Sem,Colon
@@ -141,17 +139,17 @@ export default function Base() {
                             <p className="footer-list-title">FOLLOW US</p>
                             <FooterLink
                                 href="https://www.facebook.com/SemiColon.team.asu"
-                                url="src/assets/footer/Facebook.svg"
+                                url={FacebookIcon}
                                 text="Facebook"
                             />
                             <FooterLink
                                 href="https://www.linkedin.com/company/semicolon.org"
-                                url="src/assets/footer/LinkedIn.svg"
+                                url={LinkedInIcon}
                                 text="LinkedIn"
                             />
                             <FooterLink
                                 href="https://www.instagram.com/semicolon_asu/"
-                                url="src/assets/footer/Instagram.svg"
+                                url={InstagramIcon}
                                 text="Instagram"
                             />
                             
@@ -161,21 +159,21 @@ export default function Base() {
                             <FooterLink
                                 href="#home"
                                 target=""
-                                url="src/assets/footer/Home.svg"
+                                url={HomeIcon}
                                 text="Home"
                                 handleScroll={setSelectedNav}
                             />
                             <FooterLink
                                 href="#about"
                                 target=""
-                                url="src/assets/footer/About.svg"
+                                url={AboutIcon}
                                 text="About"
                                 handleScroll={setSelectedNav}
                             />
                             <FooterLink
                                 href="#committees"
                                 target=""
-                                url="src/assets/footer/People.svg"
+                                url={PeopleIcon}
                                 text="Committees"
                                 handleScroll={setSelectedNav}
                             />

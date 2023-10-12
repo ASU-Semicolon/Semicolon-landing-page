@@ -1,5 +1,8 @@
 import TitleAndParagraph from "../titleandparagraph/TitleAndParagraph";
 import ContactCard from "./contactCard/ContactCard";
+import PhoneIcon from "../../assets/contact-graphics/phone.png";
+import EmailIcon from "../../assets/contact-graphics/Email.png";
+import WhatsAppIcon from "../../assets/contact-graphics/WhatsApp.png";
 import "./contactInfo.css";
 
 export default function Info() {
@@ -16,17 +19,17 @@ export default function Info() {
                     <ContactCard
                         title="Phone"
                         number="+20112345680"
-                        url="src/assets/contact-graphics/phone.png"
+                        url={PhoneIcon}
                     />
                     <ContactCard
                         title="Email"
                         number="semicolon@gmail.com"
-                        url="src/assets/contact-graphics/Email.png"
+                        url={EmailIcon}
                     />
                     <ContactCard
                         title="WhatsApp"
                         number="+20112345680"
-                        url="src/assets/contact-graphics/WhatsApp.png"
+                        url={WhatsAppIcon}
                     />
                 </div>
             </div>
