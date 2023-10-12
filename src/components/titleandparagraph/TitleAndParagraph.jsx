@@ -1,9 +1,7 @@
 import "./TitleAndParagraph.css";
-import { useContext } from "react";
-import { scrollContext } from "../../Context";
+import { Link } from "react-router-dom";
 
 export default function TitleAndParagraph(props) {
-    const { scrollRef } = useContext(scrollContext);
 
     return (
         <>
@@ -11,7 +9,6 @@ export default function TitleAndParagraph(props) {
                 <h1
                     className="main-title"
                     id={props.titleId}
-                    ref={(element) => scrollRef.current.push(element)}
                 >
                     {props.title}
                 </h1>
@@ -19,9 +16,9 @@ export default function TitleAndParagraph(props) {
                 {props.button == "" ? (
                     ""
                 ) : (
-                    <a href={props.href}>
+                    <Link to={props.href}>
                         <button className="button">{props.button}</button>
-                    </a>
+                    </Link>
                 )}
             </div>
         </>

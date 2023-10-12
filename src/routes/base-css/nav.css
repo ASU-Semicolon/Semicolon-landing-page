@@ -14,6 +14,10 @@ header {
     gap: calc(5vw - 2rem);
 }
 
+div.hidden {
+    display: none;
+}
+
 .nav-wrapper {
     display: flex;
     flex-direction: column;
@@ -67,7 +71,7 @@ button.navbar-toggler {
 
 .nav-button.selected,
 .nav-button.selected:hover {
-    border-bottom: #ffb000 solid 2px;
+    /* border-bottom: #ffb000 solid 2px; */
 }
 
 @media (max-width: 760px) {

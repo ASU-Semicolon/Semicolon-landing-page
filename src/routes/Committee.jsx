@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { API_URL } from "../keys.config";
 import { HashLoader } from "react-spinners";
 import "./committee.css";
@@ -54,13 +54,22 @@ export default function Committee() {
                                     Vice Director of {committee.sector}
                                 </p>
                             )}
-                            {committee.heads.map((head) => (
+                            {committee.heads && committee.heads.map((head) => (
                                 <p
                                     className="committee-description"
                                     key={Math.random()}
                                 >
                                     <span className="bold">{head}:</span> Head
                                     of {committee.title}
+                                </p>
+                            ))}
+                            {committee.vice_heads && committee.vice_heads.map((vice_head) => (
+                                <p
+                                    className="committee-description"
+                                    key={Math.random()}
+                                >
+                                    <span className="bold">{vice_head}: </span>
+                                    Vice Head of {committee.title}
                                 </p>
                             ))}
                         </div>
@@ -70,9 +79,9 @@ export default function Committee() {
                         <p className="committee-description">
                             {committee.brief}
                         </p>
-                        <a href="/form" className="join-committee">
+                        <Link to="/form" className="join-committee">
                             <button className="committee-btn">join us</button>
-                        </a>
+                        </Link>
                     </div>
                 )}
             </section>

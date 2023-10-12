@@ -11,6 +11,7 @@ export default function Info() {
             <div className="contact-information">
                 <TitleAndParagraph
                     title="Contact Us"
+                    titleId="contact"
                     paragraph="We will be more than happy to hear from you whether it’s a question or a feedback or just some random thoughts that you want share just hit us and we will contact you as soon as we can."
                     button=""
                 />

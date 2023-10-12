@@ -1,30 +1,21 @@
-import { Outlet, Link } from "react-router-dom";
-import ExternalFooterLink from "../components/footerLink/ExternalFooterLink";
-import InternalFooterLink from "../components/footerLink/InternalFooterLink";
-import { useEffect, useRef } from "react";
-import { scrollContext } from "../Context";
+import { Outlet, Link, useLocation } from "react-router-dom";
+import FooterLink from "../components/footerLink/FooterLink";
+import { useEffect, useRef, useState } from "react";
 import Logo from "../assets/home-graphics/logo.svg";
 import FacebookIcon from "../assets/footer/Facebook.svg";
 import LinkedInIcon from "../assets/footer/LinkedIn.svg";
 import HomeIcon from "../assets/footer/Home.svg";
 import AboutIcon from "../assets/footer/About.svg";
 import PeopleIcon from "../assets/footer/People.svg";
+import InstagramIcon from "../assets/footer/Instagram.svg"
 import "./base-css/nav.css";
 import "./base-css/footer.css";
 import "./base-css/logo.css";
 
 export default function Base() {
-    const navRef = useRef(new Array());
-    const scrollRef = useRef(new Array());
+    const [selectedNav, setSelectedNav] = useState("home");
     const navToggleButton = useRef();
-
-    const handleScroll = (num) => {
-        for (let i = 0; i < navRef.current.length; i++) {
-            navRef.current[i].classList.remove("selected");
-        }
-        navRef.current[num].classList.add("selected");
-        scrollRef.current[num].scrollIntoView({ behavior: "smooth" });
-    };
+    const path = useLocation();
 
     const handleResize = () => {
         if (window.innerWidth > 760) {
@@ -65,7 +56,7 @@ export default function Base() {
                     </div>
                 </Link>
 
-                <div className="nav-wrapper">
+                <div className={`nav-wrapper ${path.pathname != "/" && "hidden"}`}>
                     <nav className="navbar navbar-dark nav-mobile">
                         <button
                             className="navbar-toggler"
@@ -81,68 +72,49 @@ export default function Base() {
                         </button>
                     </nav>
 
-                    <div id="navbarToggleExternalContent" ref={navToggleButton}>
+                    <div
+                        id="navbarToggleExternalContent"
+                        ref={navToggleButton}
+                    >
                         <nav className="nav-bar">
-                            <Link to="/">
+                            <a href="#home">
                                 <button
-                                    className="nav-button selected"
-                                    ref={(element) =>
-                                        navRef.current.push(element)
-                                    }
-                                    onClick={() => {
-                                        handleScroll(0);
-                                    }}
+                                    className={`nav-button ${selectedNav == "home" && "selected"}`}
+                                    onClick={() => {setSelectedNav("home")}}
                                 >
                                     Home
                                 </button>
-                            </Link>
-                            <Link to="/">
+                            </a>
+                            <a href="#about">
                                 <button
-                                    className="nav-button"
-                                    ref={(element) =>
-                                        navRef.current.push(element)
-                                    }
-                                    onClick={() => {
-                                        handleScroll(1);
-                                    }}
+                                    className={`nav-button ${selectedNav == "about" && "selected"}`}
+                                    onClick={() => {setSelectedNav("about")}}
                                 >
                                     About Us
                                 </button>
-                            </Link>
-                            <Link to="/">
+                            </a>
+                            <a href="#committees">
                                 <button
-                                    className="nav-button"
-                                    ref={(element) =>
-                                        navRef.current.push(element)
-                                    }
-                                    onClick={() => {
-                                        handleScroll(2);
-                                    }}
+                                    className={`nav-button ${selectedNav == "committees" && "selected"}`}
+                                    onClick={() => {setSelectedNav("committees")}}
                                 >
                                     Committees
                                 </button>
-                            </Link>
-                            <Link to="/">
+                            </a>
+                            <a href="#contact">
                                 <button
-                                    className="nav-button"
-                                    ref={(element) =>
-                                        navRef.current.push(element)
-                                    }
-                                    onClick={() => {
-                                        handleScroll(3);
-                                    }}
+                                    className={`nav-button ${selectedNav == "contact" && "selected"}`}
+                                    onClick={() => {setSelectedNav("contact")}}
                                 >
                                     Contact Us
                                 </button>
-                            </Link>
+                            </a>
                         </nav>
                     </div>
                 </div>
             </header>
 
-            <scrollContext.Provider value={{ scrollRef }}>
-                <Outlet />
-            </scrollContext.Provider>
+            <Outlet />
 
             <footer>
                 <div className="main-footer">
@@ -165,43 +137,46 @@ export default function Base() {
                     <div className="footer-links-container">
                         <div className="footer-links-list">
                             <p className="footer-list-title">FOLLOW US</p>
-                            <ExternalFooterLink
+                            <FooterLink
                                 href="https://www.facebook.com/SemiColon.team.asu"
                                 url={FacebookIcon}
                                 text="Facebook"
                             />
-                            <ExternalFooterLink
+                            <FooterLink
                                 href="https://www.linkedin.com/company/semicolon.org"
                                 url={LinkedInIcon}
                                 text="LinkedIn"
                             />
+                            <FooterLink
+                                href="https://www.instagram.com/semicolon_asu/"
+                                url={InstagramIcon}
+                                text="Instagram"
+                            />
+                            
                         </div>
-                        <div className="footer-links-list">
+                        <div className={`footer-links-list ${path.pathname != "/" && "hidden"}`}>
                             <p className="footer-list-title">Navigate</p>
-                            <Link to="/">
-                                <InternalFooterLink
-                                    handleScroll={handleScroll}
-                                    target="0"
-                                    url={HomeIcon}
-                                    text="Home"
-                                />
-                            </Link>
-                            <Link to="/">
-                                <InternalFooterLink
-                                    handleScroll={handleScroll}
-                                    target="1"
-                                    url={AboutIcon}
-                                    text="About"
-                                />
-                            </Link>
-                            <Link to="/">
-                                <InternalFooterLink
-                                    handleScroll={handleScroll}
-                                    target="2"
-                                    url={PeopleIcon}
-                                    text="Committees"
-                                />
-                            </Link>
+                            <FooterLink
+                                href="#home"
+                                target=""
+                                url={HomeIcon}
+                                text="Home"
+                                handleScroll={setSelectedNav}
+                            />
+                            <FooterLink
+                                href="#about"
+                                target=""
+                                url={AboutIcon}
+                                text="About"
+                                handleScroll={setSelectedNav}
+                            />
+                            <FooterLink
+                                href="#committees"
+                                target=""
+                                url={PeopleIcon}
+                                text="Committees"
+                                handleScroll={setSelectedNav}
+                            />
                         </div>
                     </div>
                 </div>

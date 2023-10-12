@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% calc(6% - 1rem);
+    padding: 20px;
 }
 
 .footer-links-container {
@@ -19,13 +19,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 0.6rem;
+    gap: 1rem;
 }
 
 .footer-list-title {
     font-family: "Montserrat";
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 2rem;
     letter-spacing: 0.05em;
     color: #ffffff;
@@ -56,7 +56,6 @@
 @media (max-width: 760px) {
     .footer-list-title {
         font-size: 1.2rem;
-        font-weight: 300;
         line-height: 1rem;
         letter-spacing: 0.05em;
     }
