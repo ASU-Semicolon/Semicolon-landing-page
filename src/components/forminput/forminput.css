@@ -30,6 +30,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 .input-field label {
+    text-wrap: nowrap;
     color: white;
     font-family: "Montserrat";
     font-size: 1.8rem;
