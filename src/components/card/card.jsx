@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getCommitteeIcon } from "../../utils/iconExporter";
 import "./card.css";
 
 export default function Card(props) {
@@ -17,7 +18,7 @@ export default function Card(props) {
                 <img
                     className="card-image"
                     width="70px"
-                    src={props.icon}
+                    src={getCommitteeIcon(props.title)}
                     alt=""
                 />
             </Link>
