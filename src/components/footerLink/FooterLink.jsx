@@ -5,13 +5,13 @@ export default function FooterLink(props) {
         <>
             <a
                 className="footer-link-container"
-                target={props.target}
-                href={props.href}
+                target={props.target || null}
+                href={props.href || null}
             >
                 <img src={props.url} alt="" />
                 <button className="footer-link-text"
                     onClick={() => {
-                        props.handleScroll(props.href.substring(1));
+                        props.handleScroll(props.scrollTo);
                     }}
                 >
                     {props.text}

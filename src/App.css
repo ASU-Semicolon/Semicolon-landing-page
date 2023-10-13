@@ -26,3 +26,9 @@
 * {
     margin: 0;
 }
+
+@media (max-width: 760px) {
+    :root {
+        height: 150vh;
+    }
+}

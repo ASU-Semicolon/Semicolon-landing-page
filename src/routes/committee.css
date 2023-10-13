@@ -68,6 +68,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    white-space: pre-line;
 }
 
 .committee-icon {

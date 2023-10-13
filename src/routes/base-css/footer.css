@@ -3,15 +3,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .footer-links-container {
     display: flex;
     justify-content: space-around;
     align-items: start;
-    gap: 10vw;
-    padding: 1rem 2% 0;
+    gap: 8vw;
+    padding: 1rem 5vw 0 0;
 }
 
 .footer-links-list {
@@ -53,21 +53,31 @@
 }
 
 @media (max-width: 760px) {
+    .footer-links-list {
+        gap: 0.5rem;
+    }
     .footer-list-title {
         font-size: 1.2rem;
         line-height: 1rem;
         letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
     }
     .footer-link-text {
         font-size: 0.9rem;
     }
     div.main-footer {
         width: 100%;
-        padding: 20px 10px;
+        padding: 10px 3vw 15px;
     }
     .copyrights {
         font-size: 0.8rem;
         letter-spacing: 0.02em;
         padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-links-list:last-child {
+        display: none;
     }
 }

@@ -31,7 +31,7 @@
 #getinfo {
     display: flex;
     justify-content: space-evenly;
-    gap: 5px;
+    gap: 5%;
 }
 
 #name {

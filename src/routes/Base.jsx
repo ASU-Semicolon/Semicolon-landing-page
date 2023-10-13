@@ -17,6 +17,12 @@ export default function Base() {
     const navToggleButton = useRef();
     const path = useLocation();
 
+    const handleScroll = (id) => {
+        setSelectedNav(id);
+        const navButton = document.getElementById(id);
+        navButton.scrollIntoView({ behavior: 'smooth' });
+    }
+
     const handleResize = () => {
         if (window.innerWidth > 760) {
             navToggleButton.current.classList.remove("collapse");
@@ -50,7 +56,7 @@ export default function Base() {
                             </h2>
                             <p className="main-logo-slogan">
                                 Debug Your
-                                <span className="orange-text">Soul.</span>
+                                <span className="orange-text"> Soul.</span>
                             </p>
                         </div>
                     </div>
@@ -77,38 +83,30 @@ export default function Base() {
                         ref={navToggleButton}
                     >
                         <nav className="nav-bar">
-                            <a href="#home">
-                                <button
-                                    className={`nav-button ${selectedNav == "home" && "selected"}`}
-                                    onClick={() => {setSelectedNav("home")}}
-                                >
-                                    Home
-                                </button>
-                            </a>
-                            <a href="#about">
-                                <button
-                                    className={`nav-button ${selectedNav == "about" && "selected"}`}
-                                    onClick={() => {setSelectedNav("about")}}
-                                >
-                                    About Us
-                                </button>
-                            </a>
-                            <a href="#committees">
-                                <button
-                                    className={`nav-button ${selectedNav == "committees" && "selected"}`}
-                                    onClick={() => {setSelectedNav("committees")}}
-                                >
-                                    Committees
-                                </button>
-                            </a>
-                            <a href="#contact">
-                                <button
-                                    className={`nav-button ${selectedNav == "contact" && "selected"}`}
-                                    onClick={() => {setSelectedNav("contact")}}
-                                >
-                                    Contact Us
-                                </button>
-                            </a>
+                            <button
+                                className={`nav-button ${selectedNav == "home" && "selected"}`}
+                                onClick={() => {handleScroll("home")}}
+                            >
+                                Home
+                            </button>
+                            <button
+                                className={`nav-button ${selectedNav == "about" && "selected"}`}
+                                onClick={() => {handleScroll("about")}}
+                            >
+                                About Us
+                            </button>
+                            <button
+                                className={`nav-button ${selectedNav == "committees" && "selected"}`}
+                                onClick={() => {handleScroll("committees")}}
+                            >
+                                Committees
+                            </button>
+                            <button
+                                className={`nav-button ${selectedNav == "contact" && "selected"}`}
+                                onClick={() => {handleScroll("contact")}}
+                            >
+                                Contact Us
+                            </button>
                         </nav>
                     </div>
                 </div>
@@ -128,7 +126,7 @@ export default function Base() {
                                 </h2>
                                 <p className="main-logo-slogan">
                                     Debug Your
-                                    <span className="orange-text">Soul.</span>
+                                    <span className="orange-text"> Soul.</span>
                                 </p>
                             </div>
                         </div>
@@ -139,16 +137,19 @@ export default function Base() {
                             <p className="footer-list-title">FOLLOW US</p>
                             <FooterLink
                                 href="https://www.facebook.com/SemiColon.team.asu"
+                                target="_blank"
                                 url={FacebookIcon}
                                 text="Facebook"
                             />
                             <FooterLink
                                 href="https://www.linkedin.com/company/semicolon.org"
+                                target="_blank"
                                 url={LinkedInIcon}
                                 text="LinkedIn"
                             />
                             <FooterLink
                                 href="https://www.instagram.com/semicolon_asu/"
+                                target="_blank"
                                 url={InstagramIcon}
                                 text="Instagram"
                             />
@@ -157,25 +158,22 @@ export default function Base() {
                         <div className={`footer-links-list ${path.pathname != "/" && "hidden"}`}>
                             <p className="footer-list-title">Navigate</p>
                             <FooterLink
-                                href="#home"
-                                target=""
+                                scrollTo="home"
                                 url={HomeIcon}
                                 text="Home"
-                                handleScroll={setSelectedNav}
+                                handleScroll={handleScroll}
                             />
                             <FooterLink
-                                href="#about"
-                                target=""
+                                scrollTo="about"
                                 url={AboutIcon}
                                 text="About"
-                                handleScroll={setSelectedNav}
+                                handleScroll={handleScroll}
                             />
                             <FooterLink
-                                href="#committees"
-                                target=""
+                                scrollTo="committees"
                                 url={PeopleIcon}
                                 text="Committees"
-                                handleScroll={setSelectedNav}
+                                handleScroll={handleScroll}
                             />
                         </div>
                     </div>

@@ -50,15 +50,16 @@ export default function Home() {
                             ]}
                             titleId="home"
                             paragraph={
-                                "Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with Semi Colon!"
+                                "Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with SemiColon!"
                             }
                             button={"APPLY NOW"}
+                            target=""
                             href="/form"
                         />
                         <div className="logo-container">
                             <img
                                 src={Logo}
-                                width="183px"
+                                width="120px"
                                 alt=""
                             />
                         </div>
@@ -84,6 +85,7 @@ export default function Home() {
                                 "We are a student activity at the Faculty of Engineering, Ain Shams University. Our goal is to strengthen and revitalize the students of the Computer, communication & mechatronics Departments in the different tracks"
                             }
                             button={"Learn More"}
+                            target="_blank"
                             href="https://www.facebook.com/SemiColon.team.asu/posts/pfbid0eqbNgvA2E1yjKh5V6cjZYxr4z7h3x4pfcLkwJ1HQZMxhrzFapyRvFj2qymhh73udl"
                         />
                         <Brief
@@ -114,7 +116,7 @@ export default function Home() {
                             button=""
                         />
 
-                        <div className="cards-container">
+                        <div className="cards-container" style={committees ? {alignItems : "stretch"} : {alignItems : "center"}}>
                             <HashLoader
                                 color={"#FFB000"}
                                 loading={!committees}

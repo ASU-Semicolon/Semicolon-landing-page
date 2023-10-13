@@ -71,7 +71,7 @@ button.navbar-toggler {
 
 .nav-button.selected,
 .nav-button.selected:hover {
-    /* border-bottom: #ffb000 solid 2px; */
+    border-bottom: #ffb000 solid 2px;
 }
 
 @media (max-width: 760px) {
