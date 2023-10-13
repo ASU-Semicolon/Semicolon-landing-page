@@ -23,7 +23,6 @@ export default function Card(props) {
                         LEARN MORE
                     </Link>
                 </button>
-                
             </Link>
         </>
     );
