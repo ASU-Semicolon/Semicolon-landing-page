@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1rem repeat(auto-fill, 1fr);
     column-gap: 9rem;
+    row-gap: 3rem;
     justify-content: center;
     align-items: center;
     min-height: 70vh;
@@ -69,7 +70,7 @@ a {
 .stats-container {
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     gap: 2rem;
     overflow: hidden;
     min-width: none;
@@ -83,9 +84,9 @@ a {
     div.about-container,
     div.contact-container,
     div.committee-brief {
-        max-width: 65rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
+        max-width: 60rem;
+        padding-left: 4vw;
+        padding-right: 4vw;
     }
 
     .home-container {
@@ -109,6 +110,10 @@ a {
         padding-top: 8vw;
     }
 
+    .stats-container {
+        padding: 0 20px;
+    }
+
     .left-content {
         max-width: none;
         padding: 20px;
@@ -128,5 +133,11 @@ a {
 
     .logo-container img {
         width: 90px;
+    }
+}
+
+@media (max-width: 400px) {
+    .stats-container {
+        display: none;
     }
 }
