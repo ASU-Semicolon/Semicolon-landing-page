@@ -16,7 +16,7 @@ export default function TitleAndParagraph(props) {
                 {props.button == "" ? (
                     ""
                 ) : (
-                    <Link to={props.href}>
+                    <Link to={props.href} target={props.target}>
                         <button className="button">{props.button}</button>
                     </Link>
                 )}
