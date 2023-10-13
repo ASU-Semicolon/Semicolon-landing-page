@@ -4,7 +4,6 @@ import Statistic from "../components/statistic/Statistic";
 import Brief from "../components/brief/Brief";
 import Card from "../components/card/card";
 import Info from "../components/contactInfo/ContactInfo";
-import Contactform from "../components/contactInput/ContactInput";
 import { useEffect, useState } from "react";
 import { API_URL } from "../keys.config";
 import { HashLoader } from "react-spinners";
@@ -82,7 +81,7 @@ export default function Home() {
                             title={"Who We Are"}
                             titleId="about"
                             paragraph={
-                                "We are a student activity at the Faculty of Engineering, Ain Shams University. Our goal is to strengthen and revitalize the students of the Computer, communication & mechatronics Departments in the different tracks"
+                                "We are a student activity at the Faculty of Engineering, Ain Shams University. Our goal is to strengthen and revitalize the students of the Computer, Communication & Mechatronics Departments in the different tracks."
                             }
                             button={"Learn More"}
                             target="_blank"
@@ -90,12 +89,12 @@ export default function Home() {
                         />
                         <Brief
                             title="Our history"
-                            description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
+                            description="We started our journey in 2022 with the aim to become one of the most impactful student activities. In such little time we managed to have tremendous growth, by bringing passionate students who share the same interests together."
                             url={HistoryIcon}
                         />
                         <Brief
                             title="Our Vision"
-                            description="rem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet vestibulum sem. Fusce nec varius magna. Mauris porta tempus mi eu efficitur."
+                            description="Our vision is to create a friendly space in which our community of students and enthusiasts can learn from each other and keep the wheel turning by promoting excelling students to become instructors."
                             url={VisionIcon}
                         />
                     </div>
@@ -112,7 +111,7 @@ export default function Home() {
                             className="committee-brief"
                             titleId="committees"
                             title="Our Committees"
-                            paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris."
+                            paragraph="We have a bunch of different committees of both technical and non-technical fields, so that everyone whichever their interest is, finds something they're truly passionate about."
                             button=""
                         />
 
