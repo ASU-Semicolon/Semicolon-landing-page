@@ -72,6 +72,10 @@
         font-size: 3.2rem;
         line-height: 3.8rem;
     }
+    
+    .committee-container .main-title {
+        padding-right: 5vw;
+    }
 
     .main-paragraph {
         font-size: 1.5rem;

@@ -78,6 +78,20 @@ export default function Home() {
                             id="name"
                             placeholder="Your name"
                         />
+                        <Input
+                            type="number"
+                            label="Phone Number"
+                            name="phone"
+                            id="phone-number"
+                            placeholder="Your number"
+                        />
+                        <Input
+                            type="email"
+                            label="Email"
+                            name="email"
+                            id="email"
+                            placeholder="Your email"
+                        />
                         <Dropdownmenu
                             type="text"
                             label="Department"
@@ -94,18 +108,11 @@ export default function Home() {
                             ]}
                         />
                         <Input
-                            type="number"
-                            label="Phone Number"
-                            name="phone"
-                            id="phone-number"
-                            placeholder="Your number"
-                        />
-                        <Input
-                            type="email"
-                            label="Email"
-                            name="email"
-                            id="email"
-                            placeholder="Your email"
+                            type="text"
+                            label="Specialization"
+                            name="specialization"
+                            id="specialization"
+                            placeholder="Your specialization"
                         />
                         <Dropdownmenu
                             label="Academic Year"

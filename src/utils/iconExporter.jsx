@@ -23,16 +23,16 @@ const iconsObject = {
     "AVR": embedded,
     "ARM": embedded,
     "C++": cpp,
-    "mobile": mobile,
-    "qt": qt,
-    "Ai": ai,
+    "Mobile": mobile,
+    "QT": qt,
+    "AI": ai,
     "Digital IC": digital,
     "Analog IC": analog,
-    "hr": hr,
+    "HR": hr,
     "PR": pr,
     "Fundraising": fr,
     "Media": media,
-    "pm": pm,
+    "PM": pm,
 }
 
 export function getCommitteeIcon(committeeName) {

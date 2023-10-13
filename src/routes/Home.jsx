@@ -138,12 +138,12 @@ export default function Home() {
                 </div>
 
                 <div className="contact-container">
-                    <div className="left-content">
+                    {/* <div className="left-content"> */}
                         <Info />
-                    </div>
-                    <div className="right-content">
+                    {/* </div> */}
+                    {/* <div className="right-content">
                         <Contactform />
-                    </div>
+                    </div> */}
                 </div>
                 </div>
             </main>

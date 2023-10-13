@@ -11,10 +11,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 50vh;
     gap: 9%;
     font-size: 1.6rem;
     padding: 0 5vw;
+}
+
+.contact-container .right-content {
+    flex-grow: 0;
+    flex-basis: content;
 }
 
 @media (max-width: 760px) {
@@ -23,12 +28,8 @@
         flex-direction: column;
         height: fit-content;
         padding-top: 5rem;
-        padding-bottom: 2rem;
+        padding-bottom: 6rem;
         gap: 2rem;
-    }
-
-    .contact-cards-container {
-        display: none;
     }
 
     .contact-container .right-content {

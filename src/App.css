@@ -29,6 +29,6 @@
 
 @media (max-width: 760px) {
     :root {
-        height: 150vh;
+        height: calc(100% + 60px);
     }
 }
