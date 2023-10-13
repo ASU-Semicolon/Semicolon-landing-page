@@ -78,6 +78,17 @@ button.card-button {
         padding: 2rem;
     }
 
+    .card-text-container {
+        width: 100%;
+    }
+
+    .mobile-card-description {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
     button.card-button {
         display: none;
     }
@@ -92,11 +103,12 @@ button.card-button {
         padding-right: 2rem;
         font-size: 1.4rem;
         font-weight: 300;
-        line-height: 1.6rem;
+        line-height: 2rem;
     }
 
     .card-image {
         position: static;
+        float: right;
         align-self: end;
     }
 }

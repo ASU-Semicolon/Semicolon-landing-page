@@ -83,7 +83,7 @@ a {
     div.home-container,
     div.about-container,
     div.contact-container,
-    div.committee-brief {
+    div.committee-brief.committee-brief {
         max-width: 60rem;
         padding-left: 4vw;
         padding-right: 4vw;

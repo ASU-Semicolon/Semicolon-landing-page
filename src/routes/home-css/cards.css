@@ -5,6 +5,10 @@
     padding-top: 5rem;
 }
 
+.committee-container .text-container {
+    padding-left: 3vw;
+}
+
 .committee-wrapper {
     display: flex;
     flex-direction: column;
@@ -44,4 +48,5 @@
         align-items: start;
         width: 100%;
     }
+
 }

@@ -78,6 +78,20 @@ export default function Home() {
                             id="name"
                             placeholder="Your name"
                         />
+                        <Input
+                            type="number"
+                            label="Phone Number"
+                            name="phone"
+                            id="phone-number"
+                            placeholder="Your number"
+                        />
+                        <Input
+                            type="email"
+                            label="Email"
+                            name="email"
+                            id="email"
+                            placeholder="Your email"
+                        />
                         <Dropdownmenu
                             type="text"
                             label="Department"
@@ -94,18 +108,11 @@ export default function Home() {
                             ]}
                         />
                         <Input
-                            type="number"
-                            label="Phone Number"
-                            name="phone"
-                            id="phone-number"
-                            placeholder="Your number"
-                        />
-                        <Input
-                            type="email"
-                            label="Email"
-                            name="email"
-                            id="email"
-                            placeholder="Your email"
+                            type="text"
+                            label="Specialization"
+                            name="specialization"
+                            id="specialization"
+                            placeholder="Your specialization"
                         />
                         <Dropdownmenu
                             label="Academic Year"
@@ -121,34 +128,47 @@ export default function Home() {
                             ]}
                         />
                         <Dropdownmenu
-                            label="First Preferance"
+                            label="First Preference"
                             name="first_preference"
                             id="firstchoice"
-                            placeholder="First Preferance"
+                            placeholder="First Preference"
                             options={committees}
                         />
                         <Input
-                            label="First Preferance Previous Experience"
-                            name="first_preference_experience"
+                            name="first_preference_reason"
                             id="firstchoiceexperience"
-                            placeholder="Your previous experience"
+                            placeholder="Reasons for applying"
                             multiline={true}
                         />
                         <Dropdownmenu
-                            label="Second Preferance"
+                            label="Second Preference"
                             name="second_preference"
                             id="secondchoice"
-                            placeholder="Second Preferance"
+                            placeholder="Second Preference"
                             options={committees}
                         />
                         <Input
-                            label="Second Preferance Previous Experience"
-                            name="second_preference_experience"
+                            name="second_preference_reason"
                             id="secondchoiceexperience"
-                            placeholder="Your previous experience"
+                            placeholder="Reasons for applying"
                             multiline={true}
                         />
-
+                        <div className="form-experinece">
+                            <Input
+                                label="Previous Experience"
+                                name="second_preference_experience"
+                                id="secondchoiceexperience"
+                                placeholder="Your previous experience"
+                                labelOnly={true}
+                            />
+                            <Input
+                                name="previousExperience"
+                                id="secondchoiceexperience"
+                                placeholder="Your previous experience"
+                                multiline={true}
+                            />
+                        </div>
+                        
                         <button type="submit" id="submit-btn">
                             Submit
                         </button>
