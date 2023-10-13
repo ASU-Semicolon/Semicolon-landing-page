@@ -94,13 +94,20 @@
     background-color: gray;
 }
 
+.form-experinece {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
 .mobile { 
     display: none;
     text-align: center;
     margin-top: 1em;
     font-size: 42px;
 }
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .form-main-page {
         justify-content: center;
         align-items: center;
@@ -130,5 +137,9 @@
     #submit-btn {
         max-width: 40%;
         margin-left: 1.3em;
+    }
+
+    .form-experinece {
+        gap: 0;
     }
 }

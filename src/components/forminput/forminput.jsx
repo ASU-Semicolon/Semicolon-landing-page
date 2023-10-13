@@ -14,13 +14,15 @@ export default function Input(props) {
                 ) : (
                     <>
                         <label htmlFor={props.id}>{props.label}</label>
-                        <input
-                            type={props.type}
-                            id={props.id}
-                            name={props.name}
-                            placeholder={props.placeholder}
-                            required
-                        ></input>
+                            {props.labelOnly ? (<span></span>) : (
+                            <input
+                                type={props.type}
+                                id={props.id}
+                                name={props.name}
+                                placeholder={props.placeholder}
+                                required
+                            ></input>
+                        )}
                     </>
                 )}
             </div>
