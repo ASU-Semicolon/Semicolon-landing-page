@@ -86,11 +86,11 @@
 #submit-btn:hover {
     background: rgb(19, 200, 19);
 }
-.input-field:has(input:invalid, select:invalid) ~ #submit-btn {
+.input-field:has(input:invalid, select:invalid, textarea:invalid) ~ #submit-btn {
     background: #ffb000;
     color: black;
 }
-.input-field:has(input:invalid, select:invalid) ~ #submit-btn:hover {
+.input-field:has(input:invalid, select:invalid, textarea:invalid) ~ #submit-btn:hover {
     background-color: gray;
 }
 
