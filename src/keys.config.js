@@ -1,1 +1,1 @@
-export const API_URL = "https://semicolor-backend-prod.onrender.com";
+export const API_URL = "https://backend.asusemicolon.com";
