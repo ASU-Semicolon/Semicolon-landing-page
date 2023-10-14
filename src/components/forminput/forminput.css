@@ -39,6 +39,15 @@ input::-webkit-inner-spin-button {
     text-transform: uppercase;
     width: 60%;
 }
+.input-field label:after {
+    content: "*"
+}
+.incorrect input:invalid,
+.incorrect select:invalid,
+.incorrect textarea:invalid{
+    border-color: red;
+}
+
 .input-field::placeholder {
     color: #bebebe;
     font-family: "Open Sans";

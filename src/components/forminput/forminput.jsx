@@ -20,6 +20,8 @@ export default function Input(props) {
                                 id={props.id}
                                 name={props.name}
                                 placeholder={props.placeholder}
+                                maxLength={props.maxLength}
+                                min={props.min}
                                 required
                             ></input>
                         )}

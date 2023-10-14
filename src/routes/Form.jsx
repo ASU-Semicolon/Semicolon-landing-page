@@ -55,6 +55,10 @@ export default function Home() {
             });
     };
 
+    const checkValid = (event) => {
+        event.target.parentElement.classList.add("incorrect")
+    }
+
     return (
         <>
             <ToastContainer />
@@ -84,7 +88,9 @@ export default function Home() {
                             name="phone"
                             id="phone-number"
                             placeholder="Your number"
-                                                    />
+                            maxLength="11"
+                            min="0"
+                        />
                         <Input
                             type="email"
                             label="Email"
@@ -169,7 +175,7 @@ export default function Home() {
                             />
                         </div>
                         
-                        <button type="submit" id="submit-btn">
+                        <button type="submit" id="submit-btn" onClick={checkValid}>
                             Submit
                         </button>
                     </form>
