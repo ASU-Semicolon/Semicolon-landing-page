@@ -61,7 +61,6 @@
 
 .committee-description,
 .prerequisite {
-    /* width: 628px; */
     flex-shrink: 0;
     color: #fff;
     font-family: Open Sans;
@@ -89,7 +88,8 @@
         line-height: 3.8rem;
     }
 
-    .committee-description {
+    .committee-description,
+    .prerequisite {
         font-size: 1.6rem;
         line-height: 2.2rem;
     }
