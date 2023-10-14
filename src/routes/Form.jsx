@@ -27,6 +27,7 @@ export default function Home() {
 
     const handleApplyFormSubmit = async (event) => {
         event.preventDefault();
+        event.target.classList.remove("incorrect");
         const form = new FormData(event.target);
         let applicant = {};
         for (let entry of form.entries()) {
