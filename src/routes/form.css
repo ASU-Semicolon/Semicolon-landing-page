@@ -86,11 +86,23 @@
 #submit-btn:hover {
     background: rgb(19, 200, 19);
 }
-.input-field:has(input:invalid, select:invalid, textarea:invalid) ~ #submit-btn {
+
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #000d10 inset !important;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.input-field:has(input:invalid, select:invalid, textarea:invalid) ~ #submit-btn,
+.form-experinece:has(textarea:invalid) ~ #submit-btn {
     background: #ffb000;
     color: black;
 }
-.input-field:has(input:invalid, select:invalid, textarea:invalid) ~ #submit-btn:hover {
+.input-field:has(input:invalid, select:invalid, textarea:invalid) ~ #submit-btn:hover,
+.form-experinece:has(textarea:invalid) ~ #submit-btn:hover {
     background-color: gray;
 }
 
