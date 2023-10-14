@@ -29,9 +29,9 @@ export default function Home() {
         event.preventDefault();
         const form = new FormData(event.target);
         let applicant = {};
-        form.entries().forEach((entry) => {
+        for (let entry of form.entries()) {
             applicant[entry[0]] = entry[1];
-        });
+        }
         fetch(`${API_URL}/applicant`, {
             method: "POST",
             body: JSON.stringify(applicant),
@@ -84,7 +84,7 @@ export default function Home() {
                             name="phone"
                             id="phone-number"
                             placeholder="Your number"
-                        />
+                                                    />
                         <Input
                             type="email"
                             label="Email"
