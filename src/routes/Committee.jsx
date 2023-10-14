@@ -40,13 +40,14 @@ export default function Committee() {
                             Board Members
                         </h1>
                         <div className="board-members">
-
-                            { committee.director && <p className="committee-description">
-                                <span className="bold">
-                                    {committee.director}:
-                                </span>{" "}
-                                Director of {committee.sector}
-                            </p>}
+                            {committee.director && (
+                                <p className="committee-description">
+                                    <span className="bold">
+                                        {committee.director}:
+                                    </span>{" "}
+                                    Director of {committee.sector}
+                                </p>
+                            )}
                             {committee.vice_director && (
                                 <p className="committee-description">
                                     <span className="bold">
@@ -55,25 +56,49 @@ export default function Committee() {
                                     Vice Director of {committee.sector}
                                 </p>
                             )}
-                            {committee.heads && committee.heads.map((head) => (
-                                <p
-                                    className="committee-description"
-                                    key={Math.random()}
-                                >
-                                    <span className="bold">{head}:</span> Head
-                                    of {committee.title}
-                                </p>
-                            ))}
-                            {committee.vice_heads && committee.vice_heads.map((vice_head) => (
-                                <p
-                                    className="committee-description"
-                                    key={Math.random()}
-                                >
-                                    <span className="bold">{vice_head}: </span>
-                                    Vice Head of {committee.title}
-                                </p>
-                            ))}
+                            {committee.heads &&
+                                committee.heads.map((head) => (
+                                    <p
+                                        className="committee-description"
+                                        key={Math.random()}
+                                    >
+                                        <span className="bold">{head}:</span>{" "}
+                                        Head of {committee.title}
+                                    </p>
+                                ))}
+                            {committee.vice_heads &&
+                                committee.vice_heads.map((vice_head) => (
+                                    <p
+                                        className="committee-description"
+                                        key={Math.random()}
+                                    >
+                                        <span className="bold">
+                                            {vice_head}:{" "}
+                                        </span>
+                                        Vice Head of {committee.title}
+                                    </p>
+                                ))}
                         </div>
+                        {committee.prerequisites && (
+                            <>
+                                <h1 className="committee-title committee-title-underline">
+                                    Prerequisites
+                                </h1>
+                                <ul>
+                                    {committee.prerequisites.map(
+                                        (prerequisite) => (
+                                            <li
+                                                key={Math.random()}
+                                                className="prerequisite"
+                                            >
+                                                {" "}
+                                                {prerequisite}{" "}
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
+                            </>
+                        )}
                         <h1 className="committee-title committee-title-underline">
                             What We Do
                         </h1>

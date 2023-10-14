@@ -59,7 +59,8 @@
     background-color: #ffb000;
 }
 
-.committee-description {
+.committee-description,
+.prerequisite {
     /* width: 628px; */
     flex-shrink: 0;
     color: #fff;
