@@ -26,14 +26,9 @@ export default function Info() {
                         />
                         <ContactCard
                             title="Email"
-                            number="semicolon@gmail.com"
+                            number="hr.semicolon.asu@gmail.com"
                             url={EmailIcon}
                         />
-                        {/* <ContactCard
-                            title="WhatsApp"
-                            number="+20112345680"
-                            url={WhatsAppIcon}
-                        /> */}
                     </div>
                 </div>
             </div>
