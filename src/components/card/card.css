@@ -57,6 +57,7 @@ button.card-button {
 }
 
 .card-image {
+    width: 50px;
     position: absolute;
     right: 2rem;
     bottom: 1.5rem;
