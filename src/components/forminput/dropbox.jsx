@@ -9,8 +9,9 @@ export default function Dropdownmenu(props) {
                 <select name={props.name} id={props.id} required>
                     <option
                         className="default"
-                        value={props.placeholder}
+                        value=""
                         hidden
+                        selected
                     >
                         {props.placeholder}
                     </option>

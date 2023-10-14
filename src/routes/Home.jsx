@@ -49,7 +49,7 @@ export default function Home() {
                             ]}
                             titleId="home"
                             paragraph={
-                                "Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve them well in the future.\nSo why not start today? Make your college years count with SemiColon!"
+                                "Whether it’s joining a coding club, participating in hackathons, or contributing to open-source projects.\nCreate memories that will last a lifetime and build skills that will serve you well in the future.\nSo why not start today? Make your college years count with SemiColon!"
                             }
                             button={"APPLY NOW"}
                             target=""

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { API_URL } from "../keys.config";
 import { ToastContainer, toast } from "react-toastify";
-import FormBackgroundImage from "../assets/form-graphics/form-photo.png"
+import FormBackgroundImage from "../assets/form-graphics/form-photo.png";
 import "./form.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -29,9 +29,9 @@ export default function Home() {
         event.preventDefault();
         const form = new FormData(event.target);
         let applicant = {};
-        form.entries().forEach((entry) => {
+        for (let entry of form.entries()) {
             applicant[entry[0]] = entry[1];
-        });
+        }
         fetch(`${API_URL}/applicant`, {
             method: "POST",
             body: JSON.stringify(applicant),
@@ -53,6 +53,10 @@ export default function Home() {
             .catch((err) => {
                 showErrorToast(err.message);
             });
+    };
+
+    const checkValid = (event) => {
+        event.target.parentElement.classList.add("incorrect");
     };
 
     return (
@@ -79,11 +83,12 @@ export default function Home() {
                             placeholder="Your name"
                         />
                         <Input
-                            type="number"
+                            type="text"
                             label="Phone Number"
                             name="phone"
                             id="phone-number"
                             placeholder="Your number"
+                            pattern="^01\d{9}$"
                         />
                         <Input
                             type="email"
@@ -91,6 +96,7 @@ export default function Home() {
                             name="email"
                             id="email"
                             placeholder="Your email"
+                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                         />
                         <Dropdownmenu
                             type="text"
@@ -168,8 +174,12 @@ export default function Home() {
                                 multiline={true}
                             />
                         </div>
-                        
-                        <button type="submit" id="submit-btn">
+
+                        <button
+                            type="submit"
+                            id="submit-btn"
+                            onClick={checkValid}
+                        >
                             Submit
                         </button>
                     </form>

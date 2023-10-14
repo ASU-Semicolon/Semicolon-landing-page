@@ -29,6 +29,6 @@
 
 @media (max-width: 760px) {
     :root {
-        height: calc(100% + 60px);
+        background-size: 160vh;
     }
 }
