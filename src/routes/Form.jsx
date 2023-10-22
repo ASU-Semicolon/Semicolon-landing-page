@@ -20,7 +20,10 @@ export default function Home() {
     useEffect(() => {
         fetch(`${API_URL}/committee`).then((res) => {
             res.json().then(({ data }) => {
-                setCommittees(data.map((committee) => committee.title));
+                setCommittees(data.map((committee) => {
+                    return {"title":committee.title,
+                            "disabled":committee.disabled}
+                }));
             });
         });
     }, []);
@@ -106,12 +109,12 @@ export default function Home() {
                             id="department"
                             placeholder="Your department"
                             options={[
-                                "Freshman",
-                                "Electrical",
-                                "Mechanical",
-                                "Civil",
-                                "Architecture",
-                                "Other",
+                                {"title":"Freshman"},
+                                {"title":"Electrical"},
+                                {"title":"Mechanical"},
+                                {"title":"Civil"},
+                                {"title":"Architecture"},
+                                {"title":"Other"},
                             ]}
                         />
                         <Input
@@ -127,11 +130,11 @@ export default function Home() {
                             id="academicyear"
                             placeholder="Your academic year"
                             options={[
-                                "Freshman",
-                                "Sophomore",
-                                "Junior",
-                                "Senior 1",
-                                "Senior 2",
+                                {"title":"Freshman"},
+                                {"title":"Sophomore"},
+                                {"title":"Junior"},
+                                {"title":"Senior 1"},
+                                {"title":"Senior 2"},
                             ]}
                         />
                         <Dropdownmenu
