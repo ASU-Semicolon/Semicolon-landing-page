@@ -20,6 +20,7 @@ export default function Home() {
     useEffect(() => {
         fetch(`${API_URL}/committee`).then((res) => {
             res.json().then(({ data }) => {
+                data = data.sort((a, b) => (b.disabled ? -1 : 1));
                 setCommittees(data.map((committee) => {
                     return {"title":committee.title,
                             "disabled":committee.disabled}
