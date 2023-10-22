@@ -16,7 +16,7 @@ export default function Dropdownmenu(props) {
                         {props.placeholder}
                     </option>
                     {props.options.map((option) => {
-                        return <option value={option}>{option}</option>;
+                        return <option value={option.title} disabled={option.disabled}>{option.title}{option.disabled == "true" ? " (closed)":""}</option>;
                     })}
                 </select>
             </div>
