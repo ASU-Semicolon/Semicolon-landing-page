@@ -1,16 +1,16 @@
-import { Outlet, Link, useLocation } from "react-router-dom";
-import FooterLink from "../components/footerLink/FooterLink";
 import { useEffect, useRef, useState } from "react";
-import Logo from "../assets/home-graphics/logo.svg";
-import FacebookIcon from "../assets/footer/Facebook.svg";
-import LinkedInIcon from "../assets/footer/LinkedIn.svg";
-import HomeIcon from "../assets/footer/Home.svg";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import AboutIcon from "../assets/footer/About.svg";
+import FacebookIcon from "../assets/footer/Facebook.svg";
+import HomeIcon from "../assets/footer/Home.svg";
+import InstagramIcon from "../assets/footer/Instagram.svg";
+import LinkedInIcon from "../assets/footer/LinkedIn.svg";
 import PeopleIcon from "../assets/footer/People.svg";
-import InstagramIcon from "../assets/footer/Instagram.svg"
-import "./base-css/nav.css";
+import Logo from "../assets/home-graphics/logo.svg";
+import FooterLink from "../components/footerLink/FooterLink";
 import "./base-css/footer.css";
 import "./base-css/logo.css";
+import "./base-css/nav.css";
 
 export default function Base() {
     const [selectedNav, setSelectedNav] = useState("home");
@@ -20,8 +20,8 @@ export default function Base() {
     const handleScroll = (id) => {
         setSelectedNav(id);
         const navButton = document.getElementById(id);
-        navButton.scrollIntoView({ behavior: 'smooth' });
-    }
+        navButton.scrollIntoView({ behavior: "smooth" });
+    };
 
     const handleResize = () => {
         if (window.innerWidth > 760) {
@@ -33,7 +33,7 @@ export default function Base() {
             navToggleButton.current.setAttribute("data-bs-toggle", "collapse");
             navToggleButton.current.setAttribute(
                 "data-bs-target",
-                "#navbarToggleExternalContent"
+                "#navbarToggleExternalContent",
             );
         }
     };
@@ -62,7 +62,11 @@ export default function Base() {
                     </div>
                 </Link>
 
-                <div className={`nav-wrapper ${path.pathname != "/" && "hidden"}`}>
+                <div
+                    className={`nav-wrapper ${
+                        path.pathname != "/" && "hidden"
+                    }`}
+                >
                     <nav className="navbar navbar-dark nav-mobile">
                         <button
                             className="navbar-toggler"
@@ -78,32 +82,45 @@ export default function Base() {
                         </button>
                     </nav>
 
-                    <div
-                        id="navbarToggleExternalContent"
-                        ref={navToggleButton}
-                    >
+                    <div id="navbarToggleExternalContent" ref={navToggleButton}>
                         <nav className="nav-bar">
                             <button
-                                className={`nav-button ${selectedNav == "home" && "selected"}`}
-                                onClick={() => {handleScroll("home")}}
+                                className={`nav-button ${
+                                    selectedNav == "home" && "selected"
+                                }`}
+                                onClick={() => {
+                                    handleScroll("home");
+                                }}
                             >
                                 Home
                             </button>
                             <button
-                                className={`nav-button ${selectedNav == "about" && "selected"}`}
-                                onClick={() => {handleScroll("about")}}
+                                className={`nav-button ${
+                                    selectedNav == "about" && "selected"
+                                }`}
+                                onClick={() => {
+                                    handleScroll("about");
+                                }}
                             >
                                 About Us
                             </button>
                             <button
-                                className={`nav-button ${selectedNav == "committees" && "selected"}`}
-                                onClick={() => {handleScroll("committees")}}
+                                className={`nav-button ${
+                                    selectedNav == "committees" && "selected"
+                                }`}
+                                onClick={() => {
+                                    handleScroll("committees");
+                                }}
                             >
                                 Committees
                             </button>
                             <button
-                                className={`nav-button ${selectedNav == "contact" && "selected"}`}
-                                onClick={() => {handleScroll("contact")}}
+                                className={`nav-button ${
+                                    selectedNav == "contact" && "selected"
+                                }`}
+                                onClick={() => {
+                                    handleScroll("contact");
+                                }}
                             >
                                 Contact Us
                             </button>
@@ -153,9 +170,12 @@ export default function Base() {
                                 url={InstagramIcon}
                                 text="Instagram"
                             />
-                            
                         </div>
-                        <div className={`footer-links-list ${path.pathname != "/" && "hidden"}`}>
+                        <div
+                            className={`footer-links-list ${
+                                path.pathname != "/" && "hidden"
+                            }`}
+                        >
                             <p className="footer-list-title">Navigate</p>
                             <FooterLink
                                 scrollTo="home"

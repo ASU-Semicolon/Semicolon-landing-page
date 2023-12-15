@@ -9,7 +9,8 @@ export default function FooterLink(props) {
                 href={props.href || null}
             >
                 <img src={props.url} alt="" />
-                <button className="footer-link-text"
+                <button
+                    className="footer-link-text"
                     onClick={() => {
                         props.handleScroll(props.scrollTo);
                     }}

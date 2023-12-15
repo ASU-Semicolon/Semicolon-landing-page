@@ -40,11 +40,11 @@ input::-webkit-inner-spin-button {
     width: 60%;
 }
 .input-field label:after {
-    content: "*"
+    content: "*";
 }
 .incorrect input:invalid,
 .incorrect select:invalid,
-.incorrect textarea:invalid{
+.incorrect textarea:invalid {
     border-color: red;
 }
 

@@ -1,23 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext, useLayoutEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { API_URL } from "../keys.config";
 import { HashLoader } from "react-spinners";
 import "./committee.css";
 import LoadingData from "../components/loadingData/loadingData.component";
+import { CommitteesContext } from "../contexts/committees.context.jsx";
 
 export default function Committee() {
     const { committeeName } = useParams();
-    const [isFetching, setIsFetching] = useState(true);
-    const [committee, setCommittee] = useState();
+    const { isFetching, committees } = useContext(CommitteesContext);
 
-    useEffect(() => {
-        fetch(`${API_URL}/committee/${committeeName}`)
-            .then((res) => res.json())
-            .then(({ data }) => {
-                setCommittee(data);
-                setIsFetching(false);
-            });
-    }, [committeeName]);
+    const [committee, setCommittee] = useState(null);
+    useLayoutEffect(() => {
+        setCommittee(committees.find((c) => c.title === committeeName));
+    }, [committees]);
 
     if (isFetching) return <LoadingData isLoading={isFetching} />;
 
@@ -94,7 +90,7 @@ export default function Committee() {
                                                 {" "}
                                                 {prerequisite}{" "}
                                             </li>
-                                        )
+                                        ),
                                     )}
                                 </ul>
                             </>

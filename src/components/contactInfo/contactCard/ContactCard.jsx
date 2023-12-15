@@ -10,7 +10,9 @@ export default function ContactCard(props) {
                 <div className="contact-card-text">
                     <h4 className="contact-card-title">{props.title}</h4>
                     <a href={props.href}>
-                        <p className="contact-card-description">{props.number}</p>
+                        <p className="contact-card-description">
+                            {props.number}
+                        </p>
                     </a>
                 </div>
             </div>

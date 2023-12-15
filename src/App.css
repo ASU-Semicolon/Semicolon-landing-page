@@ -7,20 +7,30 @@
     scroll-padding-top: 15rem;
 }
 
-/* @media screen and (min-width: 600px) {
-    .Toastify__toast-container {
-        transform: scale(1.5);
-        margin-right: 60px;
-    }
-} */
-
 .Toastify__toast-body {
     font-size: 1.6rem;
     display: flex;
-    gap:10px
+    gap: 10px;
 }
 .Toastify__toast-icon {
     transform: scale(1.5);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cc8d0099;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cc8d00;
 }
 
 * {

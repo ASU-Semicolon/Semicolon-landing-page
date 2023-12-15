@@ -1,12 +1,13 @@
 import Input from "../components/forminput/forminput";
 import Dropdownmenu from "../components/forminput/dropbox";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { API_URL } from "../keys.config";
 import { ToastContainer, toast } from "react-toastify";
 import FormBackgroundImage from "../assets/form-graphics/form-photo.png";
 import "./form.css";
 import "react-toastify/dist/ReactToastify.css";
+import { CommitteesContext } from "../contexts/committees.context.jsx";
 
 export default function Home() {
     function showErrorToast(message, theme = "dark") {
@@ -16,18 +17,21 @@ export default function Home() {
         toast.success(message, { theme });
     }
 
-    const [committees, setCommittees] = useState([]);
+    const { committees } = useContext(CommitteesContext);
+    const [sortedCommittees, setSortedCommittees] = useState();
+
     useEffect(() => {
-        fetch(`${API_URL}/committee`).then((res) => {
-            res.json().then(({ data }) => {
-                data = data.sort((a, b) => (b.disabled ? -1 : 1));
-                setCommittees(data.map((committee) => {
-                    return {"title":committee.title,
-                            "disabled":committee.disabled}
-                }));
-            });
-        });
-    }, []);
+        let data = committees?.sort((a, b) => (b.disabled ? -1 : 1));
+        setSortedCommittees(
+            data.map((committee) => {
+                return {
+                    title: committee.title,
+                    disabled: committee.disabled,
+                };
+            }),
+        );
+        console.log(sortedCommittees);
+    }, [committees]);
 
     const handleApplyFormSubmit = async (event) => {
         event.preventDefault();
@@ -51,7 +55,7 @@ export default function Home() {
                     event.target.reset();
                 } else {
                     showErrorToast(
-                        "Phone or email has been used before, try again with new data"
+                        "Phone or email has been used before, try again with new data",
                     );
                 }
             })
@@ -110,12 +114,12 @@ export default function Home() {
                             id="department"
                             placeholder="Your department"
                             options={[
-                                {"title":"Freshman"},
-                                {"title":"Electrical"},
-                                {"title":"Mechanical"},
-                                {"title":"Civil"},
-                                {"title":"Architecture"},
-                                {"title":"Other"},
+                                { title: "Freshman" },
+                                { title: "Electrical" },
+                                { title: "Mechanical" },
+                                { title: "Civil" },
+                                { title: "Architecture" },
+                                { title: "Other" },
                             ]}
                         />
                         <Input
@@ -131,11 +135,11 @@ export default function Home() {
                             id="academicyear"
                             placeholder="Your academic year"
                             options={[
-                                {"title":"Freshman"},
-                                {"title":"Sophomore"},
-                                {"title":"Junior"},
-                                {"title":"Senior 1"},
-                                {"title":"Senior 2"},
+                                { title: "Freshman" },
+                                { title: "Sophomore" },
+                                { title: "Junior" },
+                                { title: "Senior 1" },
+                                { title: "Senior 2" },
                             ]}
                         />
                         <Dropdownmenu
@@ -143,7 +147,7 @@ export default function Home() {
                             name="first_preference"
                             id="firstchoice"
                             placeholder="First Preference"
-                            options={committees}
+                            options={sortedCommittees}
                         />
                         <Input
                             name="first_preference_reason"
@@ -156,7 +160,7 @@ export default function Home() {
                             name="second_preference"
                             id="secondchoice"
                             placeholder="Second Preference"
-                            options={committees}
+                            options={sortedCommittees}
                         />
                         <Input
                             name="second_preference_reason"

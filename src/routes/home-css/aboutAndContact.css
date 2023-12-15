@@ -23,7 +23,6 @@
 }
 
 @media (max-width: 760px) {
-
     .contact-container {
         flex-direction: column;
         height: fit-content;

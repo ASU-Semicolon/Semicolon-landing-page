@@ -15,7 +15,6 @@
     font-size: calc(3rem + 1.5vw);
     letter-spacing: -3px;
     text-transform: uppercase;
-
 }
 
 .form-wrapper {
@@ -37,8 +36,8 @@
     /* padding-top: 2em; */
     /* padding-bottom: 2em; */
     /* border-left: 1px solid #ffb000; */
-    border-top: 2px solid rgb(255, 176, 0,0.5);
-    border-bottom: 2px solid rgb(255, 176, 0,0.5);
+    border-top: 2px solid rgb(255, 176, 0, 0.5);
+    border-bottom: 2px solid rgb(255, 176, 0, 0.5);
 }
 .form-photo img {
     width: 90%;
@@ -50,8 +49,8 @@
     width: clamp(35rem, 45%, 100rem);
     background-color: rgba(0, 23, 28, 1);
     padding: 3em;
-    border-top: 2px solid rgb(255, 176, 0,0.5);
-    border-bottom: 2px solid rgb(255, 176, 0,0.5);
+    border-top: 2px solid rgb(255, 176, 0, 0.5);
+    border-bottom: 2px solid rgb(255, 176, 0, 0.5);
 }
 
 .form-inputs {
@@ -101,7 +100,8 @@ input:-webkit-autofill:active {
     background: #ffb000;
     color: black;
 }
-.input-field:has(input:invalid, select:invalid, textarea:invalid) ~ #submit-btn:hover,
+.input-field:has(input:invalid, select:invalid, textarea:invalid)
+    ~ #submit-btn:hover,
 .form-experinece:has(textarea:invalid) ~ #submit-btn:hover {
     background-color: gray;
 }
@@ -113,7 +113,7 @@ input:-webkit-autofill:active {
     width: 100%;
 }
 
-.mobile { 
+.mobile {
     display: none;
     text-align: center;
     margin-top: 1em;
@@ -129,7 +129,7 @@ input:-webkit-autofill:active {
         display: none;
     }
 
-    .mobile{
+    .mobile {
         display: block;
     }
 
