@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { HashLoader } from "react-spinners";
 import HistoryIcon from "../assets/about-graphics/History.svg";
 import VisionIcon from "../assets/about-graphics/Vision.svg";
@@ -19,8 +19,11 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     const { committees, isFetching } = useContext(CommitteesContext);
-    const [annoyUser, setAnnoyUser] = useState(true);
-    console.log(committees);
+    const advertisementRef = useRef(null);
+
+    setTimeout(() => {
+        advertisementRef.current.classList.add("annoying-advertisement-show");
+    }, 2000);
 
     return (
         <>
@@ -155,24 +158,25 @@ export default function Home() {
                     </div>
                 </div>
             </main>
-            {annoyUser && (
-                <div className="annoying-advertisement">
-                    <h1>Semicolon's Hackathon is On.</h1>
-                    <div>
-                        <button>
-                            <Link to="/hackathon">find out more</Link>
-                        </button>
-                        <button
-                            className="adv-close-btn"
-                            onClick={() => {
-                                setAnnoyUser(false);
-                            }}
-                        >
-                            Close
-                        </button>
-                    </div>
+
+            <div className="annoying-advertisement" ref={advertisementRef}>
+                <h1>Semicolon's Hackathon is On.</h1>
+                <div>
+                    <button>
+                        <Link to="/hackathon">find out more</Link>
+                    </button>
+                    <button
+                        className="adv-close-btn"
+                        onClick={() => {
+                            advertisementRef.current.classList.remove(
+                                "annoying-advertisement-show"
+                            );
+                        }}
+                    >
+                        Close
+                    </button>
                 </div>
-            )}
+            </div>
         </>
     );
 }
