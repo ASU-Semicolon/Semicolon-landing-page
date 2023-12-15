@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { HashLoader } from "react-spinners";
 import HistoryIcon from "../assets/about-graphics/History.svg";
 import VisionIcon from "../assets/about-graphics/Vision.svg";
@@ -15,9 +15,11 @@ import { CommitteesContext } from "../contexts/committees.context.jsx";
 import "./home-css/aboutAndContact.css";
 import "./home-css/cards.css";
 import "./home-css/home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const { committees, isFetching } = useContext(CommitteesContext);
+    const [annoyUser, setAnnoyUser] = useState(true);
     console.log(committees);
 
     return (
@@ -153,6 +155,24 @@ export default function Home() {
                     </div>
                 </div>
             </main>
+            {annoyUser && (
+                <div className="annoying-advertisement">
+                    <h1>Semicolon's Hackathon is On.</h1>
+                    <div>
+                        <button>
+                            <Link to="/hackathon">find out more</Link>
+                        </button>
+                        <button
+                            className="adv-close-btn"
+                            onClick={() => {
+                                setAnnoyUser(false);
+                            }}
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
         </>
     );
 }
