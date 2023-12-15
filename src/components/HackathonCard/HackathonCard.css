@@ -5,7 +5,7 @@
     box-shadow: 0px 4px 67px -2px #000;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
 
     div.hackathon-card-header {
         color: #fff;
@@ -16,7 +16,7 @@
         line-height: normal;
         text-transform: capitalize;
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     p {

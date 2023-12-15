@@ -80,7 +80,7 @@ a {
 
 .annoying-advertisement {
     position: fixed;
-    bottom: 0;
+    bottom: -100%;
     width: 100%;
     padding: 6rem;
     z-index: 100;
@@ -90,6 +90,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 6rem;
+
     @media (max-width: 768px){
         padding: 6rem 2rem;
 
@@ -97,7 +98,7 @@ a {
 
     h1 {
         color: #fba212;
-        font-family: "Open Sans";
+        font-family: 'lora';
         font-size: 70px;
         font-style: normal;
         font-weight: 700;
@@ -149,6 +150,10 @@ a {
             font-weight: 500;
         }
     }
+}
+.annoying-advertisement-show {
+    bottom: 0;
+    transition: bottom 1s;
 }
 
 @media (max-width: 760px) {

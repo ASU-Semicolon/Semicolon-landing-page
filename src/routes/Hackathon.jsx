@@ -1,24 +1,28 @@
 import React from "react";
 import { HackathonCard } from "../components/HackathonCard/HackathonCard";
 import "./hackathon.css";
+import webIcon from '../assets/web-hackathon-icon.svg'
+import softwareIcon from '../assets/software-hackathon-icon.svg'
+import embeddedIcon from '../assets/embedded-hackathon-icon.svg'
+
 
 const Hackathon = () => {
     let cards = [
         {
             title: "Web Dev",
-            icon: "",
+            icon: <img src={webIcon} alt="web-icon" />,
             content:
                 "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
         },
         {
             title: "Software",
-            icon: "",
+            icon: <img src={softwareIcon} alt="web-icon" />,
             content:
                 "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
         },
         {
             title: "Embedded",
-            icon: "",
+            icon: <img src={embeddedIcon} alt="web-icon" />,
             content:
                 "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
         },
@@ -27,13 +31,13 @@ const Hackathon = () => {
     return (
         <div className="hackathon-page">
             <div className="header">
-                Semicolon is Here With <br /> A New <span>Hackathon</span>
+                Semicolon is Here With <br /><span>The Hack Week</span>
             </div>
             <section>
                 <h1> Fields </h1>
                 <div className="field-cards">
                     {cards.map(
-                        ({ title, icon, content, buttonText }, index) => {
+                        ({ title, icon, content}, index) => {
                             return (
                                 <HackathonCard
                                     key={title}
