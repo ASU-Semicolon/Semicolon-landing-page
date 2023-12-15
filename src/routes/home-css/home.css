@@ -96,7 +96,7 @@ a {
 
     }
 
-    h1 {
+    & h1 {
         color: #fba212;
         font-family: 'lora';
         font-size: 70px;
@@ -118,12 +118,12 @@ a {
         }
     }
 
-    div {
+    & div {
         display: flex;
         gap: 3rem;
     }
 
-    button {
+    & button {
         padding: 0.5rem 3em;
         font-size: 2rem;
         background-color: #fba212;
@@ -141,7 +141,7 @@ a {
             padding: 0.5rem 2rem;
             font-size: 1.5rem;
         }
-        a {
+        & a {
             color: #030708;
         }
         &.adv-close-btn {

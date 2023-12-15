@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 6rem;
 
-    div.header {
+    & div.header {
         font-family: "lora";
         background-image: url("../assets/hackathon-header-bg.png");
         background-position: center;
@@ -19,7 +19,8 @@
         letter-spacing: -3px;
         padding: 6rem 1rem;
         background-color: #031012;
-        span {
+        
+        & span {
             color: #fba312;
         }
         @media (max-width: 768px) {
@@ -32,19 +33,19 @@
         }
     }
 
-    section {
+    & section {
         padding: 0 12rem;
         @media (max-width: 425px) {
             padding: 2rem;
         }
-        h1 {
+        & h1 {
             margin-bottom: 4rem;
             font-size: 4rem;
             @media (max-width: 425px) {
                 font-size: 3rem;
             }
         }
-        ul {
+        & ul {
             font-size: 2.5rem;
             margin-left: 6rem;
             display: flex;
@@ -57,7 +58,7 @@
         }
     }
 
-    div.field-cards {
+    & div.field-cards {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;

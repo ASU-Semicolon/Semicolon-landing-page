@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 4rem;
 
-    div.hackathon-card-header {
+    & div.hackathon-card-header {
         color: #fff;
         font-family: Montserrat;
         font-size: 28px;
@@ -19,11 +19,11 @@
         gap: 1.5rem;
     }
 
-    p {
+    & p {
         font-size: 1.5rem;
     }
 
-    button{
+    & button{
         width: 100%;
         text-align: center;
         padding: 0.5rem 3rem;
@@ -34,7 +34,7 @@
         border: none;
     }
 
-    button.white{
+    & button.white{
         background: white;
         &:hover {
             background: black; 
@@ -42,7 +42,7 @@
         }
     }
 
-    button.yellow{
+    & button.yellow{
         background: #FBA312;
 
         &:hover {
