@@ -161,22 +161,25 @@ export default function Home() {
 
             <div className="annoying-advertisement-wrapper" ref={advertisementRef}>
                 <div className="annoying-advertisement">
-                <h1>Semicolon's Hackathon is On.</h1>
-                <div>
-                    <button>
-                        <Link to="/hackathon">find out more</Link>
-                    </button>
-                    <button
-                        className="adv-close-btn"
-                        onClick={() => {
-                            advertisementRef.current.classList.remove(
-                                "annoying-advertisement-show"
-                            );
-                        }}
-                    >
-                        Close
-                    </button>
-                </div>
+                    <div className="annoying-advertisement-text">
+                        <h1>Join Our HackWeek.</h1>
+                        <p>An exciting opportunity to work on a project with your team and expand your knowledge in our supporting environment or developers</p>
+                    </div>
+                    <div className="annoying-advertisement-buttons">
+                        <button>
+                            <Link to="/hackathon">find out more</Link>
+                        </button>
+                        <button
+                            className="adv-close-btn"
+                            onClick={() => {
+                                advertisementRef.current.classList.remove(
+                                    "annoying-advertisement-show"
+                                    );
+                                }}
+                                >
+                            Close
+                        </button>
+                    </div>
                 </div>
             </div>
         </>
