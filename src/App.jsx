@@ -1,10 +1,11 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import { CommitteesProvider } from "./contexts/committees.context.jsx";
 import Base from "./routes/Base";
 import Committee from "./routes/Committee";
 import Form from "./routes/Form";
+import Hackathon from "./routes/Hackathon.jsx";
 import Home from "./routes/Home";
+import "./App.css";
 
 export default function App() {
     return (
@@ -18,6 +19,7 @@ export default function App() {
                             element={<Committee />}
                         ></Route>
                         <Route path="/form" element={<Form />}></Route>
+                        <Route path="hackathon" element={<Hackathon />} />
                     </Route>
                 </Routes>
             </CommitteesProvider>
