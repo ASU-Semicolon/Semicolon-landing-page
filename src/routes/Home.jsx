@@ -159,7 +159,8 @@ export default function Home() {
                 </div>
             </main>
 
-            <div className="annoying-advertisement" ref={advertisementRef}>
+            <div className="annoying-advertisement-wrapper" ref={advertisementRef}>
+                <div className="annoying-advertisement">
                 <h1>Semicolon's Hackathon is On.</h1>
                 <div>
                     <button>
@@ -175,6 +176,7 @@ export default function Home() {
                     >
                         Close
                     </button>
+                </div>
                 </div>
             </div>
         </>
