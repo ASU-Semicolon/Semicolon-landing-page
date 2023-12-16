@@ -40,10 +40,12 @@ export default function Base() {
         
         const isShown = hackathonMobile.current.classList.contains("hackathon-nav-show") || hackathonDesktop.current.classList.contains("hackathon-nav-show");
 
-        if (window.innerWidth < 760 || (isShown && window.innerWidth < 1000)) {
+        if (window.innerWidth < 760 || (isShown && window.innerWidth < 1030)) {
             if (isShown) {
                 hackathonDesktop.current.classList.remove("hackathon-nav-show");
+                hackathonDesktop.current.classList.add("hidden");
                 hackathonMobile.current.classList.add("hackathon-nav-show");
+                hackathonMobile.current.classList.remove("hidden");
             }
             navToggleButton.current.classList.remove("hidden");
             navBarRef.current.classList.add("nav-bar-mobile");
@@ -57,7 +59,9 @@ export default function Base() {
         } else {
             if (isShown) {
                 hackathonDesktop.current.classList.add("hackathon-nav-show");
+                hackathonDesktop.current.classList.remove("hidden");
                 hackathonMobile.current.classList.remove("hackathon-nav-show");
+                hackathonMobile.current.classList.add("hidden");
             }
             navToggleButton.current.classList.add("hidden");
             navBarRef.current.classList.add("nav-bar-desktop")

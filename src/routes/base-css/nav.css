@@ -99,9 +99,10 @@ button.navbar-toggler {
     top: 50px;
     opacity: 0;
     color: #ffffff;
+    font-weight: bold;
     border: solid #ffb000;
     padding: 0.5em 1em;
-    transition: top 1s, opacity 1s, color 1s, background-color 1s;
+    transition: top 1s, opacity 1s, color 0.8s, background-color 0.8s;
 
     @media (max-width: 760px) {
         padding: 0.3em 0.8em;
@@ -110,7 +111,7 @@ button.navbar-toggler {
 }
 
 .hackathon-link-nav:hover {
-    color: #ffffff;
+    color: #000000;
     background-color: #ffb000;
     border: solid #ffb000;
 }
