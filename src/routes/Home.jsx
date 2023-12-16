@@ -15,10 +15,11 @@ import { CommitteesContext } from "../contexts/committees.context.jsx";
 import "./home-css/aboutAndContact.css";
 import "./home-css/cards.css";
 import "./home-css/home.css";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 
 export default function Home() {
     const { committees, isFetching } = useContext(CommitteesContext);
+    const handleHackathonButton = useOutletContext();
     const advertisementRef = useRef(null);
 
     setTimeout(() => {
@@ -163,7 +164,7 @@ export default function Home() {
                 <div className="annoying-advertisement">
                     <div className="annoying-advertisement-text">
                         <h1>Join Our HackWeek.</h1>
-                        <p>An exciting opportunity to work on a project with your team and expand your knowledge in our supporting environment or developers</p>
+                        <p>An exciting opportunity to work on a project with your team and expand your knowledge in our supporting environment of developers</p>
                     </div>
                     <div className="annoying-advertisement-buttons">
                         <button>
@@ -175,6 +176,7 @@ export default function Home() {
                                 advertisementRef.current.classList.remove(
                                     "annoying-advertisement-show"
                                     );
+                                handleHackathonButton()
                                 }}
                                 >
                             Close

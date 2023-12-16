@@ -12,21 +12,23 @@ header {
     top: 0px;
     z-index: 10;
     gap: calc(5vw - 2rem);
+    @media (max-width: 760px) {
+        padding: 1rem calc(2vw + 1rem);
+    }
 }
 
-div.hidden {
+div.hidden, .hidden {
     display: none;
 }
 
 .nav-wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: end;
-}
-
-.nav-mobile {
-    display: none;
+    gap: 3em;
+    @media (max-width: 760px) {
+        gap: 1em;
+    }
 }
 
 .nav-icon {
@@ -43,12 +45,26 @@ button.navbar-toggler {
     border: 0px;
 }
 
-.nav-bar {
+.nav-bar-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: calc(5.6vw - 3rem);
     padding: 0 calc(5.6vw - 3rem);
+}
+
+.nav-bar-mobile {
+    background: #0b1616;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    position: absolute;
+    align-items: center;
+    top: 80px;
+    right: 2px;
+    gap: 1.2rem;
+    padding: 1rem;
 }
 
 .nav-button {
@@ -74,24 +90,34 @@ button.navbar-toggler {
     border-bottom: #ffb000 solid 2px;
 }
 
-@media (max-width: 760px) {
-    header {
-        padding: 1rem calc(2vw + 1rem);
+.hackathon-link-nav a, .hackathon-link-nav:hover a {
+    color: inherit;
+}
+
+.hackathon-link-nav {
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    color: #ffffff;
+    font-weight: bold;
+    border: solid #ffb000;
+    padding: 0.5em 1em;
+    transition: top 1s, opacity 1s, color 0.8s, background-color 0.8s;
+
+    @media (max-width: 760px) {
+        padding: 0.3em 0.8em;
+        font-size: 16px;
     }
-    .nav-bar {
-        background: #0b1616;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 10px;
-        position: absolute;
-        align-items: center;
-        top: 80px;
-        right: 2px;
-        gap: 1.2rem;
-        padding: 1rem;
-    }
-    .nav-mobile {
-        display: flex;
-    }
+}
+
+.hackathon-link-nav:hover {
+    color: #000000;
+    background-color: #ffb000;
+    border: solid #ffb000;
+}
+
+button.hackathon-nav-show {
+    position: relative;
+    top: 0;
+    opacity: 1;
 }
