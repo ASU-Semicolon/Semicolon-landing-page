@@ -78,22 +78,46 @@ a {
     align-self: start;
 }
 
-.annoying-advertisement {
+.annoying-advertisement-wrapper {
     position: fixed;
-    bottom: -100%;
+    bottom: -100%;   
     width: 100%;
-    padding: 6rem;
+    background-image: url("../../assets/annoying-advertisement-bg.png");
+    transition: bottom 1s;
+}
+
+.annoying-advertisement-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.annoying-advertisement-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: row;
+        justify-content: start;
+    }
+}
+
+.annoying-advertisement {
+    padding: 5rem;
     z-index: 100;
-    background-color: #030708;
+    background-color: rgba(3, 7, 8, 0.85);
     border: none;
     box-shadow: 0px 4px 35.8px 31px rgba(255, 176, 0, 0.07);
     display: flex;
-    flex-direction: column;
-    gap: 6rem;
+    flex-direction: row;
+    gap: 4rem;
 
     @media (max-width: 768px){
         padding: 6rem 2rem;
-
+        flex-direction: column;
     }
 
     & h1 {
@@ -118,6 +142,25 @@ a {
         }
     }
 
+    & p {
+        color: #ffffff;
+        font-family: 'lora';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        max-width: 100rem;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        @media (max-width: 425px) {
+            display: none;
+        }
+    }
+
     & div {
         display: flex;
         gap: 3rem;
@@ -129,6 +172,7 @@ a {
         background-color: #fba212;
         font-weight: 700;
         border: none;
+        width: 100%;
         text-transform: uppercase;
         letter-spacing: -1px;
 
@@ -136,6 +180,7 @@ a {
             padding: 0.5rem 2rem;
             font-size: 1.75rem;
             letter-spacing: normal;
+            width: auto;
         }
         @media (max-width: 425px){
             padding: 0.5rem 2rem;
@@ -143,6 +188,7 @@ a {
         }
         & a {
             color: #030708;
+            text-wrap: nowrap;
         }
         &.adv-close-btn {
             background-color: rgba(17, 44, 44, 1);
@@ -153,7 +199,6 @@ a {
 }
 .annoying-advertisement-show {
     bottom: 0;
-    transition: bottom 1s;
 }
 
 @media (max-width: 760px) {

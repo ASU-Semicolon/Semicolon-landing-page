@@ -34,6 +34,13 @@ const Hackathon = () => {
                 Semicolon is Here With <br /><span>The Hack Week</span>
             </div>
             <section>
+                <h1> Rules </h1>
+                <ul>
+                    <li>Teams up to 3 members.</li>
+                    <li>Duration of the Hackathon is 1 week.</li>
+                </ul>
+            </section>
+            <section>
                 <h1> Fields </h1>
                 <div className="field-cards">
                     {cards.map(
@@ -52,13 +59,6 @@ const Hackathon = () => {
                         }
                     )}
                 </div>
-            </section>
-            <section>
-                <h1> Rules </h1>
-                <ul>
-                    <li>Teams up to 3 members.</li>
-                    <li>Duration of the Hackathon is 1 week.</li>
-                </ul>
             </section>
         </div>
     );
