@@ -14,7 +14,11 @@ import "./base-css/nav.css";
 
 export default function Base() {
     const [selectedNav, setSelectedNav] = useState("home");
+    const navLinksContainer = useRef();
     const navToggleButton = useRef();
+    const hackathonDesktop = useRef();
+    const hackathonMobile = useRef();
+    const navBarRef = useRef();
     const path = useLocation();
 
     const handleScroll = (id) => {
@@ -23,18 +27,44 @@ export default function Base() {
         navButton.scrollIntoView({ behavior: "smooth" });
     };
 
-    const handleResize = () => {
-        if (window.innerWidth > 760) {
-            navToggleButton.current.classList.remove("collapse");
-            navToggleButton.current.setAttribute("data-bs-toggle", "");
-            navToggleButton.current.setAttribute("data-bs-target", "");
+    const handleHackathonButton = () => {
+        if (window.innerWidth < 1030) {
+            hackathonMobile.current.classList.add("hackathon-nav-show");
         } else {
-            navToggleButton.current.classList.add("collapse");
-            navToggleButton.current.setAttribute("data-bs-toggle", "collapse");
-            navToggleButton.current.setAttribute(
+            hackathonDesktop.current.classList.add("hackathon-nav-show");
+        }
+        handleResize();
+    }
+
+    const handleResize = () => {
+        
+        const isShown = hackathonMobile.current.classList.contains("hackathon-nav-show") || hackathonDesktop.current.classList.contains("hackathon-nav-show");
+
+        if (window.innerWidth < 760 || (isShown && window.innerWidth < 1000)) {
+            if (isShown) {
+                hackathonDesktop.current.classList.remove("hackathon-nav-show");
+                hackathonMobile.current.classList.add("hackathon-nav-show");
+            }
+            navToggleButton.current.classList.remove("hidden");
+            navBarRef.current.classList.add("nav-bar-mobile");
+            navBarRef.current.classList.remove("nav-bar-desktop");
+            navLinksContainer.current.classList.add("collapse");
+            navLinksContainer.current.setAttribute("data-bs-toggle", "collapse");
+            navLinksContainer.current.setAttribute(
                 "data-bs-target",
                 "#navbarToggleExternalContent",
-            );
+                );
+        } else {
+            if (isShown) {
+                hackathonDesktop.current.classList.add("hackathon-nav-show");
+                hackathonMobile.current.classList.remove("hackathon-nav-show");
+            }
+            navToggleButton.current.classList.add("hidden");
+            navBarRef.current.classList.add("nav-bar-desktop")
+            navBarRef.current.classList.remove("nav-bar-mobile")
+            navLinksContainer.current.classList.remove("collapse");
+            navLinksContainer.current.setAttribute("data-bs-toggle", "");
+            navLinksContainer.current.setAttribute("data-bs-target", "");
         }
     };
 
@@ -67,7 +97,11 @@ export default function Base() {
                         path.pathname != "/" && "hidden"
                     }`}
                 >
-                    <nav className="navbar navbar-dark nav-mobile">
+                    <button className="nav-button hackathon-link-nav" ref={hackathonMobile}>
+                        <Link to="/hackathon">HackWeek</Link>
+                    </button>
+
+                    <nav className="navbar navbar-dark" ref={navToggleButton}>
                         <button
                             className="navbar-toggler"
                             type="button"
@@ -81,9 +115,12 @@ export default function Base() {
                             <div className="nav-icon"></div>
                         </button>
                     </nav>
-
-                    <div id="navbarToggleExternalContent" ref={navToggleButton}>
-                        <nav className="nav-bar">
+                    
+                    <div id="navbarToggleExternalContent" ref={navLinksContainer}>
+                        <nav className="" ref={navBarRef}>
+                            <button className="nav-button hackathon-link-nav" ref={hackathonDesktop}>
+                                <Link to="/hackathon">HackWeek</Link>
+                            </button>
                             <button
                                 className={`nav-button ${
                                     selectedNav == "home" && "selected"
@@ -129,7 +166,7 @@ export default function Base() {
                 </div>
             </header>
 
-            <Outlet />
+            <Outlet context={handleHackathonButton}/>
 
             <footer>
                 <div className="main-footer">
