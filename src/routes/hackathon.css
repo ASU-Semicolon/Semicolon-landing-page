@@ -17,9 +17,10 @@
         font-style: normal;
         font-weight: 700;
         letter-spacing: -3px;
-        padding: 6rem 1rem;
+        padding: 18rem 1rem 6rem;
         background-color: #031012;
-        
+        margin-top: -12rem;
+
         & span {
             color: #fba312;
         }
