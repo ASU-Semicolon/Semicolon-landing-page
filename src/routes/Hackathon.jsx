@@ -31,7 +31,7 @@ const Hackathon = () => {
     return (
         <div className="hackathon-page">
             <div className="header">
-                Semicolon is Here With <br /><span>The HackWeek</span>
+                Semicolon is Here With<br />'24 Winter's <span>Hack Week</span>
             </div>
             <section>
                 <h1> Rules </h1>

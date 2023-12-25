@@ -163,7 +163,7 @@ export default function Home() {
             <div className="annoying-advertisement-wrapper" ref={advertisementRef}>
                 <div className="annoying-advertisement">
                     <div className="annoying-advertisement-text">
-                        <h1>Join Our HackWeek.</h1>
+                        <h1>Join Our Hack Week.</h1>
                         <p>An exciting opportunity to work on a project with your team and expand your knowledge in our supporting environment of developers</p>
                     </div>
                     <div className="annoying-advertisement-buttons">
