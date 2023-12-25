@@ -4,24 +4,28 @@ import "./hackathon.css";
 import webIcon from '../assets/web-hackathon-icon.svg'
 import softwareIcon from '../assets/software-hackathon-icon.svg'
 import embeddedIcon from '../assets/embedded-hackathon-icon.svg'
+import { Outlet } from "react-router-dom";
 
 
 const Hackathon = () => {
     let cards = [
         {
             title: "Web Dev",
+            field: "web",
             icon: <img src={webIcon} alt="web-icon" />,
             content:
                 "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
         },
         {
             title: "Software",
+            field: "sw",
             icon: <img src={softwareIcon} alt="web-icon" />,
             content:
                 "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
         },
         {
             title: "Embedded",
+            field: "emb",
             icon: <img src={embeddedIcon} alt="web-icon" />,
             content:
                 "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
@@ -44,10 +48,11 @@ const Hackathon = () => {
                 <h1> Fields </h1>
                 <div className="field-cards">
                     {cards.map(
-                        ({ title, icon, content}, index) => {
+                        ({ title, field, icon, content}, index) => {
                             return (
                                 <HackathonCard
                                     key={title}
+                                    field={field}
                                     title={title}
                                     icon={icon}
                                     content={content}
@@ -60,6 +65,7 @@ const Hackathon = () => {
                     )}
                 </div>
             </section>
+            <Outlet/>
         </div>
     );
 };

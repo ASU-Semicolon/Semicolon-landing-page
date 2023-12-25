@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './HackathonCard.css'
 
 export const HackathonCard = ({
     title,
+    field,
     icon,
     content,
     buttonClass,
@@ -14,9 +16,9 @@ export const HackathonCard = ({
                 {title}
             </div>
             <p>{content}</p>
-            <button className={buttonClass}>
-                Join Now
-            </button>
+            <Link to={field} className={buttonClass}>
+                Learn More
+            </Link>
         </div>
     );
 };

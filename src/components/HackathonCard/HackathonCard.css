@@ -23,7 +23,7 @@
         font-size: 1.5rem;
     }
 
-    & button{
+    & a{
         width: 100%;
         text-align: center;
         padding: 0.5rem 3rem;
@@ -34,7 +34,7 @@
         border: none;
     }
 
-    & button.white{
+    & a.white{
         background: white;
         &:hover {
             background: black; 
@@ -42,7 +42,7 @@
         }
     }
 
-    & button.yellow{
+    & a.yellow{
         background: #FBA312;
 
         &:hover {

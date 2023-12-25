@@ -5,6 +5,7 @@ import Committee from "./routes/Committee";
 import Form from "./routes/Form";
 import Hackathon from "./routes/Hackathon.jsx";
 import Home from "./routes/Home";
+import HackathonField from "./routes/HackathonField.jsx";
 import "./App.css";
 
 export default function App() {
@@ -20,6 +21,10 @@ export default function App() {
                         ></Route>
                         <Route path="/form" element={<Form />}></Route>
                         <Route path="hackathon" element={<Hackathon />} />
+                        <Route
+                            path="hackathon/:fieldName"
+                            element={<HackathonField />}
+                        ></Route>
                     </Route>
                 </Routes>
             </CommitteesProvider>
