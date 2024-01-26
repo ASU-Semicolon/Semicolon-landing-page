@@ -4,31 +4,36 @@ import "./hackathon.css";
 import webIcon from '../assets/web-hackathon-icon.svg'
 import softwareIcon from '../assets/software-hackathon-icon.svg'
 import embeddedIcon from '../assets/embedded-hackathon-icon.svg'
+import timeIcon from '../assets/hackathon/time.png'
+import dateIcon from '../assets/hackathon/date.png'
 import { Outlet } from "react-router-dom";
 
 
 const Hackathon = () => {
     let cards = [
         {
-            title: "Web Dev",
+            title: "Webathon",
             field: "web",
+            subtitle: "Web Development",
             icon: <img src={webIcon} alt="web-icon" />,
             content:
-                "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
+                "Utilize your knowledge in web development to create a full-stack project using your favorate framework.",
         },
         {
             title: "Software",
             field: "sw",
+            subtitle: "Software Engineering",
             icon: <img src={softwareIcon} alt="web-icon" />,
             content:
-                "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
+                "Develop a desktop software from scratch, and tackle performance and efficiency problems to create a professional software.",
         },
         {
-            title: "Embedded",
+            title: "GameHack",
             field: "emb",
+            subtitle: "Arduino",
             icon: <img src={embeddedIcon} alt="web-icon" />,
             content:
-                "Python's simple syntax is ideal for beginners. Its versatile applications and helpful community make it a great choice for new programmers.",
+                "Start a fun challenge to design and create a game using an arduino board.",
         },
     ];
 
@@ -38,11 +43,14 @@ const Hackathon = () => {
                 Semicolon is Here With<br />'24 Winter's <span>Hack Week</span>
             </div>
             <section>
-                <h1> Rules </h1>
-                <ul>
-                    <li>Teams up to 3 members.</li>
-                    <li>Duration of the Hackathon is 1 week.</li>
-                </ul>
+                <h1>Are You Ready to Compete?</h1>
+                <p className="paragraph">&emsp; Venture into a new opportunity to join a friendly and intense coding contest. Work with your team and aim for the top with your project.</p>
+                <p className="info">
+                    <img src={dateIcon}/> Start Date: 3 February 2024
+                </p>
+                <p className="info">
+                    <img src={timeIcon}/> Duration: 1 Week
+                </p>
             </section>
             <section>
                 <h1> Fields </h1>
