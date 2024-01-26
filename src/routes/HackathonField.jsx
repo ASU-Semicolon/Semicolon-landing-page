@@ -55,6 +55,9 @@ const HackathonField = () => {
                     )}
                 </ul>
             </section>
+            <section>
+                <a>Apply</a>
+            </section>
         </div>
     );
 };
