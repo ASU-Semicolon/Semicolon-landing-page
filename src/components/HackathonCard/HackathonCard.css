@@ -4,8 +4,9 @@
     background: #031012;
     box-shadow: 0px 4px 67px -2px #000;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
 
     & div.hackathon-card-header {
         color: #fff;

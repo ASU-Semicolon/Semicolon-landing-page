@@ -56,11 +56,12 @@ const Hackathon = () => {
                 <h1> Fields </h1>
                 <div className="field-cards">
                     {cards.map(
-                        ({ title, field, icon, content}, index) => {
+                        ({ title, field, subtitle, icon, content}, index) => {
                             return (
                                 <HackathonCard
                                     key={title}
                                     field={field}
+                                    subtitle={subtitle}
                                     title={title}
                                     icon={icon}
                                     content={content}
