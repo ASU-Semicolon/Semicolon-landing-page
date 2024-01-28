@@ -56,7 +56,7 @@ const HackathonField = () => {
                 </ul>
             </section>
             <section>
-                <a>Apply</a>
+                <a className="applyButton">Apply</a>
             </section>
         </div>
     );

@@ -86,7 +86,7 @@
             }
         }
 
-        & a {
+        & .applyButton {
             width: 100%;
             margin-left: 2rem;
             text-align: center;
