@@ -18,11 +18,14 @@ export default function Input(props) {
                             <span></span>
                         ) : (
                             <input
+                                tabIndex = {props.selectable}
                                 type={props.type}
                                 id={props.id}
                                 name={props.name}
                                 placeholder={props.placeholder}
                                 pattern={props.pattern ?? ".*"}
+                                max={props.max}
+                                min={props.min}
                                 required
                             ></input>
                         )}

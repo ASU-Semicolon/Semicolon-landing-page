@@ -29,7 +29,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-.input-field label {
+.input-field label, .checkbox label {
     text-wrap: nowrap;
     color: white;
     font-family: "Montserrat";
@@ -39,7 +39,10 @@ input::-webkit-inner-spin-button {
     text-transform: uppercase;
     width: 60%;
 }
-.input-field label:after {
+.checkbox input {
+    margin: 1rem;
+}
+.input-field:has(input:required, select:required) label:after {
     content: "*";
 }
 .incorrect input:invalid,
