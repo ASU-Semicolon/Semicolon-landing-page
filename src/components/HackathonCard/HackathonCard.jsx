@@ -21,7 +21,7 @@ export const HackathonCard = ({
             </div>
             <p>{content}</p>
             <Link to={field} className={buttonClass}>
-                Learn More
+                {buttonClass == "btn-enable" ? "Learn More" : "Comming Soon"}
             </Link>
         </div>
     );

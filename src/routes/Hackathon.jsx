@@ -21,7 +21,7 @@ const Hackathon = () => {
         },
         {
             title: "Software",
-            field: "sw",
+            field: "",
             subtitle: "Software Engineering",
             icon: <img src={softwareIcon} alt="web-icon" />,
             content:
@@ -29,7 +29,7 @@ const Hackathon = () => {
         },
         {
             title: "GameHack",
-            field: "emb",
+            field: "",
             subtitle: "Arduino",
             icon: <img src={embeddedIcon} alt="web-icon" />,
             content:
@@ -66,7 +66,7 @@ const Hackathon = () => {
                                     icon={icon}
                                     content={content}
                                     buttonClass={
-                                        index % 2 == 0 ? "yellow" : "white"
+                                        index == 0 ? "btn-enable" : "btn-disable"
                                     }
                                 />
                             );

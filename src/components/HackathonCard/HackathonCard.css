@@ -35,15 +35,15 @@
         border: none;
     }
 
-    & a.white{
-        background: white;
+    & a.btn-disable{
+        background: gray;
         &:hover {
             background: black; 
-            color: white;
+            color: gray;
         }
     }
 
-    & a.yellow{
+    & a.btn-enable{
         background: #FBA312;
 
         &:hover {
