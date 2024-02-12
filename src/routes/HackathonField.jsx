@@ -1,4 +1,5 @@
 import React from "react";
+import { HackathonForm } from "../components/HackathonForm/HackathonForm";
 import { useParams } from "react-router-dom";
 import "./hackathon.css";
 
@@ -10,8 +11,8 @@ const HackathonField = () => {
             field: "web",
             header: "Full-Stack Web Application",
             description: "In this project you will create a web app. both front-end and back-end are required, there are requriements for each one like mobile responsivity and user authentication.",
-            rules: ["Teams up to 3 members.",
-                    "Duration of the Hackathon is 1 week."]
+            rules: ["Teams from 2 to 5 members.",
+                    "Duration of the Hackathon is 3 week."]
         },
         {
             title: "Software Engineering Hackathon",
@@ -55,8 +56,9 @@ const HackathonField = () => {
                     )}
                 </ul>
             </section>
-            <section>
-                <a className="applyButton">Apply</a>
+            <section className="hackathon-form-section">
+                <h1>Join US!</h1>
+                <HackathonForm/>
             </section>
         </div>
     );

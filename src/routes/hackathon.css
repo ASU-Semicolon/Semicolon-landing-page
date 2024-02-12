@@ -28,7 +28,7 @@
             font-size: 42px;
             letter-spacing: -2px;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 760px) {
             font-size: 36px;
             letter-spacing: -2px;
         }
@@ -36,13 +36,13 @@
 
     & section {
         padding: 0 12rem;
-        @media (max-width: 600px) {
-            padding: 2rem;
+        @media (max-width: 760px) {
+            padding: 3.5rem;
         }
         & h1 {
             margin-bottom: 4rem;
             font-size: 4rem;
-            @media (max-width: 600px) {
+            @media (max-width: 760px) {
                 font-size: 3rem;
             }
         }
@@ -51,7 +51,7 @@
             margin-bottom: 2rem;
             font-size: 2.4rem;
             max-width: 70rem;
-            @media (max-width: 600px) {
+            @media (max-width: 760px) {
                 font-size: 1.6rem;
             }
         }
@@ -59,7 +59,7 @@
         & p.info {
             font-size: 2.5rem;
             margin-left: 6rem;
-            @media (max-width: 600px) {
+            @media (max-width: 760px) {
                 margin-left: 1rem;
                 font-size: 2rem;
             }
@@ -80,7 +80,7 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            @media (max-width: 600px) {
+            @media (max-width: 760px) {
                 margin-left: 1rem;
                 font-size: 2rem;
             }
@@ -102,6 +102,17 @@
                 background: black; 
                 color: #FBA312;
             }
+        }
+    }
+
+    & .hackathon-form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & h1 {
+            align-self: start;
         }
     }
 
