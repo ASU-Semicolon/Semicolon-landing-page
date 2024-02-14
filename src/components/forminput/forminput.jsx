@@ -26,6 +26,7 @@ export default function Input(props) {
                                 pattern={props.pattern ?? ".*"}
                                 max={props.max}
                                 min={props.min}
+                                title={props.title}
                                 required
                             ></input>
                         )}

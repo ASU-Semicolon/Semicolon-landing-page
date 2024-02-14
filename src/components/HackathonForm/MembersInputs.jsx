@@ -64,6 +64,7 @@ export const MembersInputs = ({shown, title, reference}) => {
                         placeholder="Your number"
                         pattern="^01\d{9}$"
                         selectable={shown ? "" : "-1"}
+                        title="11 digits starting with 01"
                     />
                     <Input
                         type="email"
@@ -73,6 +74,7 @@ export const MembersInputs = ({shown, title, reference}) => {
                         placeholder="Your email"
                         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                         selectable={shown ? "" : "-1"}
+                        title="user_name@domain"
                     />
                     <Dropdownmenu
                         label="Academic Level"
