@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Input from "../forminput/forminput";
 import Dropdownmenu from "../forminput/dropbox";
 import './HackathonForm.css'
 import Checkbox from "../forminput/checkbox";
 
-export const MembersInputs = ({shown, title, reference}) => {
+export const MembersInputs = ({shown, title, data}) => {
+
+    const page = useRef();
+
+    useEffect(() => {
+        if (shown && data) {
+            const inputsList = page.current.querySelectorAll("input, select");
+            let inputsObj = {};
+            for (let input of inputsList) {
+                inputsObj[input.getAttribute("id")] = input;
+            }
+            if (title == "Team Info") {
+                inputsObj["team_name"].value = data["team_name"]
+                inputsObj["count"].value = data["count"]
+                inputsObj["react"].checked = data["react"]
+                inputsObj["node"].checked = data["node"]
+                inputsObj["express"].checked = data["express"]
+            } else {
+                inputsObj["name"].value = data["name"]
+                inputsObj["phone-number"].value = data["phone"]
+                inputsObj["email"].value = data["email"]
+                inputsObj["academiclevel"].value = data["academic_level"]
+                inputsObj["college"].value = data["college"]
+                inputsObj["cv"].value = data["cv"]
+                inputsObj["github"].value = data["github"]
+            }
+        }
+    })
+
     return (
-        <div className={"hackathon-form-inputs" + (shown ? " first" : "")} ref={reference}>
+        <div className={"hackathon-form-inputs" + (shown ? " first" : "")} ref={page}>
             <h1 className="form-subtitle">{title}</h1>
             { (title == "Team Info") ?
                 <>
@@ -51,16 +79,16 @@ export const MembersInputs = ({shown, title, reference}) => {
                     <Input
                         type="text"
                         label="Full Name"
-                        name="name"
-                        id="name"
+                        name={shown ? "name" : ""}
+                        id={shown ? "name" : ""}
                         placeholder="Your name"
                         selectable={shown ? "" : "-1"}
                     />
                     <Input
                         type="text"
                         label="Phone Number"
-                        name="phone"
-                        id="phone-number"
+                        name={shown ? "phone" : ""}
+                        id={shown ? "phone-number" : ""}
                         placeholder="Your number"
                         pattern="^01\d{9}$"
                         selectable={shown ? "" : "-1"}
@@ -69,8 +97,8 @@ export const MembersInputs = ({shown, title, reference}) => {
                     <Input
                         type="email"
                         label="Email"
-                        name="email"
-                        id="email"
+                        name={shown ? "email" : ""}
+                        id={shown ? "email" : ""}
                         placeholder="Your email"
                         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                         selectable={shown ? "" : "-1"}
@@ -78,8 +106,8 @@ export const MembersInputs = ({shown, title, reference}) => {
                     />
                     <Dropdownmenu
                         label="Academic Level"
-                        name="academic_level"
-                        id="academiclevel"
+                        name={shown ? "academic_level" : ""}
+                        id={shown ? "academiclevel" : ""}
                         placeholder="Your academic level"
                         options={[
                             { title: "Level One" },
@@ -94,24 +122,24 @@ export const MembersInputs = ({shown, title, reference}) => {
                     <Input
                         type="text"
                         label="College / University"
-                        name="college"
-                        id="college"
+                        name={shown ? "college" : ""}
+                        id={shown ? "college" : ""}
                         placeholder="Your college / university"
                         selectable={shown ? "" : "-1"}
                     />
                     <Input
                         type="text"
                         label="CV Link on Drive"
-                        name="cv"
-                        id="cv"
+                        name={shown ? "cv" : ""}
+                        id={shown ? "cv" : ""}
                         placeholder="A link to your CV"
                         selectable={shown ? "" : "-1"}
                     />
                     <Input
                         type="text"
                         label="Github Account"
-                        name="github"
-                        id="github"
+                        name={shown ? "github" : ""}
+                        id={shown ? "github" : ""}
                         placeholder="Your github account"
                         selectable={shown ? "" : "-1"}
                     />
