@@ -25,12 +25,11 @@ export default function Home() {
         setSortedCommittees(
             data.map((committee) => {
                 return {
-                    title: committee.title,
+                    title: committee.title + " " + committee.subtitle,
                     disabled: committee.disabled,
                 };
             }),
         );
-        console.log(sortedCommittees);
     }, [committees]);
 
     const handleApplyFormSubmit = async (event) => {

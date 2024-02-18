@@ -11,6 +11,9 @@
     border: 1px solid #fff;
     padding: 0.6em 0.3em;
 }
+.input-field select:valid {
+    color: white;
+}
 .input-field option {
     background-color: #000d10;
     color: gray;
