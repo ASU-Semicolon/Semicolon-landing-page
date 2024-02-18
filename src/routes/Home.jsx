@@ -134,7 +134,9 @@ export default function Home() {
                                                 key={Math.random()}
                                                 href={committee.title}
                                                 title={committee.title}
+                                                subtitle={committee.subtitle}
                                                 description={committee.brief}
+                                                disabled={committee.disabled}
                                                 icon={null}
                                             />
                                         );
