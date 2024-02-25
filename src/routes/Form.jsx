@@ -25,7 +25,7 @@ export default function Home() {
         setSortedCommittees(
             data.map((committee) => {
                 return {
-                    title: committee.title + " " + committee.subtitle,
+                    title: committee.title,
                     disabled: committee.disabled,
                 };
             }),

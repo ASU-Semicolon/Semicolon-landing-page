@@ -134,7 +134,7 @@ export default function Home() {
                                                 key={Math.random()}
                                                 href={committee.title}
                                                 title={committee.title}
-                                                subtitle={committee.subtitle}
+                                                breakPoint={committee.breakPoint}
                                                 description={committee.brief}
                                                 disabled={committee.disabled}
                                                 icon={null}
