@@ -90,11 +90,11 @@ button.navbar-toggler {
     border-bottom: #ffb000 solid 2px;
 }
 
-.hackathon-link-nav a, .hackathon-link-nav:hover a {
+.event-link-nav a, .event-link-nav:hover a {
     color: inherit;
 }
 
-.hackathon-link-nav {
+.event-link-nav {
     position: absolute;
     top: 50px;
     opacity: 0;
@@ -110,13 +110,13 @@ button.navbar-toggler {
     }
 }
 
-.hackathon-link-nav:hover {
+.event-link-nav:hover {
     color: #000000;
     background-color: #ffb000;
     border: solid #ffb000;
 }
 
-button.hackathon-nav-show {
+button.event-nav-show {
     position: relative;
     top: 0;
     opacity: 1;

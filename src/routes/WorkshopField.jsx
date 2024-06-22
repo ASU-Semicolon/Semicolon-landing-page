@@ -1,9 +1,8 @@
 import React from "react";
-import { HackathonForm } from "../components/HackathonForm/HackathonForm";
 import { useParams } from "react-router-dom";
-import "./event.css";
+import "./hackathon.css";
 
-const HackathonField = () => {
+const WorkshopField = () => {
     const { fieldName } = useParams();
     const tracks = [
         {
@@ -56,12 +55,8 @@ const HackathonField = () => {
                     )}
                 </ul>
             </section>
-            <section className="hackathon-form-section">
-                <h1>Join US!</h1>
-                <HackathonForm/>
-            </section>
         </div>
     );
 };
 
-export default HackathonField;
+export default WorkshopField;

@@ -163,12 +163,12 @@ export default function Home() {
             <div className="annoying-advertisement-wrapper" ref={advertisementRef}>
                 <div className="annoying-advertisement">
                     <div className="annoying-advertisement-text">
-                        <h1>Join Our Hack Week.</h1>
-                        <p>An exciting opportunity to work on a project with your team and expand your knowledge in our supporting environment of developers</p>
+                        <h1>Join ZerOne Event.</h1>
+                        <p>An exciting opportunity to join valuable and interactive workshops and learn more in any field from experienced instructors.</p>
                     </div>
                     <div className="annoying-advertisement-buttons">
                         <button>
-                            <Link to="/hackathon">find out more</Link>
+                            <Link to="/event">find out more</Link>
                         </button>
                         <button
                             className="adv-close-btn"
