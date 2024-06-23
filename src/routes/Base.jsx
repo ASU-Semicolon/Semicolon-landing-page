@@ -44,9 +44,9 @@ export default function Base() {
         if (window.innerWidth < 760 || (isShown && window.innerWidth < 1030)) {
             if (isShown) {
                 eventDesktop.current.classList.remove("event-nav-show");
-                eventDesktop.current.classList.add("hidden");
+                eventDesktop.current.classList.add("hide_event_button", "hidden");
                 eventMobile.current.classList.add("event-nav-show");
-                eventMobile.current.classList.remove("hidden");
+                eventMobile.current.classList.remove("hide_event_button", "hidden");
             }
             navToggleButton.current.classList.remove("hidden");
             navBarRef.current.classList.add("nav-bar-mobile");
@@ -63,9 +63,9 @@ export default function Base() {
         } else {
             if (isShown) {
                 eventDesktop.current.classList.add("event-nav-show");
-                eventDesktop.current.classList.remove("hidden");
+                eventDesktop.current.classList.remove("hide_event_button", "hidden");
                 eventMobile.current.classList.remove("event-nav-show");
-                eventMobile.current.classList.add("hidden");
+                eventMobile.current.classList.add("hide_event_button", "hidden");
             }
             navToggleButton.current.classList.add("hidden");
             navBarRef.current.classList.add("nav-bar-desktop");
@@ -112,7 +112,7 @@ export default function Base() {
                     }`}
                 >
                     <button
-                        className="nav-button event-link-nav"
+                        className="nav-button event-link-nav hide_event_button"
                         ref={eventMobile}
                     >
                         <Link to="/event">ZerOne</Link>
@@ -139,7 +139,7 @@ export default function Base() {
                     >
                         <nav className="" ref={navBarRef}>
                             <button
-                                className="nav-button event-link-nav"
+                                className="nav-button event-link-nav hide_event_button"
                                 ref={eventDesktop}
                             >
                                 <Link to="/event">ZerOne</Link>
