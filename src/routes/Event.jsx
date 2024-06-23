@@ -1,81 +1,65 @@
 import React from "react";
-import { HackathonCard } from "../components/HackathonCard/HackathonCard";
-import "./hackathon.css";
-import webIcon from '../assets/web-hackathon-icon.svg'
-import softwareIcon from '../assets/software-hackathon-icon.svg'
-import embeddedIcon from '../assets/embedded-hackathon-icon.svg'
-import timeIcon from '../assets/hackathon/time.png'
-import dateIcon from '../assets/hackathon/date.png'
-import { Outlet } from "react-router-dom";
+import { WorkshopCard } from "../components/workshopCard/WorkshopCard";
+import "./event.css";
+import { Outlet, Link } from "react-router-dom";
+import cards from "./data"
+import c from '../assets/cards/c.png'
+import cpp from '../assets/cards/c++.png'
+import front from '../assets/cards/basic web.png'
+import react from '../assets/cards/advanced web.png'
+import { FaMicrochip as FaMicrochip1 } from "react-icons/fa6";
+import { FaMicrochip as FaMicrochip2 } from "react-icons/fa";
+import { RiNodejsLine } from "react-icons/ri";
+import { TbBrandPhp } from "react-icons/tb";
+import { SiPython } from "react-icons/si";
+import { SiFlutter } from "react-icons/si";
 
+const icons = {
+    'ARM': <FaMicrochip1/>,
+    'AVR': <FaMicrochip1/>,
+    'C Programming': <img src={c}/>,
+    'C++ App. Development': <img src={cpp}/>,
+    'Digital Design': <FaMicrochip2/>,
+    'Flutter': <SiFlutter/>,
+    'Frontend Development': <img src={front}/>,
+    'Full Stack with PHP': <TbBrandPhp/>,
+    'JavaScript & NodeJS': <RiNodejsLine/>,
+    'Python': <SiPython/>,
+    'Frontend with ReactJS': <img src={react}/>,
+}
 
 const Hackathon = () => {
-    let cards = [
-        {
-            title: "Webathon",
-            field: "web",
-            subtitle: "Web Development",
-            icon: <img src={webIcon} alt="web-icon" />,
-            content:
-                "Utilize your knowledge in web development to create a full-stack project using your favorate framework.",
-        },
-        {
-            title: "Software",
-            field: "",
-            subtitle: "Software Engineering",
-            icon: <img src={softwareIcon} alt="web-icon" />,
-            content:
-                "Develop a desktop software from scratch, and tackle performance and efficiency problems to create a professional software.",
-        },
-        {
-            title: "GameHack",
-            field: "",
-            subtitle: "Arduino",
-            icon: <img src={embeddedIcon} alt="web-icon" />,
-            content:
-                "Start a fun challenge to design and create a game using an arduino board.",
-        },
-    ];
 
     return (
-        <div className="hackathon-page">
-            <div className="header">
-                Semicolon is Here With<br />'24 Winter's <span>Hack Week</span>
-            </div>
-            <section>
-                <h1>Are You Ready to Compete?</h1>
-                <p className="paragraph">&emsp; Venture into a new opportunity to join a friendly and intense coding contest. Work with your team and aim for the top with your project.</p>
-                <p className="info">
-                    <img src={dateIcon}/> Start Date: 3 February 2024
-                </p>
-                <p className="info">
-                    <img src={timeIcon}/> Duration: 1 Week
-                </p>
-            </section>
-            <section>
-                <h1> Fields </h1>
-                <div className="field-cards">
-                    {cards.map(
-                        ({ title, field, subtitle, icon, content}, index) => {
-                            return (
-                                <HackathonCard
-                                    key={title}
-                                    field={field}
-                                    subtitle={subtitle}
-                                    title={title}
-                                    icon={icon}
-                                    content={content}
-                                    buttonClass={
-                                        index == 0 ? "btn-enable" : "btn-disable"
-                                    }
-                                />
-                            );
-                        }
-                    )}
-                </div>
-            </section>
-            <Outlet/>
-        </div>
+      <div className="hackathon-page">
+          <div className="header">
+              Semicolon is Here With<br /><span>ZerOne Event</span>
+          </div>
+          <section>
+              <h1>A new opportunity to learn and practice.</h1>
+              <p className="paragraph">&emsp; Are you ready to discover new fields and master new skills with us? Join this valuable learning experience in our interactive environment!</p>
+              <Link to="/form" target="_blank">
+                <button className="applyButton">Apply Now</button>
+              </Link>
+          </section>
+          <section>
+              <h1> Workshops </h1>
+              <div className="field-cards">
+                  {cards.map(
+                      (card, index) => {
+                          return (
+                              <WorkshopCard
+                                key={index}
+                                card={card}
+                                icon={icons[card.title]}
+                              />
+                          );
+                      }
+                  )}
+              </div>
+          </section>
+          <Outlet/>
+      </div>
     );
 };
 
