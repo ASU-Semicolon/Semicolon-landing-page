@@ -1,59 +1,76 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import "./hackathon.css";
+import { useParams, Link } from "react-router-dom";
+import "./event.css";
+import cards from "./data"
+import { IoMdTime } from "react-icons/io";
+import { IoLocationSharp } from "react-icons/io5";
 
 const WorkshopField = () => {
     const { fieldName } = useParams();
-    const tracks = [
-        {
-            title: "Web Development Hackathon",
-            field: "web",
-            header: "Full-Stack Web Application",
-            description: "In this project you will create a web app. both front-end and back-end are required, there are requriements for each one like mobile responsivity and user authentication.",
-            rules: ["Teams from 2 to 5 members.",
-                    "Duration of the Hackathon is 3 week."]
-        },
-        {
-            title: "Software Engineering Hackathon",
-            field: "sw",
-            header: "Desktop Application",
-            description: "",
-            rules: ["Teams up to 3 members.",
-                    "Duration of the Hackathon is 1 week."]
-        },
-        {
-            title: "Arduino Hackathon",
-            field: "emb",
-            header: "C++ & Arduino Game",
-            description: "",
-            rules: ["Teams up to 3 members.",
-                    "Duration of the Hackathon is 1 week."]
-        },
-    ];
-    const track = tracks.find(track => {
-        return track.field == fieldName;
+    const card = cards.find(card => {
+        return card.title == fieldName;
     })
 
     return (
         <div className="hackathon-page">
             <div className="header">
-                {track.title}
+                {card.title}
             </div>  
             <section>
-                <h1>{track.header}</h1>
-                <p className="paragraph">&emsp; {track.description}</p>
+                <h1> Description </h1>
+                <p className="paragraph">&emsp; {card.description}</p>
             </section>
             <section>
-                <h1> Rules </h1>
+                <h1> Objectives </h1>
                 <ul>
-                    {track.rules.map(
-                        (rule) => {
+                    {card.objectives.map(
+                        (item, index) => {
                             return (
-                                <li>{rule}</li>
+                                <li key={index}>{item}</li>
                             );
                         }
                     )}
                 </ul>
+            </section>
+            <section>
+                <h1> Content </h1>
+                <ul>
+                    {card.content.map(
+                        (item, index) => {
+                            return (
+                                <li key={index}>{item}</li>
+                            );
+                        }
+                    )}
+                </ul>
+            </section>
+            <section>
+                <h1> Prerequisites </h1>
+                <ul>
+                    {card.prerequisites.map(
+                        (item, index) => {
+                            return (
+                                <li key={index}>{item}</li>
+                            );
+                        }
+                    )}
+                </ul>
+            </section>
+            <section>
+                <h1> Number of Sessions </h1>
+                <p className="paragraph">
+                    &emsp; A total of {card.duration_in_sessions} sessions with {card.sessions_per_week} sessions a week.
+                </p>
+            </section>
+            <section>
+                <h1> Date and Location </h1>
+                <p className="paragraph">&emsp; <IoMdTime/> {card.start_date.toDateString()}</p>
+                <p className="paragraph">&emsp; <IoLocationSharp/> {card.location}</p>
+            </section>
+            <section>
+                <Link to="/form" target="_blank">
+                    <button className="applyButton">Apply Now</button>
+                </Link>
             </section>
         </div>
     );
