@@ -34,11 +34,12 @@ export default function Base() {
             eventDesktop.current.classList.add("event-nav-show");
         }
         handleResize();
-    }
+    };
 
     const handleResize = () => {
-        
-        const isShown = eventMobile.current.classList.contains("event-nav-show") || eventDesktop.current.classList.contains("event-nav-show");
+        const isShown =
+            eventMobile.current.classList.contains("event-nav-show") ||
+            eventDesktop.current.classList.contains("event-nav-show");
 
         if (window.innerWidth < 760 || (isShown && window.innerWidth < 1030)) {
             if (isShown) {
@@ -51,11 +52,14 @@ export default function Base() {
             navBarRef.current.classList.add("nav-bar-mobile");
             navBarRef.current.classList.remove("nav-bar-desktop");
             navLinksContainer.current.classList.add("collapse");
-            navLinksContainer.current.setAttribute("data-bs-toggle", "collapse");
+            navLinksContainer.current.setAttribute(
+                "data-bs-toggle",
+                "collapse"
+            );
             navLinksContainer.current.setAttribute(
                 "data-bs-target",
-                "#navbarToggleExternalContent",
-                );
+                "#navbarToggleExternalContent"
+            );
         } else {
             if (isShown) {
                 eventDesktop.current.classList.add("event-nav-show");
@@ -64,8 +68,8 @@ export default function Base() {
                 eventMobile.current.classList.add("hidden");
             }
             navToggleButton.current.classList.add("hidden");
-            navBarRef.current.classList.add("nav-bar-desktop")
-            navBarRef.current.classList.remove("nav-bar-mobile")
+            navBarRef.current.classList.add("nav-bar-desktop");
+            navBarRef.current.classList.remove("nav-bar-mobile");
             navLinksContainer.current.classList.remove("collapse");
             navLinksContainer.current.setAttribute("data-bs-toggle", "");
             navLinksContainer.current.setAttribute("data-bs-target", "");
@@ -76,6 +80,12 @@ export default function Base() {
         window.addEventListener("resize", handleResize);
         handleResize();
     }, []);
+
+    // Scroll to top when changing routes
+    const location = useLocation().pathname;
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
 
     return (
         <>
@@ -101,7 +111,10 @@ export default function Base() {
                         path.pathname != "/" && "hidden"
                     }`}
                 >
-                    <button className="nav-button event-link-nav" ref={eventMobile}>
+                    <button
+                        className="nav-button event-link-nav"
+                        ref={eventMobile}
+                    >
                         <Link to="/event">ZerOne</Link>
                     </button>
 
@@ -119,10 +132,16 @@ export default function Base() {
                             <div className="nav-icon"></div>
                         </button>
                     </nav>
-                    
-                    <div id="navbarToggleExternalContent" ref={navLinksContainer}>
+
+                    <div
+                        id="navbarToggleExternalContent"
+                        ref={navLinksContainer}
+                    >
                         <nav className="" ref={navBarRef}>
-                            <button className="nav-button event-link-nav" ref={eventDesktop}>
+                            <button
+                                className="nav-button event-link-nav"
+                                ref={eventDesktop}
+                            >
                                 <Link to="/event">ZerOne</Link>
                             </button>
                             <button
@@ -170,7 +189,7 @@ export default function Base() {
                 </div>
             </header>
 
-            <Outlet context={handleEventButton}/>
+            <Outlet context={handleEventButton} />
 
             <footer>
                 <div className="main-footer">

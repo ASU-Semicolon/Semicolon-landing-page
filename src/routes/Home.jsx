@@ -2,8 +2,8 @@ import { useContext, useRef, useState } from "react";
 import { HashLoader } from "react-spinners";
 import HistoryIcon from "../assets/about-graphics/History.svg";
 import VisionIcon from "../assets/about-graphics/Vision.svg";
-import AboutIcon from "../assets/about-graphics/about.png";
-import HomeIcon from "../assets/home-graphics/home.png";
+import AboutIcon from "../assets/home-graphics/community.svg";
+import HomeIcon from "../assets/home-graphics/working.svg";
 import Logo from "../assets/home-graphics/logo.svg";
 import Brief from "../components/brief/Brief";
 import Card from "../components/card/card";
@@ -74,7 +74,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="right-content">
-                            <Illustration url={HomeIcon} />
+                            <Illustration url={HomeIcon} style={{width: "500px"}}/>
                         </div>
                         <div className="stats-container">
                             <Statistic number="500" text="Workshop Students" />
@@ -160,11 +160,18 @@ export default function Home() {
                 </div>
             </main>
 
-            <div className="annoying-advertisement-wrapper" ref={advertisementRef}>
+            <div
+                className="annoying-advertisement-wrapper"
+                ref={advertisementRef}
+            >
                 <div className="annoying-advertisement">
                     <div className="annoying-advertisement-text">
                         <h1>Join ZerOne Event.</h1>
-                        <p>An exciting opportunity to join valuable and interactive workshops and learn more in any field from experienced instructors.</p>
+                        <p>
+                            An exciting opportunity to join valuable and
+                            interactive workshops and learn more in any field
+                            from experienced instructors.
+                        </p>
                     </div>
                     <div className="annoying-advertisement-buttons">
                         <button>
@@ -175,10 +182,10 @@ export default function Home() {
                             onClick={() => {
                                 advertisementRef.current.classList.remove(
                                     "annoying-advertisement-show"
-                                    );
-                                handleHackathonButton()
-                                }}
-                                >
+                                );
+                                handleHackathonButton();
+                            }}
+                        >
                             Close
                         </button>
                     </div>
