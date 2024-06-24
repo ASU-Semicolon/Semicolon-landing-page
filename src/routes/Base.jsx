@@ -22,7 +22,6 @@ export default function Base() {
     const path = useLocation();
 
     const handleScroll = (id) => {
-        setSelectedNav(id);
         const navButton = document.getElementById(id);
         navButton.scrollIntoView({ behavior: "smooth" });
     };
@@ -189,7 +188,7 @@ export default function Base() {
                 </div>
             </header>
 
-            <Outlet context={handleEventButton} />
+            <Outlet context={{handleEventButton, setSelectedNav}} />
 
             <footer>
                 <div className="main-footer">
