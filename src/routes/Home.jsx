@@ -69,7 +69,7 @@ export default function Home() {
                                     }
                                     button={"APPLY NOW"}
                                     target=""
-                                    href="/form"
+                                    href="/form/members"
                                 />
                                 <div className="logo-container">
                                     <img src={Logo} width="120px" alt="" />

@@ -20,7 +20,7 @@ export default function App() {
                             path=":committeeName"
                             element={<Committee />}
                         ></Route>
-                        <Route path="/form" element={<Form />}></Route>
+                        <Route path="/form/:formRoute" element={<Form />}></Route>
                         <Route path="event" element={<Event />} />
                         <Route
                             path="workshop/:fieldName"

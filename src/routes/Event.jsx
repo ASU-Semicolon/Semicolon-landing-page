@@ -7,6 +7,7 @@ import c from '../assets/cards/c.png'
 import cpp from '../assets/cards/c++.png'
 import front from '../assets/cards/basic web.png'
 import react from '../assets/cards/advanced web.png'
+import ai from '../assets/cards/ai.png'
 import { FaMicrochip as FaMicrochip1 } from "react-icons/fa6";
 import { FaMicrochip as FaMicrochip2 } from "react-icons/fa";
 import { RiNodejsLine } from "react-icons/ri";
@@ -20,6 +21,7 @@ const icons = {
     'C Programming': <img src={c}/>,
     'C++ App. Development': <img src={cpp}/>,
     'Digital Design': <FaMicrochip2/>,
+    'Artificial Intelligence': <img src={ai}/>,
     'Flutter': <SiFlutter/>,
     'Frontend Development': <img src={front}/>,
     'Full Stack with PHP': <TbBrandPhp/>,
@@ -38,7 +40,7 @@ const Hackathon = () => {
           <section>
               <h1>A new opportunity to learn and practice.</h1>
               <p className="paragraph">&emsp; Are you ready to discover new fields and master new skills with us? Join this valuable learning experience in our interactive environment!</p>
-              <Link to="/form" target="_blank">
+              <Link to="/form/workshops">
                 <button className="applyButton">Apply Now</button>
               </Link>
           </section>

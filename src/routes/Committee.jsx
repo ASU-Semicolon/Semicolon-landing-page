@@ -101,7 +101,7 @@ export default function Committee() {
                         <p className="committee-description">
                             {committee.brief}
                         </p>
-                        <Link to="/form" className="join-committee">
+                        <Link to="/form/members" className="join-committee">
                             <button className="committee-btn">join us</button>
                         </Link>
                     </div>
