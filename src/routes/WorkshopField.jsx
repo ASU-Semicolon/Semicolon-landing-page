@@ -16,22 +16,30 @@ const WorkshopField = () => {
             <div className="header">
                 {card.title}
             </div>  
-            <section>
-                <h1> Description </h1>
-                <p className="paragraph">&emsp; {card.description}</p>
-            </section>
-            <section>
-                <h1> Objectives </h1>
-                <ul>
-                    {card.objectives.map(
-                        (item, index) => {
-                            return (
-                                <li key={index}>{item}</li>
-                            );
-                        }
-                    )}
-                </ul>
-            </section>
+            {card.breif ?
+                <section>
+                    <p className="paragraph">&emsp; {card.breif}</p>
+                </section>
+            :
+                <section>
+                    <h1> Description </h1>
+                    <p className="paragraph">&emsp; {card.description}</p>
+                </section>
+            }
+            {card.objectives && 
+                <section>
+                    <h1> Objectives </h1>
+                    <ul>
+                        {card.objectives.map(
+                            (item, index) => {
+                                return (
+                                    <li key={index}>{item}</li>
+                                );
+                            }
+                        )}
+                    </ul>
+                </section>
+            }
             <section>
                 <h1> Content </h1>
                 <ul>
@@ -62,13 +70,13 @@ const WorkshopField = () => {
                     &emsp; A total of {card.duration_in_sessions} sessions with {card.sessions_per_week} sessions a week.
                 </p>
             </section>
-            <section>
+            {/* <section>
                 <h1> Date and Location </h1>
                 <p className="paragraph">&emsp; <IoMdTime/> {card.start_date.toDateString()}</p>
                 <p className="paragraph">&emsp; <IoLocationSharp/> {card.location}</p>
-            </section>
+            </section> */}
             <section>
-                <Link to="/form" target="_blank">
+                <Link to="/form/workshops" target="_blank">
                     <button className="applyButton">Apply Now</button>
                 </Link>
             </section>
