@@ -20,12 +20,10 @@ export default function Home() {
     }
 
     const workshops = [
-        { title: "Digital Design" },
+        { title: "C Programming" },
         { title: "ARM", disabled: "true" },
         { title: "AVR", disabled: "true" },
-        { title: "C Programming", disabled: "true" },
-        { title: "Artificial Intelligence", disabled: "true" },
-        { title: "Frontend Development", disabled: "true" },
+        { title: "Digital Design", disabled: "true" },
         { title: "JavaScript & NodeJS", disabled: "true" },
         { title: "Frontend with ReactJS", disabled: "true" },
     ];
@@ -202,7 +200,7 @@ export default function Home() {
                         />
                         <div className="form-experinece">
                             <Input
-                                label="Previous Experience"
+                                label="Prev. Experience or Drive Link to Your CV"
                                 name="second_preference_experience"
                                 id="previousexperience"
                                 placeholder="Your previous experience"
@@ -211,7 +209,7 @@ export default function Home() {
                             <Input
                                 name="previousExperience"
                                 id="secondchoiceexperience"
-                                placeholder="Your previous experience"
+                                placeholder="Your previous experience or drive link to your CV"
                                 multiline={true}
                             />
                         </div>

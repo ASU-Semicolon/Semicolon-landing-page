@@ -14,9 +14,9 @@ const WorkshopField = () => {
     return (
         <div className="hackathon-page">
             <div className="header">{card.title}</div>
-            {card.breif ? (
+            {card.brief ? (
                 <section>
-                    <p className="paragraph">&emsp; {card.breif}</p>
+                    <p className="brief">{card.brief}</p>
                 </section>
             ) : (
                 <section>
