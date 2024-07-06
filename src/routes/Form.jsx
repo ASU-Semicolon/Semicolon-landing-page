@@ -20,15 +20,15 @@ export default function Home() {
     }
 
     const workshops = [
-        {title:'Digital Design'},
-        {title:'ARM', disabled: 'true'},
-        {title:'AVR', disabled: 'true'},
-        {title:'C Programming', disabled: 'true'},
-        {title:'Artificial Intelligence', disabled: 'true'},
-        {title:'Frontend Development', disabled: 'true'},
-        {title:'JavaScript & NodeJS', disabled: 'true'},
-        {title:'Frontend with ReactJS', disabled: 'true'}
-    ]
+        { title: "Digital Design" },
+        { title: "ARM", disabled: "true" },
+        { title: "AVR", disabled: "true" },
+        { title: "C Programming", disabled: "true" },
+        { title: "Artificial Intelligence", disabled: "true" },
+        { title: "Frontend Development", disabled: "true" },
+        { title: "JavaScript & NodeJS", disabled: "true" },
+        { title: "Frontend with ReactJS", disabled: "true" },
+    ];
     const { committees } = useContext(CommitteesContext);
     const [sortedCommittees, setSortedCommittees] = useState();
 
@@ -83,23 +83,22 @@ export default function Home() {
     return (
         <>
             <ToastContainer />
-            {formRoute == "members" ?
+            {formRoute == "members" ? (
                 <h1 className="form-title mobile">Join Us Now</h1>
-            :
-                formRoute == "workshops" ?
-                    <h1 className="form-title">Apply to a Workshop!</h1>
-                :
-                    <></>
-            }
+            ) : formRoute == "workshops" ? (
+                <h1 className="form-title">Apply to a Workshop!</h1>
+            ) : (
+                <></>
+            )}
             <div className="form-main-page">
                 {/* <div className="form-wrapper"> */}
 
-                {formRoute == "members" && 
+                {formRoute == "members" && (
                     <div className="form-photo">
                         <h1 className="form-title">Join Us Now</h1>
                         <img src={FormBackgroundImage}></img>
                     </div>
-                }
+                )}
                 <div className="form-inputs-wrapper">
                     <form
                         className="form-inputs"
@@ -168,7 +167,13 @@ export default function Home() {
                             name="first_preference"
                             id="firstchoice"
                             placeholder="First Preference"
-                            options={formRoute == "members" ? sortedCommittees : formRoute == "workshops" ? workshops : []}
+                            options={
+                                formRoute == "members"
+                                    ? sortedCommittees
+                                    : formRoute == "workshops"
+                                      ? workshops
+                                      : []
+                            }
                         />
                         <Input
                             name="first_preference_reason"
@@ -181,7 +186,13 @@ export default function Home() {
                             name="second_preference"
                             id="secondchoice"
                             placeholder="Second Preference"
-                            options={formRoute == "members" ? sortedCommittees : formRoute == "workshops" ? workshops : []}
+                            options={
+                                formRoute == "members"
+                                    ? sortedCommittees
+                                    : formRoute == "workshops"
+                                      ? workshops
+                                      : []
+                            }
                         />
                         <Input
                             name="second_preference_reason"

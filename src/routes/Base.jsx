@@ -14,13 +14,12 @@ import "./base-css/logo.css";
 import "./base-css/nav.css";
 
 export default function Base() {
-    
     const [functions, setFunctions] = useState();
     let handleEventButton, setSelectedNav;
 
     const getFunctions = (functions) => {
         setFunctions(functions);
-    }
+    };
 
     const handleScroll = (id) => {
         const navButton = document.getElementById(id);
@@ -53,7 +52,6 @@ export default function Base() {
                 </Link>
 
                 <NavigationBar getFunctions={getFunctions} />
-                
             </header>
 
             {functions && <Outlet context={functions} />}

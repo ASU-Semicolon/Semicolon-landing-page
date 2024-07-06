@@ -81,7 +81,7 @@ a {
 
 .annoying-advertisement-wrapper {
     position: fixed;
-    bottom: -100%;   
+    bottom: -100%;
     width: 100%;
     background-image: url("../../assets/annoying-advertisement-bg.png");
     transition: bottom 1s;

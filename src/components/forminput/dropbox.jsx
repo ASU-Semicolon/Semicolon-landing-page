@@ -6,7 +6,12 @@ export default function Dropdownmenu(props) {
         <>
             <div className="input-field">
                 <label htmlFor={props.id}>{props.label}</label>
-                <select name={props.name} id={props.id} required tabIndex={props.selectable}>
+                <select
+                    name={props.name}
+                    id={props.id}
+                    required
+                    tabIndex={props.selectable}
+                >
                     <option className="default" value="" hidden selected>
                         {props.placeholder}
                     </option>

@@ -1,11 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import Input from "../forminput/forminput";
 import Dropdownmenu from "../forminput/dropbox";
-import './HackathonForm.css'
+import "./HackathonForm.css";
 import Checkbox from "../forminput/checkbox";
 
-export const MembersInputs = ({shown, title, data}) => {
-
+export const MembersInputs = ({ shown, title, data }) => {
     const page = useRef();
 
     useEffect(() => {
@@ -16,27 +15,30 @@ export const MembersInputs = ({shown, title, data}) => {
                 inputsObj[input.getAttribute("id")] = input;
             }
             if (title == "Team Info") {
-                inputsObj["team_name"].value = data["team_name"]
-                inputsObj["count"].value = data["count"]
-                inputsObj["react"].checked = data["react"]
-                inputsObj["node"].checked = data["node"]
-                inputsObj["express"].checked = data["express"]
+                inputsObj["team_name"].value = data["team_name"];
+                inputsObj["count"].value = data["count"];
+                inputsObj["react"].checked = data["react"];
+                inputsObj["node"].checked = data["node"];
+                inputsObj["express"].checked = data["express"];
             } else {
-                inputsObj["name"].value = data["name"]
-                inputsObj["phone-number"].value = data["phone"]
-                inputsObj["email"].value = data["email"]
-                inputsObj["academiclevel"].value = data["academic_level"]
-                inputsObj["college"].value = data["college"]
-                inputsObj["cv"].value = data["cv"]
-                inputsObj["github"].value = data["github"]
+                inputsObj["name"].value = data["name"];
+                inputsObj["phone-number"].value = data["phone"];
+                inputsObj["email"].value = data["email"];
+                inputsObj["academiclevel"].value = data["academic_level"];
+                inputsObj["college"].value = data["college"];
+                inputsObj["cv"].value = data["cv"];
+                inputsObj["github"].value = data["github"];
             }
         }
-    })
+    });
 
     return (
-        <div className={"hackathon-form-inputs" + (shown ? " first" : "")} ref={page}>
+        <div
+            className={"hackathon-form-inputs" + (shown ? " first" : "")}
+            ref={page}
+        >
             <h1 className="form-subtitle">{title}</h1>
-            { (title == "Team Info") ?
+            {title == "Team Info" ? (
                 <>
                     <Input
                         type="text"
@@ -58,23 +60,11 @@ export const MembersInputs = ({shown, title, data}) => {
                         label="Technologies your team know"
                         labelOnly={true}
                     />
-                    <Checkbox
-                        label="react"
-                        name="react"
-                        id="react"
-                    />
-                    <Checkbox
-                        label="node"
-                        name="node"
-                        id="node"
-                    />
-                    <Checkbox
-                        label="express"
-                        name="express"
-                        id="express"
-                    />
-                </> 
-                :
+                    <Checkbox label="react" name="react" id="react" />
+                    <Checkbox label="node" name="node" id="node" />
+                    <Checkbox label="express" name="express" id="express" />
+                </>
+            ) : (
                 <>
                     <Input
                         type="text"
@@ -144,7 +134,7 @@ export const MembersInputs = ({shown, title, data}) => {
                         selectable={shown ? "" : "-1"}
                     />
                 </>
-            }
+            )}
         </div>
     );
 };

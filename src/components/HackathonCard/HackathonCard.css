@@ -24,7 +24,7 @@
         font-size: 1.5rem;
     }
 
-    & a{
+    & a {
         width: 100%;
         text-align: center;
         padding: 0.5rem 3rem;
@@ -35,20 +35,20 @@
         border: none;
     }
 
-    & a.btn-disable{
+    & a.btn-disable {
         background: gray;
         &:hover {
-            background: black; 
+            background: black;
             color: gray;
         }
     }
 
-    & a.btn-enable{
-        background: #FBA312;
+    & a.btn-enable {
+        background: #fba312;
 
         &:hover {
-            background: black; 
-            color: #FBA312;
+            background: black;
+            color: #fba312;
         }
     }
 }

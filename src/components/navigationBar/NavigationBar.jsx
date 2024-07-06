@@ -32,9 +32,15 @@ export default function NavigationBar(props) {
         if (window.innerWidth < 760 || (isShown && window.innerWidth < 1030)) {
             if (isShown) {
                 eventDesktop.current.classList.remove("event-nav-show");
-                eventDesktop.current.classList.add("hide_event_button", "hidden");
+                eventDesktop.current.classList.add(
+                    "hide_event_button",
+                    "hidden",
+                );
                 eventMobile.current.classList.add("event-nav-show");
-                eventMobile.current.classList.remove("hide_event_button", "hidden");
+                eventMobile.current.classList.remove(
+                    "hide_event_button",
+                    "hidden",
+                );
             }
             navToggleButton.current.classList.remove("hidden");
             navBarRef.current.classList.add("nav-bar-mobile");
@@ -42,18 +48,24 @@ export default function NavigationBar(props) {
             navLinksContainer.current.classList.add("collapse");
             navLinksContainer.current.setAttribute(
                 "data-bs-toggle",
-                "collapse"
+                "collapse",
             );
             navLinksContainer.current.setAttribute(
                 "data-bs-target",
-                "#navbarToggleExternalContent"
+                "#navbarToggleExternalContent",
             );
         } else {
             if (isShown) {
                 eventDesktop.current.classList.add("event-nav-show");
-                eventDesktop.current.classList.remove("hide_event_button", "hidden");
+                eventDesktop.current.classList.remove(
+                    "hide_event_button",
+                    "hidden",
+                );
                 eventMobile.current.classList.remove("event-nav-show");
-                eventMobile.current.classList.add("hide_event_button", "hidden");
+                eventMobile.current.classList.add(
+                    "hide_event_button",
+                    "hidden",
+                );
             }
             navToggleButton.current.classList.add("hidden");
             navBarRef.current.classList.add("nav-bar-desktop");
@@ -65,18 +77,13 @@ export default function NavigationBar(props) {
     };
 
     useEffect(() => {
-        props.getFunctions({handleEventButton, setSelectedNav});
+        props.getFunctions({ handleEventButton, setSelectedNav });
         window.addEventListener("resize", handleResize);
         handleResize();
     }, []);
 
-
     return (
-        <div
-            className={`nav-wrapper ${
-                path.pathname != "/" && "hidden"
-            }`}
-        >
+        <div className={`nav-wrapper ${path.pathname != "/" && "hidden"}`}>
             <button
                 className="nav-button event-link-nav hide_event_button"
                 ref={eventMobile}
@@ -99,10 +106,7 @@ export default function NavigationBar(props) {
                 </button>
             </nav>
 
-            <div
-                id="navbarToggleExternalContent"
-                ref={navLinksContainer}
-            >
+            <div id="navbarToggleExternalContent" ref={navLinksContainer}>
                 <nav className="" ref={navBarRef}>
                     <button
                         className="nav-button event-link-nav hide_event_button"

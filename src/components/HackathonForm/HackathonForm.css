@@ -31,7 +31,6 @@ form.form-inputs {
     & .form-subtitle {
         margin: 0;
     }
-
 }
 
 .move-forward {
@@ -51,7 +50,8 @@ form.form-inputs {
     gap: 1rem;
 }
 
-#hackathon-submit-btn, #hackathon-back-btn {
+#hackathon-submit-btn,
+#hackathon-back-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,13 +74,25 @@ form.form-inputs {
     background: rgb(19, 200, 19);
 }
 
-.form-slider:has(.first input:invalid, .first select:invalid, .first textarea:invalid, .first textarea:invalid)
-    ~ div #hackathon-submit-btn {
+.form-slider:has(
+        .first input:invalid,
+        .first select:invalid,
+        .first textarea:invalid,
+        .first textarea:invalid
+    )
+    ~ div
+    #hackathon-submit-btn {
     background: #ffb000;
     color: black;
 }
-.form-slider:has(.first input:invalid, .first select:invalid, .first textarea:invalid, .first textarea:invalid)
-    ~ div #hackathon-submit-btn:hover {
+.form-slider:has(
+        .first input:invalid,
+        .first select:invalid,
+        .first textarea:invalid,
+        .first textarea:invalid
+    )
+    ~ div
+    #hackathon-submit-btn:hover {
     background-color: gray;
 }
 

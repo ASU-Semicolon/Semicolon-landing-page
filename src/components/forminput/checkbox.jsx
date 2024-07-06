@@ -5,7 +5,7 @@ export default function Checkbox(props) {
         <>
             <div className="checkbox">
                 <input
-                    tabIndex = "-1"
+                    tabIndex="-1"
                     type="checkbox"
                     id={props.id}
                     name={props.name}

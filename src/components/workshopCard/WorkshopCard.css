@@ -15,7 +15,8 @@
     flex-direction: column;
     gap: 1.5rem;
 
-    & img, & svg {
+    & img,
+    & svg {
         width: 4.5rem;
         height: 4.5rem;
     }
@@ -44,14 +45,13 @@
             margin-left: 0.5rem;
             font-size: 1.5rem;
         }
-
     }
     p.card-info svg {
         width: 2.2rem;
         height: 2.2rem;
     }
 
-    & a{
+    & a {
         width: 100%;
         text-align: center;
         padding: 0.5rem 3rem;
@@ -62,20 +62,20 @@
         border: none;
     }
 
-    & a.btn-disable{
+    & a.btn-disable {
         background: gray;
         &:hover {
-            background: black; 
+            background: black;
             color: gray;
         }
     }
 
-    & a.btn-enable{
-        background: #FBA312;
+    & a.btn-enable {
+        background: #fba312;
 
         &:hover {
-            background: black; 
-            color: #FBA312;
+            background: black;
+            color: #fba312;
         }
     }
 }

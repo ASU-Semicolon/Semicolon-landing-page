@@ -18,7 +18,7 @@ export default function Input(props) {
                             <span></span>
                         ) : (
                             <input
-                                tabIndex = {props.selectable}
+                                tabIndex={props.selectable}
                                 type={props.type}
                                 id={props.id}
                                 name={props.name}

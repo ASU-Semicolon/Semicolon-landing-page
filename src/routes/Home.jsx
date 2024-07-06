@@ -20,7 +20,7 @@ import { InView } from "react-intersection-observer";
 
 export default function Home() {
     const { committees, isFetching } = useContext(CommitteesContext);
-    const {handleEventButton, setSelectedNav} = useOutletContext();
+    const { handleEventButton, setSelectedNav } = useOutletContext();
     const advertisementRef = useRef(null);
 
     setTimeout(() => {
@@ -31,7 +31,13 @@ export default function Home() {
         <>
             <main>
                 <div className="mobile-wrapper">
-                    <InView rootMargin="-50% 0% -50% 0%" as="div" onChange={(inView) => {if (inView) setSelectedNav("home")}}>
+                    <InView
+                        rootMargin="-50% 0% -50% 0%"
+                        as="div"
+                        onChange={(inView) => {
+                            if (inView) setSelectedNav("home");
+                        }}
+                    >
                         <div className="home-container">
                             <div className="left-bar">
                                 <a
@@ -76,17 +82,29 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="right-content">
-                                <Illustration url={HomeIcon} style={{width: "500px"}}/>
+                                <Illustration
+                                    url={HomeIcon}
+                                    style={{ width: "500px" }}
+                                />
                             </div>
                             <div className="stats-container">
-                                <Statistic number="500" text="Workshop Students" />
+                                <Statistic
+                                    number="500"
+                                    text="Workshop Students"
+                                />
                                 <Statistic number="28" text="Instructors" />
                                 <Statistic number="13" text="Workshops" />
                             </div>
                         </div>
                     </InView>
 
-                    <InView rootMargin="-50% 0% -50% 0%" as="div" onChange={(inView) => {if (inView) setSelectedNav("about")}}>
+                    <InView
+                        rootMargin="-50% 0% -50% 0%"
+                        as="div"
+                        onChange={(inView) => {
+                            if (inView) setSelectedNav("about");
+                        }}
+                    >
                         <div className="about-container">
                             <div className="left-content">
                                 <TitleAndParagraph
@@ -116,7 +134,13 @@ export default function Home() {
                         </div>
                     </InView>
 
-                    <InView rootMargin="-50% 0% -50% 0%" as="div" onChange={(inView) => {if (inView) setSelectedNav("committees")}}>
+                    <InView
+                        rootMargin="-50% 0% -50% 0%"
+                        as="div"
+                        onChange={(inView) => {
+                            if (inView) setSelectedNav("committees");
+                        }}
+                    >
                         <div className="committee-container">
                             <div className="committee-wrapper">
                                 <TitleAndParagraph
@@ -146,7 +170,9 @@ export default function Home() {
                                                     key={Math.random()}
                                                     href={committee.title}
                                                     title={committee.title}
-                                                    description={committee.brief}
+                                                    description={
+                                                        committee.brief
+                                                    }
                                                     icon={null}
                                                 />
                                             );
@@ -156,7 +182,13 @@ export default function Home() {
                         </div>
                     </InView>
 
-                    <InView rootMargin="-50% 0% -50% 0%" as="div" onChange={(inView) => {if (inView) setSelectedNav("contact")}}>
+                    <InView
+                        rootMargin="-50% 0% -50% 0%"
+                        as="div"
+                        onChange={(inView) => {
+                            if (inView) setSelectedNav("contact");
+                        }}
+                    >
                         <div className="contact-container">
                             {/* <div className="left-content"> */}
                             <Info />
@@ -190,7 +222,7 @@ export default function Home() {
                             className="adv-close-btn"
                             onClick={() => {
                                 advertisementRef.current.classList.remove(
-                                    "annoying-advertisement-show"
+                                    "annoying-advertisement-show",
                                 );
                                 handleEventButton();
                             }}

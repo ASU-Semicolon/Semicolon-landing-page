@@ -17,7 +17,8 @@ header {
     }
 }
 
-div.hidden, .hidden {
+div.hidden,
+.hidden {
     display: none;
 }
 
@@ -94,7 +95,8 @@ button.navbar-toggler {
     border-bottom: #ffb000 solid 2px;
 }
 
-.event-link-nav a, .event-link-nav:hover a {
+.event-link-nav a,
+.event-link-nav:hover a {
     color: inherit;
 }
 
@@ -106,7 +108,11 @@ button.navbar-toggler {
     font-weight: bold;
     border: solid #ffb000;
     padding: 0.5em 1em;
-    transition: top 1s, opacity 1s, color 0.8s, background-color 0.8s;
+    transition:
+        top 1s,
+        opacity 1s,
+        color 0.8s,
+        background-color 0.8s;
     @media (max-width: 1030px) {
         margin-right: 2em;
     }

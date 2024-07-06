@@ -29,7 +29,8 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-.input-field label, .checkbox label {
+.input-field label,
+.checkbox label {
     text-wrap: nowrap;
     color: white;
     font-family: "Montserrat";

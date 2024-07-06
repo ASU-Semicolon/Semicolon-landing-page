@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './HackathonCard.css'
+import "./HackathonCard.css";
 
 export const HackathonCard = ({
     title,
