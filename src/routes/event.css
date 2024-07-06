@@ -59,6 +59,19 @@
             }
         }
 
+        & p.brief {
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            margin-bottom: 2rem;
+            font-size: 2.4rem;
+            max-width: 80ch;
+            text-align: center;
+            font-weight: 600;
+            white-space: pre-line;
+            @media (max-width: 760px) {
+                font-size: 1.6rem;
+            }
+        }
+
         & p.info {
             font-size: 2.5rem;
             margin-left: 6rem;
