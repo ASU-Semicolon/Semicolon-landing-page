@@ -51,7 +51,12 @@ export default function Home() {
         for (let entry of form.entries()) {
             applicant[entry[0]] = entry[1];
         }
-        fetch(`${API_URL}/applicant`, {
+        applicant["college"] = `${applicant["college"]} - ${applicant["department"]} - ${applicant["specialization"]}`
+        delete applicant["department"];
+        delete applicant["specialization"];
+        applicant["event"] = "workshops 24"
+        applicant["type"] = formRoute == "members" ? "member" : formRoute == "workshops" ? "student" : "";
+        fetch(`${API_URL}/api/candidates`, {
             method: "POST",
             body: JSON.stringify(applicant),
             headers: {
@@ -60,13 +65,14 @@ export default function Home() {
         })
             .then((res) => res.json())
             .then((res) => {
-                if (res.status === "success") {
+                console.log(res)
+                if (res.statusCode == 400) {
+                    showErrorToast(
+                        res.message[0],
+                    );
+                } else {
                     showSuccessToast("Your application has been submitted");
                     event.target.reset();
-                } else {
-                    showErrorToast(
-                        "Phone or email has been used before, try again with new data",
-                    );
                 }
             })
             .catch((err) => {
@@ -125,6 +131,13 @@ export default function Home() {
                             placeholder="Your email"
                             pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                         />
+                        <Input
+                            type="text"
+                            label="College"
+                            name="college"
+                            id="college"
+                            placeholder="Your college"
+                        />
                         <Dropdownmenu
                             type="text"
                             label="Department"
@@ -153,17 +166,19 @@ export default function Home() {
                             id="academicyear"
                             placeholder="Your academic year"
                             options={[
-                                { title: "Freshman" },
-                                { title: "Sophomore" },
-                                { title: "Junior" },
-                                { title: "Senior 1" },
-                                { title: "Senior 2" },
+                                { title: "freshman (1st year)" },
+                                { title: "sophomore (2nd year)" },
+                                { title: "junior (3rd year)" },
+                                { title: "senior 1 (4th year)" },
+                                { title: "senior 2 (5th year)" },
+                                { title: "graduated" },
+                                { title: "other" },
                             ]}
                         />
                         <Dropdownmenu
                             label="First Preference"
                             name="first_preference"
-                            id="firstchoice"
+                            id="first_preference"
                             placeholder="First Preference"
                             options={
                                 formRoute == "members"
@@ -175,14 +190,14 @@ export default function Home() {
                         />
                         <Input
                             name="first_preference_reason"
-                            id="firstchoiceexperience"
+                            id="first_preference_reason"
                             placeholder="Reasons for applying"
                             multiline={true}
                         />
                         <Dropdownmenu
                             label="Second Preference"
                             name="second_preference"
-                            id="secondchoice"
+                            id="second_preference"
                             placeholder="Second Preference"
                             options={
                                 formRoute == "members"
@@ -194,21 +209,21 @@ export default function Home() {
                         />
                         <Input
                             name="second_preference_reason"
-                            id="secondchoiceexperience"
+                            id="second_preference_reason"
                             placeholder="Reasons for applying"
                             multiline={true}
                         />
                         <div className="form-experinece">
                             <Input
                                 label="Prev. Experience or Drive Link to Your CV"
-                                name="second_preference_experience"
-                                id="previousexperience"
+                                name="previous_experience"
+                                id="previous_experience"
                                 placeholder="Your previous experience"
                                 labelOnly={true}
                             />
                             <Input
-                                name="previousExperience"
-                                id="secondchoiceexperience"
+                                name="previous_experience"
+                                id="previous_experience"
                                 placeholder="Your previous experience or drive link to your CV"
                                 multiline={true}
                             />

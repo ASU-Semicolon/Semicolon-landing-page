@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import { API_URL } from "../keys.config";
+import { OLD_API_URL } from "../keys.config";
 
 export const CommitteesContext = createContext();
 
@@ -8,7 +8,7 @@ export const CommitteesProvider = ({ children }) => {
     const [isFetching, setIsFetching] = useState(true);
     useEffect(() => {
         setIsFetching(true);
-        fetch(`${API_URL}/committee`)
+        fetch(`${OLD_API_URL}/committee`)
             .then((res) => res.json())
             .then(({ data }) => {
                 setCommittees(data);
