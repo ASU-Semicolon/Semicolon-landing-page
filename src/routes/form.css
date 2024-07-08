@@ -76,6 +76,8 @@
     font-family: "Montserrat";
     font-size: 2rem;
     font-weight: 400;
+    width: 120px;
+    height: 40px;
     text-transform: uppercase;
     padding: 5px 20px;
     border: 1px white solid;
@@ -104,6 +106,11 @@ input:-webkit-autofill:active {
 .input-field:has(input:invalid, select:invalid, textarea:invalid)
     ~ #submit-btn:hover,
 .form-experinece:has(textarea:invalid) ~ #submit-btn:hover {
+    background-color: gray;
+}
+
+#submit-btn.submitting, #submit-btn.submitting:hover {
+    color: black;
     background-color: gray;
 }
 
@@ -153,6 +160,7 @@ input:-webkit-autofill:active {
     #submit-btn {
         max-width: 40%;
         margin-left: 1.3em;
+        width: 100px;
     }
 
     .form-experinece {
