@@ -9,6 +9,7 @@ import "./form.css";
 import "react-toastify/dist/ReactToastify.css";
 import { CommitteesContext } from "../contexts/committees.context.jsx";
 import { useParams } from "react-router-dom";
+import { ScaleLoader } from "react-spinners";
 
 export default function Home() {
     const { formRoute } = useParams();
@@ -29,6 +30,7 @@ export default function Home() {
     ];
     const { committees } = useContext(CommitteesContext);
     const [sortedCommittees, setSortedCommittees] = useState();
+    const [ isSubmitting, setIsSubmitting ] = useState(false);
 
     useEffect(() => {
         let data = committees?.sort((a, b) => (b.disabled ? -1 : 1));
@@ -51,11 +53,9 @@ export default function Home() {
         for (let entry of form.entries()) {
             applicant[entry[0]] = entry[1];
         }
-        applicant["college"] = `${applicant["college"]} - ${applicant["department"]} - ${applicant["specialization"]}`
-        delete applicant["department"];
-        delete applicant["specialization"];
         applicant["event"] = "workshops 24"
         applicant["type"] = formRoute == "members" ? "member" : formRoute == "workshops" ? "student" : "";
+        setIsSubmitting(true);
         fetch(`${API_URL}/api/candidates`, {
             method: "POST",
             body: JSON.stringify(applicant),
@@ -65,7 +65,7 @@ export default function Home() {
         })
             .then((res) => res.json())
             .then((res) => {
-                console.log(res)
+                setIsSubmitting(false);
                 if (res.statusCode == 400) {
                     showErrorToast(
                         res.message[0],
@@ -76,6 +76,7 @@ export default function Home() {
                 }
             })
             .catch((err) => {
+                setIsSubmitting(false);
                 showErrorToast(err.message);
             });
     };
@@ -230,11 +231,17 @@ export default function Home() {
                         </div>
 
                         <button
-                            type="submit"
+                            type={isSubmitting ? "button" : "submit"}
                             id="submit-btn"
+                            className={isSubmitting ? "submitting" : ""}
                             onClick={checkValid}
                         >
-                            Submit
+                            <ScaleLoader 
+                                color={"#000000"}
+                                loading={isSubmitting}
+                                height={20}
+                            />
+                            {isSubmitting ? "" : "Submit"}
                         </button>
                     </form>
                 </div>
