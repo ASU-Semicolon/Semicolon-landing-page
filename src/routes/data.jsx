@@ -114,6 +114,27 @@ let cards = [
         state: "not-started",
     },
     {
+        title: "Cybersecurity",
+        description:
+            "Welcome to our Cybersecurity Workshop! In today's digital age, understanding and implementing cybersecurity is crucial for protecting sensitive information and ensuring business continuity. This workshop will provide a comprehensive introduction to the field, covering key concepts such as the importance and objectives of cybersecurity, common threats and vulnerabilities, and essential practices in network and web security.\n\n You will learn about different roles in cybersecurity, types of malware and social engineering attacks, network security essentials like firewalls and encryption, and the fundamentals of penetration testing. By the end of this workshop, you will have the foundational knowledge needed to protect both personal and professional digital environments from cyber threats.",
+        prerequisites: [
+            "No prerequisites are required.",
+        ],
+        content: [
+            "1. Introduction to Cybersecurity",
+            "2. Threats, Attacks, and Vulnerabilities",
+            "3. Introduction to Network Security",
+            "4. Web security",
+            "5. Introduction to Penetration Testing",
+        ],
+        duration_in_sessions: 6,
+        sessions_per_week: 2,
+        start_date: new Date(2024, 8, 1),
+        location: "Abdo Basha",
+        season: "Summer 2024",
+        state: "not-started",
+    },
+    {
         title: "NodeJS",
         description:
             "Welcome to the JavaScript & Node.js course! In this course, you will learn the fundamentals of server-side development with Node.js. Node.js is a popular and powerful JavaScript runtime that allows developers to build fast, scalable, and event-driven server-side applications. You will learn how to build and deploy server-side applications using Node.js and other popular web development technologies.",
