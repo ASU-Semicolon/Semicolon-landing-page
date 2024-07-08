@@ -114,7 +114,7 @@ let cards = [
         state: "not-started",
     },
     {
-        title: "JavaScript & NodeJS",
+        title: "NodeJS",
         description:
             "Welcome to the JavaScript & Node.js course! In this course, you will learn the fundamentals of server-side development with Node.js. Node.js is a popular and powerful JavaScript runtime that allows developers to build fast, scalable, and event-driven server-side applications. You will learn how to build and deploy server-side applications using Node.js and other popular web development technologies.",
         objectives: [
@@ -151,7 +151,7 @@ let cards = [
         state: "not-started",
     },
     {
-        title: "Frontend with ReactJS",
+        title: "ReactJS",
         description:
             "In this workshop, you will have the opportunity to dive deep into the world of React and see how it can be used to develop web applications. You will learn how to build interactive and dynamic user interfaces, integrate with APIs, and much more. Some examples of popular web applications built with React include Facebook, Instagram, and Netflix.",
         objectives: [
