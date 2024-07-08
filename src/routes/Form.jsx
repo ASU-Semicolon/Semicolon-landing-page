@@ -22,9 +22,9 @@ export default function Home() {
 
     const workshops = [
         { title: "C Programming" },
+        { title: "Digital Design" },
         { title: "ARM", disabled: "true" },
         { title: "AVR", disabled: "true" },
-        { title: "Digital Design", disabled: "true" },
         { title: "JavaScript & NodeJS", disabled: "true" },
         { title: "Frontend with ReactJS", disabled: "true" },
     ];
