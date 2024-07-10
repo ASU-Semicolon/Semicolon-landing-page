@@ -23,14 +23,15 @@ export default function Home() {
     const workshops = [
         { title: "C Programming" },
         { title: "Digital Design" },
-        { title: "ARM", disabled: "true" },
-        { title: "AVR", disabled: "true" },
-        { title: "JavaScript & NodeJS", disabled: "true" },
-        { title: "Frontend with ReactJS", disabled: "true" },
+        { title: "ARM" },
+        { title: "AVR" },
+        { title: "NodeJS" },
+        { title: "ReactJS" },
+        { title: "Cybersecurity" },
     ];
     const { committees } = useContext(CommitteesContext);
     const [sortedCommittees, setSortedCommittees] = useState();
-    const [ isSubmitting, setIsSubmitting ] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         let data = committees?.sort((a, b) => (b.disabled ? -1 : 1));
@@ -53,8 +54,13 @@ export default function Home() {
         for (let entry of form.entries()) {
             applicant[entry[0]] = entry[1];
         }
-        applicant["event"] = "workshops 24"
-        applicant["type"] = formRoute == "members" ? "member" : formRoute == "workshops" ? "student" : "";
+        applicant["event"] = "workshops 24";
+        applicant["type"] =
+            formRoute == "members"
+                ? "member"
+                : formRoute == "workshops"
+                  ? "student"
+                  : "";
         setIsSubmitting(true);
         fetch(`${API_URL}/api/candidates`, {
             method: "POST",
@@ -67,9 +73,7 @@ export default function Home() {
             .then((res) => {
                 setIsSubmitting(false);
                 if (res.statusCode == 400) {
-                    showErrorToast(
-                        res.message[0],
-                    );
+                    showErrorToast(res.message[0]);
                 } else {
                     showSuccessToast("Your application has been submitted");
                     event.target.reset();
@@ -236,7 +240,7 @@ export default function Home() {
                             className={isSubmitting ? "submitting" : ""}
                             onClick={checkValid}
                         >
-                            <ScaleLoader 
+                            <ScaleLoader
                                 color={"#000000"}
                                 loading={isSubmitting}
                                 height={20}
