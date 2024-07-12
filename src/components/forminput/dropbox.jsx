@@ -22,7 +22,7 @@ export default function Dropdownmenu(props) {
                                 disabled={option.disabled}
                             >
                                 {option.title}
-                                {option.disabled == "true" ? " (closed)" : ""}
+                                {option.disabled ? " (closed)" : ""}
                             </option>
                         );
                     })}
