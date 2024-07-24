@@ -22,10 +22,8 @@ export default function Home() {
 
     const workshops = [
         { title: "C Programming" },
-        { title: "Digital Design" },
         { title: "ARM" },
         { title: "AVR" },
-        { title: "NodeJS" },
         { title: "ReactJS" },
         { title: "Cybersecurity" },
     ];

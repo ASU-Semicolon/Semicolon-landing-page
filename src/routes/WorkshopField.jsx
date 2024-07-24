@@ -27,28 +27,28 @@ const WorkshopField = () => {
             {card.objectives && (
                 <section>
                     <h1> Objectives </h1>
-                    <ul>
+                    <ol>
                         {card.objectives.map((item, index) => {
                             return <li key={index}>{item}</li>;
                         })}
-                    </ul>
+                    </ol>
                 </section>
             )}
             <section>
                 <h1> Content </h1>
-                <ul>
+                <ol>
                     {card.content.map((item, index) => {
                         return <li key={index}>{item}</li>;
                     })}
-                </ul>
+                </ol>
             </section>
             <section>
                 <h1> Prerequisites </h1>
-                <ul>
+                <ol>
                     {card.prerequisites.map((item, index) => {
                         return <li key={index}>{item}</li>;
                     })}
-                </ul>
+                </ol>
             </section>
             <section>
                 <h1> Number of Sessions </h1>
