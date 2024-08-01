@@ -22,10 +22,10 @@ export default function Home() {
 
     const workshops = [
         { title: "C Programming" },
-        { title: "ARM" },
         { title: "AVR" },
         { title: "ReactJS" },
         { title: "Cybersecurity" },
+        { title: "ARM", disabled: "true"},
     ];
     const { committees } = useContext(CommitteesContext);
     const [sortedCommittees, setSortedCommittees] = useState();
